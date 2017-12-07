@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def language_flag
-    flag = %w(https://s3-ap-southeast-1.amazonaws.com/indoexchanger/flag/US.png https://s3-ap-southeast-1.amazonaws.com/indoexchanger/flag/ID.png)
+    flag = %w(https://res.cloudinary.com/muhammadyana/image/upload/v1512641507/al-mizan/US.png https://res.cloudinary.com/muhammadyana/image/upload/v1512641511/al-mizan/ID.png https://res.cloudinary.com/muhammadyana/image/upload/v1512641511/al-mizan/SA.png)
   end
 
   def current_language_flag
@@ -8,6 +8,8 @@ module ApplicationHelper
       image_local = image_tag language_flag[0]
     elsif locale_nation(I18n.locale).eql? 'Indonesia'
     	image_local = image_tag language_flag[1]
+    elsif locale_nation(I18n.locale).eql? 'Arabic'
+      image_local = image_tag language_flag[2]
     end
     return image_local
   end
@@ -56,6 +58,8 @@ module ApplicationHelper
 	      "Indonesia"
 	    when :en
 	      "English"
+      when :sa
+        "Arabic"
     end
   end
 end

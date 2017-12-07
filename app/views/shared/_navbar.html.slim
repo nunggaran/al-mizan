@@ -6,19 +6,19 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      = link_to 'Ponpes Al-Mizan', root_path, class: "navbar-brand"
+      = link_to t('navbar.al-mizan'), root_path, class: "navbar-brand"
       	/ = image_tag 'https://res.cloudinary.com/muhammadyana/image/upload/v1512631795/al-mizan/logo/Graphic1-2.png', class: "navbar-brand", alt: "Indo Exchanger Logo"
       
     .collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
-            span.header-firstname Profile
+            span.header-firstname = t('navbar.profile.profile')
             b.caret
           ul.dropdown-menu
             li 
               a href="#" 
-                = t('navbar.history')
+                = t('navbar.profile.history')
             li
               a href="#" 
                 | Visi dan Misi
@@ -37,7 +37,7 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
 
         li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
-            span.header-firstname Pengajaran
+            span.header-firstname = t('navbar.pengajaran.pengajaran')
             b.caret
           ul.dropdown-menu
             li 

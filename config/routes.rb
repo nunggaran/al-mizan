@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   	end
   end
 
-  scope '(:locale)', locale: /en|id/  do 
+  scope '(:locale)', locale: /en|id|sa/  do 
     # resources :contacts
     post 'contacts' => 'contacts#create'
     	# mount Monologue::Engine, at: '/blog', :as => :blog	

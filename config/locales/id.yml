@@ -3,8 +3,14 @@ id:
     application:
       title: "JUAL BELI BITCOIN | PT Indonesia Exchanger Utama"
   navbar:
+    al-mizan: "Ponpes Al-Mizan"
+    pengajaran: 
+      pengajaran: "Pengajaran"
+    profile: 
+      profile: "Profile"
+      history: "Sejarah"
     about: "Tentang Al-Mizan"
-    history: "Sejarah"
+    
     registrasi: "Pendaftaran Santri Baru"
   footer:
     column_one: 

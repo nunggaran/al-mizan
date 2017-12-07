@@ -1,15 +1,15 @@
-en:
+sa:
   layouts:
     application:
       title: "BUY AND SEL BITCOIN | PT Indonesia Exchanger Utama"
   navbar:
-    al-mizan: "Al-Mizan College"
+    al-mizan: "معهد الميزان"
     pengajaran: 
-      pengajaran: "Education"
-    profile: 
-      profile: "Profile"
-      history: "History"
-    about: "About Al-Mizan"
+      pengajaran: "تعليم"
+    profile:
+      profile: "الملف الشخصي"
+      history: "تاريخ"
+    about: "حول الميزان"
     
     registrasi: "Student Registration"
     
