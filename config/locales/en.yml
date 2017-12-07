@@ -4,13 +4,17 @@ en:
       title: "BUY AND SEL BITCOIN | PT Indonesia Exchanger Utama"
   navbar:
     al-mizan: "Al-Mizan College"
-    pengajaran: 
-      pengajaran: "Education"
     profile: 
       profile: "Profile"
       history: "History"
-    about: "About Al-Mizan"
+    pengajaran: 
+      pengajaran: "Education"
+    pengasuhan: 
+      pengasuhan: "Parenting"
     
+    ekonomi_pondok: 
+      pondok: "College Economy"
+    about: "About Al-Mizan"
     registrasi: "Student Registration"
     
   footer:

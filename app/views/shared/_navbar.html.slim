@@ -55,7 +55,7 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
         
         li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
-            span.header-firstname Pengasuhan
+            span.header-firstname = t('navbar.pengasuhan.pengasuhan')
             b.caret
           ul.dropdown-menu
             li 
@@ -73,7 +73,7 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
         
         li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
-            span.header-firstname Ekonomi Pondok
+            span.header-firstname = t('navbar.ekonomi_pondok.pondok')
             b.caret
           ul.dropdown-menu
             li 
@@ -87,7 +87,7 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
                 | Koprasi
 
         li = link_to t('navbar.about'), calculator_path
-        li = link_to t('navbar.registration'), '#'
+        li = link_to t('navbar.registrasi'), '#'
         li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
             = current_language_flag

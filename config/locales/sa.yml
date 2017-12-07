@@ -4,14 +4,17 @@ sa:
       title: "BUY AND SEL BITCOIN | PT Indonesia Exchanger Utama"
   navbar:
     al-mizan: "معهد الميزان"
-    pengajaran: 
-      pengajaran: "تعليم"
     profile:
       profile: "الملف الشخصي"
       history: "تاريخ"
+    pengajaran: 
+      pengajaran: "تعليم"
+    pengasuhan: 
+      pengasuhan: "تغذية"
+    ekonomi_pondok: 
+      pondok: "المعهد الاقتصادي"
     about: "حول الميزان"
-    
-    registrasi: "Student Registration"
+    registrasi: "تسجيل"
     
   footer:
     column_one: 
