@@ -32,6 +32,10 @@ sa:
       free_btc: "How to get Bitcoin"
   static_page:
     index:
+      header:
+        first_tagline: "مدرسة الميزان الإسلامية"
+        second_tagline: "يتيح المدرسة في الميزان"
+        third_tagline: "الميزان، مدرسة عالمية المستوى فيما بعد"
       tagline: "<b>Sell and Buy Bitcoin</b> with <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Welcome to PT. Indonesia Exchanger Utama"
       running_text_registrasi: "For new registrants please see the video tutorial"

@@ -32,6 +32,10 @@ id:
       free_btc: "Cara mendapatkan Bitcoin"
   static_page:
     index:
+      header:
+        first_tagline: "Pondok Pesantren Modern Al-Mizan"
+        second_tagline: "Yuk Mondok di Al-Mizan"
+        third_tagline: "Al-Mizan, Sekolah Bertaraf Dunia Akhirat"
       tagline: "<b>Jual Beli Bitcoin</b> anda bersama <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Selamat Datang di PT. Indonesia Exchanger Utama"
       running_text_registrasi: "Untuk pendaftar baru silahkan lihat video cara register"

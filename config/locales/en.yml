@@ -11,7 +11,6 @@ en:
       pengajaran: "Education"
     pengasuhan: 
       pengasuhan: "Parenting"
-    
     ekonomi_pondok: 
       pondok: "College Economy"
     about: "About Al-Mizan"
@@ -33,6 +32,10 @@ en:
       free_btc: "How to get Bitcoin"
   static_page:
     index:
+      header:
+        first_tagline: "Al-Mizan Islamic Boarding School"
+        second_tagline: "Let's School in Al-Mizan"
+        third_tagline: "Al-Mizan, school end of the world hereafter"
       tagline: "<b>Sell and Buy Bitcoin</b> with <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Welcome to PT. Indonesia Exchanger Utama"
       running_text_registrasi: "For new registrants please see the video tutorial"
