@@ -46,7 +46,7 @@ module ApplicationHelper
   end
 
   def random_image_home
-    images = %w(https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_955/v1509841042/banner-app_tlpilu.jpg https://res.cloudinary.com/indoexchanger/image/upload/q_40/v1509841228/banner-app-iex-2_pcr04i.jpg https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1310/v1509851946/home-mobile-1_hnye3g.jpg)
+    images = %w(https://res.cloudinary.com/muhammadyana/image/upload/v1512631618/al-mizan/background/13776027_1133994073325327_6243295768723387211_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512631708/al-mizan/background/silaturrahmi-4.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512632320/al-mizan/background/14330073_1179143412143726_4215595160823234128_n.jpg)
     return images.sample
   end
 
