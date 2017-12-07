@@ -1,4 +1,4 @@
-###Website Pondok Pesantren Modern Al-Mizan using Ruby on Rails 5.0
+### Website Pondok Pesantren Modern Al-Mizan using Ruby on Rails 5.0
 
 # Technology
 
