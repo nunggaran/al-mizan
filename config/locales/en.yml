@@ -3,11 +3,10 @@ en:
     application:
       title: "BUY AND SEL BITCOIN | PT Indonesia Exchanger Utama"
   navbar:
-    deposito: "Deposito Bitcoin"
-    navbar: "Blog Forum"
-    calculator: "Bitcoin Calculator"
-    registrasi: "How to register"
-    login: "Login"
+    about: "About Al-Mizan"
+    history: "History"
+    registrasi: "Student Registration"
+    
   footer:
     column_one: 
       title: "Support Services"

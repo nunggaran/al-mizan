@@ -3,11 +3,9 @@ id:
     application:
       title: "JUAL BELI BITCOIN | PT Indonesia Exchanger Utama"
   navbar:
-    deposito: "Deposito Bitcoin"
-    navbar: "Blog Forum"
-    calculator: "Calculator Bitcoin"
-    registrasi: "Cara daftar akun"
-    login: "Sign"
+    about: "Tentang Al-Mizan"
+    history: "Sejarah"
+    registrasi: "Pendaftaran Santri Baru"
   footer:
     column_one: 
       title: "Support Services"

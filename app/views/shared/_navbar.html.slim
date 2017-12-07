@@ -11,24 +11,95 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
       
     .collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
-        / li = link_to t('navbar.deposito'), deposito_path
-        / li = link_to t('navbar.blog'), blog_path
-        li = link_to t('navbar.calculator'), calculator_path
-        li = link_to t('navbar.registrasi'), how_to_register_path
-        li = link_to t('navbar.login'), 'https://indoexchanger.co.id/private/login'
         li.dropdown
-		      = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
-		        = current_language_flag
-		        |   
-		        span.header-firstname = locale_nation(I18n.locale)
-		        b.caret
-		      ul.dropdown-menu
-		        / = language_flag.zip I18n.available_locales
-		        - language_flag.zip(I18n.available_locales).each do |language, locale|
-		          li= link_to params.merge({locale: locale.to_s}), data: {turbolinks: false}
-		              = image_tag language
-		              |   
-		              = locale_nation(locale)
+          = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+            span.header-firstname Profile
+            b.caret
+          ul.dropdown-menu
+            li 
+              a href="#" 
+                = t('navbar.history')
+            li
+              a href="#" 
+                | Visi dan Misi
+            li
+              a href="#" 
+                | Susunan Pengurus
+            li
+              a href="#" 
+                | Fasilitas
+            li
+              a href="#" 
+                | Ekstrakulikuler
+            li
+              a href="#" 
+                | Kalender Akademik
+
+        li.dropdown
+          = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+            span.header-firstname Pengajaran
+            b.caret
+          ul.dropdown-menu
+            li 
+              a href="#" 
+                | Kurikulum Pendidikan
+            li
+              a href="#" 
+                | Program Pendidikan
+            li
+              a href="#" 
+                | Tenaga Pengajar
+            li
+              a href="#" 
+                | KBM
+        
+        li.dropdown
+          = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+            span.header-firstname Pengasuhan
+            b.caret
+          ul.dropdown-menu
+            li 
+              a href="#" 
+                | Majlis Pengasuhan
+            li
+              a href="#" 
+                | Kegiatan Santri
+            li
+              a href="#" 
+                | Pengasuhan Putra
+            li
+              a href="#" 
+                | Pengasuhan Putri
+        
+        li.dropdown
+          = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+            span.header-firstname Ekonomi Pondok
+            b.caret
+          ul.dropdown-menu
+            li 
+              a href="#" 
+                | Rental Mobil
+            li
+              a href="#" 
+                | Al-Mizan Tour
+            li
+              a href="#" 
+                | Koprasi
+
+        li = link_to t('navbar.about'), calculator_path
+        li = link_to t('navbar.registration'), '#'
+        li.dropdown
+          = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+            = current_language_flag
+            |   
+            span.header-firstname = locale_nation(I18n.locale)
+            b.caret
+          ul.dropdown-menu
+            - language_flag.zip(I18n.available_locales).each do |language, locale|
+              li= link_to params.merge({locale: locale.to_s}), data: {turbolinks: false}
+                  = image_tag language
+                  |   
+                  = locale_nation(locale)
 
         
         
