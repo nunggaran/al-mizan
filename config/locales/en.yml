@@ -77,9 +77,11 @@ en:
       content: "Subscribe your email to get </b> Bitcoin </b> update price" 
     contact_section:
       title: "Get in Touch"
-      content: "You need more information? Check what other persons are saying about our service. They are very happy with their transaction."
-      office_title: "Find us at the Office"
-      office_content: "Jl Keramat II no 15A RT 01 RW 08 <br> Kelurahan Kwitang Kecamatan Senen Jakarta Pusat - DKI Jakarta"
+      male_campus: "Male Campus"
+      woman_campus: "Woman Campus"
+      content: "Need more information? Check what other persons are saying about our school. They are very happy with us."
+      office_title: "Al-Mizan Address"
+      office_content: "Jl Jend Sudirman KM 3 Ar-Royyan's Building 2nd floor, Narimbang - Rangkasbitung - Lebak - Banten"
       phone_title: "Work Phone"
     rivan: 
       title: "Link to rivan"

@@ -78,9 +78,11 @@ id:
       content: "Subscribe email anda untuk mendapatkan harga <b> Bitcoin </b> tertinggi:"
     contact_section:
       title: "Hubungi Kami"
-      content: "Anda butuh informasi lebih lanjut? Periksa apa yang orang lain katakan tentang layanan kami. Mereka sangat senang dengan transaksi mereka."
-      office_title: "Temui kami di kantor"
-      office_content: "Jl Keramat II no 15A RT 01 RW 08 <br> Kelurahan Kwitang Kecamatan Senen Jakarta Pusat - DKI Jakarta"
+      male_campus: "Kampus Putra"
+      woman_campus: "Kampus Putri"
+      content: "Anda butuh informasi lebih lanjut? Periksa apa yang orang lain katakan tentang Pondok kami. Mereka sangat senang tinggal di Al-Mizan."
+      office_title: "Alamat Al-Mizan"
+      office_content: "Jl Jend Sudirman KM 3 Ar-Royyan's Building 2nd floor, Narimbang - Rangkasbitung - Lebak - Banten"
       phone_title: "Handphone"
     rivan: 
       title: "Link ke rivan"
