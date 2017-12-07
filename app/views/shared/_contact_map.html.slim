@@ -1,0 +1,125 @@
+/ #contactus.cd-section
+/   .contactus-1.section-image[style="background-image: url('#{random_image_header}')"]
+/     .container
+/       .row
+/         .col-md-5
+/           h2.title
+/             | Get in Touch
+/           h5.description
+/             | You need more information? Check what other persons are saying about our product. They are very happy with their purchase.
+/           .info.info-horizontal
+/             .icon.icon-primary
+/               i.material-icons
+/                 | pin_drop
+/             .description
+/               h4.info-title
+/                 | Find us at the office
+/               p
+/                 |  Bld Mihail Kogalniceanu, nr. 8,
+/                 br
+/                 |  7652 Bucharest,
+/                 br
+/                 |  Romania
+/           .info.info-horizontal
+/             .icon.icon-primary
+/               i.material-icons
+/                 | phone
+/             .description
+/               h4.info-title
+/                 | Give us a ring
+/               p
+/                 |  Michael Jordan
+/                 br
+/                 |  +40 762 321 762
+/                 br
+/                 |  Mon - Fri, 8:00-22:00
+/         .col-md-5.col-md-offset-2
+/           .card.card-contact
+/             form#contact-form[role="form" method="post"]
+/               .header.header-raised.header-primary.text-center
+/                 h4.card-title
+/                   | Contact Us
+/               .card-content
+/                 .row
+/                   .col-md-6
+/                     .form-group.label-floating
+/                       label.control-label
+/                         | First name
+/                       input.form-control[type="text" name="name"]
+/                   .col-md-6
+/                     .form-group.label-floating
+/                       label.control-label
+/                         | Last name
+/                       input.form-control[type="text" name="name"]
+/                 .form-group.label-floating
+/                   label.control-label
+/                     | Email address
+/                   input.form-control[type="email" name="email"]
+/                 .form-group.label-floating
+/                   label.control-label
+/                     | Your message
+/                   textarea#message.form-control[name="message" rows="6"]
+/                 .row
+/                   .col-md-6
+/                     .checkbox
+/                       label
+/                         input[type="checkbox" name="optionsCheckboxes"]
+/                         |  I'm not a robot
+/                   .col-md-6
+/                     button.btn.btn-primary.pull-right[type="submit"]
+/                       | Send Message
+
+.contactus-2
+  #contactUs2Map.map
+  .col-md-6
+    .card.card-contact.card-raised
+      form#contact-form method="post" role="form" 
+        .header.header-raised.header-rose.text-center
+          h4.card-title Contact Us
+        .card-content
+          .row
+            .col-md-6
+              .info.info-horizontal
+                .icon.icon-rose
+                  i.material-icons phone
+                .description
+                  h5.info-title Give us a ring
+                  p
+                    | Michael Jordan
+                    br/
+                    | +40 762 321 762
+                    br/
+                    | Mon - Fri, 8:00-22:00
+            .col-md-6
+              .info.info-horizontal
+                .icon.icon-rose
+                  i.material-icons pin_drop
+                .description
+                  h5.info-title Find us at the office
+                  p
+                    | Bld Mihail Kogalniceanu, nr. 8,
+                    br/
+                    | 7652 Bucharest,
+                    br/
+                    | Romania
+          .row
+            .col-md-6
+              .form-group.label-floating.form-rose
+                label.control-label Full Name
+                input.form-control name="name" type="text" /
+            .col-md-6
+              .form-group.label-floating.form-rose
+                label.control-label Email address
+                input.form-control name="email" type="email" /
+          .form-group.label-floating.form-rose
+            label.control-label Your message
+            textarea#message.form-control name="message" rows="6" 
+          .row
+            .col-md-6
+              .checkbox
+                label
+                  input name="optionsCheckboxes" type="checkbox" /
+                  | I'm not a robot
+            .col-md-6
+              button.btn.btn-rose.pull-right type="submit"  Send Message
+

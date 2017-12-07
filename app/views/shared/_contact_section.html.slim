@@ -1,0 +1,67 @@
+.contactus-1.section-image style=("background-image: url('https://res.cloudinary.com/indoexchanger/image/upload/c_scale,q_84,w_1500/v1511704652/assets/office/office.jpg')") 
+  .container
+    .row
+      .col-md-5
+        h2.title = t('static_page.contact_section.title')
+        h5.description = t('static_page.contact_section.content')
+        .info.info-horizontal
+          .icon.icon-primary
+            i.material-icons pin_drop
+          .description
+            h4.info-title = t('static_page.contact_section.office_title')
+            p = t('static_page.contact_section.office_content').html_safe
+              
+        .info.info-horizontal
+          .icon.icon-primary
+            i.material-icons phone
+          .description
+            h4.info-title = t('static_page.contact_section.phone_title')
+            p
+              = link_to '+62812-2081-2265', 'tel:+62812-2081-2265'
+              br/
+              | Mon - Fri, 8:00-22:00
+      .col-md-5.col-md-offset-2
+        .card.card-contact
+          /= simple_form_for @contact, html: { class: "form-horizontal" }, wrapper: :horizontal_form, wrapper_mappings: { check_boxes: :horizontal_radio_and_checkboxes, radio_buttons: :horizontal_radio_and_checkboxes, file: :horizontal_file_input, boolean: :horizontal_boolean } do |f|
+            = f.input :first_name
+            = f.input :last_name
+            = f.input :email
+            = f.input :message
+            .form-group
+              .col-sm-offset-3.col-sm-9
+                = f.submit nil, class: 'btn btn-primary'
+                = link_to t('.cancel', default: t("helpers.links.cancel")), contacts_path, class: 'btn btn-default'
+          = form_for @contact do |f|
+            .header.header-raised.header-primary.text-center
+              h4.card-title Contact Us
+            .card-content
+              .row
+                .col-md-6
+                  .form-group.label-floating.is-empty
+                    label.control-label First name
+                    = f.text_field :first_name, class: "form-control"
+                    span.material-input
+                .col-md-6
+                  .form-group.label-floating.is-empty
+                    label.control-label Last name
+                    = f.text_field :last_name, class: "form-control"
+                    span.material-input
+              .form-group.label-floating.is-empty
+                label.control-label Email address
+                = f.text_field :email, class: "form-control"
+                span.material-input
+              .form-group.label-floating.is-empty
+                label.control-label Your message
+                = f.text_area :message, class: "form-control", id: "message", rows: "6"
+                span.material-input
+              .row
+                .col-md-6
+                  .checkbox
+                    label
+                      input name="optionsCheckboxes" type="checkbox" /
+                      | I'm not a robot
+                .col-md-6
+                  = f.submit "Send Message", class: 'btn btn-primary pull-right'
+                  / button.btn.btn-primary.pull-right type="submit"  Send Message
+
+         

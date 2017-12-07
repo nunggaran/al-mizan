@@ -1,0 +1,120 @@
+en:
+  layouts:
+    application:
+      title: "BUY AND SEL BITCOIN | PT Indonesia Exchanger Utama"
+  navbar:
+    deposito: "Deposito Bitcoin"
+    navbar: "Blog Forum"
+    calculator: "Bitcoin Calculator"
+    registrasi: "How to register"
+    login: "Login"
+  footer:
+    column_one: 
+      title: "Support Services"
+      instruction: "Getting Started"
+      cs: "Customer Services"
+    column_two: 
+      title: "Product"
+      wallet: "Wallet Address"
+      deposito: "Deposito Bitcoin"
+    column_thrid: 
+      title: "Other"
+      about_us: "About Us"
+      legalitas: "Our legalitas"
+      free_btc: "How to get Bitcoin"
+  static_page:
+    index:
+      tagline: "<b>Sell and Buy Bitcoin</b> with <b> PT Indonesia Exchanger Utama </b>"
+      running_text_welcome: "Welcome to PT. Indonesia Exchanger Utama"
+      running_text_registrasi: "For new registrants please see the video tutorial"
+      running_text_web: "Indoexchanger can only be accessed by link www.indoexchanger.co.id not indoexchanger.com"
+      btc: "1 BTC = "
+      content_header: "<b> <i> Indoexchanger.co.id </i></b> is a place to buy and sell digital bitcoin assets in Indonesia with legal status.
+        <br>Our excellence in addition to our fast, easy, secure process is also charged a much cheaper transaction fee.
+        <br> In addition we prepare the method of barter BTC-IDR, deposit and withdrawal of IDR by mechanism among several banks in Indonesia."
+      register: "Get Started"
+      services: "Our Services"
+      description: "PT Indonesia Exchanger Utama can also serve mobile transaction through android application other than web aplication."
+      buy_btc: "Buy Bitcoin"
+      sell_btc: "Sell Bitcoin"
+      transfer_btc: "Transfer Bitcoin"
+      receive_btc: "Receive Bitcoin"
+      buy_btc_description: "Beli Bitcoin dalam kurang dari 1 jam. Kami menerima pembayaran dari semua bank nasional di Indonesia."
+      sell_btc_description: "Jual Bitcoin ke Rupiah dengan beberapa bank yang ada di Indonesia."
+      why_title: "PT Indonesia Exchanger Utama - Easy, Fast, and Accountable"
+      why_indoexchanger: "Why are people from all over the world choosing <b>Indo Exchanger</b>?"
+      iex_trusted_title: "Indo Exchanger is trusted by people"
+      iex_trusted_description: "We have payment thousand successfully without any trouble"
+      iex_security_title: "Indo Exchanger is secure"
+      iex_security_description: "Indoexchanger.co.id ini telah diproteksi `dengan Enkripsi SSL 128 bit."
+      iex_easy_title: "Easy, Fast and Accountable"
+      iex_easy_description: "Deposit, penarikan rupiah dan barter Bitcoin diproses secara cepat serta akuntabel dalam waktu kurang dari satu jam."
+      iex_secure_title: "Security"
+      iex_secure_description: "Your account is protected by <i> Multifactor Authentication</i>. Use a combination of email, SMS, Google Authenticator and session for 20 minutes. This ensures that transactions can only be validated by yourself."
+      iex_easy_two: "Easy"
+      iex_easy_two_des: "You only need 1 account to do the Bitcoin barter either buy or sell. indoexchanger.co.id can be accessed through various platforms namely Android, iPhone, and Desktop."
+      iex_cs_title: "Customer Service"
+      iex_cs_desc: "Our customer service team is on hand to help you 12 hours a day, 7 days a week from <b>07:00 - 20:00 WIB </b>, without getting a day off. Please contact us via chat or email."
+      why_use_btc_title: "Why are so many people investing in digital currencies like <b>Bitcoin</b>?"
+      why_use_btc_desc: "Learn about <b> Bitcoin </b> in Blog <b> Indo Exchanger </b>."
+      barter_title: "The best way transaction of barter"
+      barter_desc: "<b> Bitcoin </b> users around the world are doing barter to friends and family and bartering stuff online, faster, and easier than using regular cash."
+      financial_title: "Kebebasan Finansial yang sesungguhnya"
+      financial_desc: "Like the internet, no single entity controls Bitcoin. It provides users with both transparency and privacy. It puts you back in control of your money."
+      new_barter_title: "It's a new type of Barter"
+      new_barter_desc: "People are buying Bitcoin because it’s like digital gold. It is used as an alternative store of wealth, for portfolio diversification, and long term investment."
+      iex_wallet_title: "Your transaction will be much easier with IEX Mobile Wallet"
+      iex_wallet_desc: "Download now, and feel easy transaction in <b> Indo Exchanger </b>"
+      mobile_pin_title: "Mobile PIN Protection"
+      mobile_pin_desc: "Your account is protected by Mobile PIN which is only you know that PIN, so all your transactions will be safe. Every transaction always required Mobile PIN, so you have to remember the PIN. "
+      mobile_buy_btc_title: "Buy and Sell Bitcoin."
+      mobile_buy_btc_desc: "Buy and Sell <b> Bitcoin</b> easily and comfortable in one application."
+      mobile_sell_title: "Send and Receive"
+      mobile_sell_desc: "Send and Receive <b> Bitcoin </b> easily and fastly in one application. When transfer <b> Bitcoin </b> you have to enter Mobile PIN and confirmation via email"
+      mobile_accountable_title: "Accountable"
+      mobile_accountable_desc: "All transaction has been recorded in Web apllication and Mobile Application, which is has syncrhonized with your Account in Mobile and Website. "
+    newslatter:
+      title: "Get Bitcoin Price"
+      content: "Subscribe your email to get </b> Bitcoin </b> update price" 
+    contact_section:
+      title: "Get in Touch"
+      content: "You need more information? Check what other persons are saying about our service. They are very happy with their transaction."
+      office_title: "Find us at the Office"
+      office_content: "Jl Keramat II no 15A RT 01 RW 08 <br> Kelurahan Kwitang Kecamatan Senen Jakarta Pusat - DKI Jakarta"
+      phone_title: "Work Phone"
+    rivan: 
+      title: "Link to rivan"
+    testimony: 
+      title: "See Why Our Clients Love <b> indoexchanger.co.id </b>"
+      content: "Check what other persons are saying about our services. They are very happy with their transaction."
+    about_us: 
+      title: "About Us"
+      description: "Meet the amazing team behind Indoe Exchanger and find out more about how we serve our customer."
+      content:
+        header: "<b> PT Indonesia Exchanger Utama</b> was established in 2017. The founder of our world-class cryptocurrency company used the same platform to buy and sell <b> Bitcoin </b>. Since our cryptocurrency company and user base continues to grow, we built a <b> Bitcoin Exchanger </b>."
+        description_member: "Anggota tim exchanger bitcoin kami saat ini berasal dari berbagai cabang ilmu yang berbeda, tapi kepercayaan yang sama dalam cryptocurrency telah menyatukan kami. Kami semua adalah orang yang sangat percaya masa depan mata uang digital dan kami senang menjadi bagian dari komunitas yang sedang tumbuh ini."
+    calculator: 
+      title: "Bitcoin Calculator"
+      description: "Simplify yourself using the <b> Bitcoin Calculator </b> platform to find out the price of dygital <b> Bitcoin </b> assets in the rupiah-bitcoin or bitcoin-rupiah conversion"
+    get_btc:
+      header_title: "Get Free Bitcoin"
+      title: "Here's How To Get <b> Bitcoin </b> Easily"
+      description: "There are several ways to get <b> Bitcoin </b> easily and for free, one of them is by playing online games and Mining."
+    how_to_register: 
+      header_title: "How to register account Indo Exchanger"
+      header_description: "PT Indonesia Exchanger Utama"
+      content_title: "Step by step to register  <a href='https://indoexchanger.co.id/'> Indoexchanger Account </a>"
+      step_one: "Please open the page <a href='https://indoexchanger.co.id' target='_blank'> www.indoexchanger.co.id </a>  on the main page click the 'REGISTER' button on the top right corner, then the page will appear as shown below."
+      step_two: "You will see the registration form. Please fill in the identity of your ID (Mandatory ID). after the contents of the ID card click the 'CONTINUE REGISTRATION' button to continue the registration process."
+      step_three: "Setelah proses registrasi berhasil seperti gambar di atas, selanjutnya cek email Anda untuk melakukan aktivasi akun <b> indoexchanger. </b>"
+      step_four: "You will receive an email from <a href='mailto:cs@indoexchanger.co.id'>cs@indoexchanger.co.id </a>. Then click the 'Activate Account'."
+      successfully_login: "congratulation yo've successfully <b> Indoexchanger's </b> account 🎉👏."
+      share: "This page is helpfully? Share to u'r social media"
+      login_step: 
+        title: "Login Akun <b> Indoexchanger </b>."
+        step_one: "Please go to the <a href='https://indoexchanger.co.id' target='_blank'alt='indoexchanger'> www.indoexchanger.co.id/private/login </a> page, and a page will appear like below this."
+        step_two: "Enter the username and password you created earlier, then click the 'LOGIN' button and the page will appear as shown below."
+        step_three: "You will receive an sms from <b> IndoExchang </ b>. Enter the SMS PIN and click on the 'SUBMIT' button. (Verification Sms only first time login."
+        step_four: "Scan barcode dibawah dengan menggunakan Aplikasi 'Google Authenticator' yang bisa di unduh di <a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en' target='_blank'> Play Store (Android) </a> atau <a href='https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8' target='_blank'> App Store (iPhone) </a>. Setelah di scan akan muncul pin akun Anda, Masukkan pin tersebut. Lalu klik 'SETUJU'. "
+        step_five: "For mor information how to use Google Authenticator, please view this video."
+

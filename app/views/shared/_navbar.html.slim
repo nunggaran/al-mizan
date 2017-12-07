@@ -1,0 +1,36 @@
+nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-scroll color-on-scroll="20" 
+  .container
+    .navbar-header
+      button.navbar-toggle data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to root_path, data: {turbolinks: false}
+      	= image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/v1511616612/assets/logo/Indoexcnager-white-small.png', class: "navbar-brand", alt: "Indo Exchanger Logo"
+      
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        / li = link_to t('navbar.deposito'), deposito_path
+        / li = link_to t('navbar.blog'), blog_path
+        li = link_to t('navbar.calculator'), calculator_path
+        li = link_to t('navbar.registrasi'), how_to_register_path
+        li = link_to t('navbar.login'), 'https://indoexchanger.co.id/private/login'
+        li.dropdown
+		      = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+		        = current_language_flag
+		        |   
+		        span.header-firstname = locale_nation(I18n.locale)
+		        b.caret
+		      ul.dropdown-menu
+		        / = language_flag.zip I18n.available_locales
+		        - language_flag.zip(I18n.available_locales).each do |language, locale|
+		          li= link_to params.merge({locale: locale.to_s}), data: {turbolinks: false}
+		              = image_tag language
+		              |   
+		              = locale_nation(locale)
+
+        
+        
+        
+         

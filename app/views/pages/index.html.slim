@@ -1,0 +1,141 @@
+-content_for :meta_tags
+  = display_meta_tags site: "JUAL BELI BITCOIN - PT Indonesia Exchanger Utama"
+  = display_meta_tags description: "PT Indonesia Exchanger adalah tempat untuk membeli dan menjual Bitcoin di Indonesia. Keunggulan kami adalah selain proses yang cepat, mudah, aman dan legal serta biaya barter yang murah. Selain itu Kami menyiapkan berbagai metode barter dan pencairan dengan mekanisme transfer antar bank di Indonesia."
+  = display_meta_tags keyword: "Indo Exchanger, Indonesia Exchanger, Jual beli Bitcoin, jual bitcoin murah, beli bitcoin mahal, jual beli bitcoin aman, jual beli bitcoin,bitcoin murah,beli bitcoin,Free Bitcoin, exchanger bitcoin, exchanger terpercaya"
+  = display_meta_tags author: "PT Indonesia Exchanger Utama"
+
+  meta property="og:image" content="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1200/v1511654797/assets/banner/indoexchanger-stamp-pen.jpg"/
+  meta content="https://indoexchanger.co.id#{request.fullpath}" property="og:url" /
+  meta content="Indo Exchanger, Indonesia Exchanger, Jual beli Bitcoin, jual bitcoin murah, beli bitcoin mahal, jual beli bitcoin aman, jual beli bitcoin,bitcoin murah,beli bitcoin,Free Bitcoin, exchanger bitcoin, exchanger terpercaya" name="keyword" /
+  meta content="JUAL BELI BITCOIN - PT INDONESIA EXCHANGER UTAMA" property="og:title" /
+  meta content="PT Indonesia Exchanger adalah tempat untuk membeli dan menjual Bitcoin di Indonesia. Keunggulan kami adalah selain proses yang cepat), mudah, aman dan legal serta biaya barter yang murah. Selain itu Kami menyiapkan berbagai metode barter dan pencairan dengan mekanisme transfer antar bank di Indonesia. " property="og:description" /
+  meta content="https://indoexchanger.co.id/file/img/indo-exchanger-iklan-jual-beli-bitcoin.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="JUAL BELI BITCOIN - PT INDONESIA EXCHANGER UTAMA" name="twitter:title" /
+  meta content="JUAL BELI BITCOIN - PT INDONESIA EXCHANGER UTAMA | PT Indonesia Exchanger adalah tempat untuk membeli dan menjual Bitcoin di Indonesia. Keunggulan kami adalah selain proses yang cepat, mudah, aman dan legal serta biaya barter yang murah. Selain itu Kami menyiapkan berbagai metode barter dan pencairan dengan mekanisme transfer antar bank di Indonesia. " name="twitter:description" /
+  meta content="https://indoexchanger.co.id/" name="twitter:url" /
+
+.page-header.header-filter style=("background-image: url('#{random_image_home}');")
+  .container
+    .row
+      .col-md-12
+        h3.price
+          = t('static_page.index.btc')
+          = number_to_currency(amount_btc["amountIDRBuy"], unit: "IDR ")
+      		
+        marquee.text-white behavior="" direction="" onmouseout="this.start();" onmouseover="this.stop();" style=("text-transform: uppercase; margin-bottom: 50px; font-size: 20px;") 
+          = t('static_page.index.running_text_welcome')
+          b style=("color: #FF9800")  |  
+          = t('static_page.index.running_text_registrasi')
+          b style=("color: #FF9800")  |  
+          = t('static_page.index.running_text_web')
+
+        h3 = t('static_page.index.tagline').html_safe
+        h4 = t('static_page.index.content_header').html_safe
+        br/
+       
+        h4 = t('static_page.index.register')
+        = link_to 'https://indoexchanger.co.id/private/',  target: "_blank" do
+          = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/v1511605273/website_biepec.svg', class: "mr-10 mb-20", alt: "indoexchanger"
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        = link_to 'http://bit.ly/iex-wallet', target: "_blank" do
+          = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/v1511592096/store-google_rancmp.svg', class: "mr-10 mb-20", alt: "IndoExchanger"
+          
+= render 'shared/section_one'
+
+.team-4.section-grey
+  .container
+    .row
+      .col-md-8.col-md-offset-2.text-center
+        h2.title
+          = t('static_page.index.why_use_btc_title').html_safe
+        h5.description
+          = t('static_page.index.why_use_btc_desc').html_safe
+    .row
+      .col-md-4
+        .card.card-profile
+          .card-avatar
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/b_rgb:ffffff/v1511671068/assets/bitcoin-icon/beralih.png', alt: "indoexchanger"
+          .card-content
+            h4.card-title
+              = t('static_page.index.barter_title')
+            p.card-description
+              = t('static_page.index.barter_desc').html_safe
+            
+      .col-md-4
+        .card.card-profile
+          .card-avatar
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/b_rgb:ffffff/v1511671071/assets/bitcoin-icon/poker-sm.png', alt: "indoexchanger"
+          .card-content
+            h4.card-title
+              = t('static_page.index.financial_ttitle')
+            p.card-description
+              = t('static_page.index.financial_desc').html_safe
+            
+      .col-md-4
+        .card.card-profile
+          .card-avatar
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/b_rgb:ffffff/v1511671070/assets/bitcoin-icon/doublecoin.png', alt: "indoexchanger"
+          .card-content
+            h4.card-title
+              = t('static_page.index.new_barter_title')
+            p.card-description
+              = t('static_page.index.new_barter_desc').html_safe
+#features.cd-section
+  .features-4.section-white
+    .container
+      .row
+        .col-md-8.col-md-offset-2.text-center
+          h2.title = t('static_page.index.iex_wallet_title')
+          h5.description
+            = t('static_page.index.iex_wallet_desc').html_safe
+      .row
+        .col-md-3.col-md-offset-1
+          .info.info-horizontal
+            .icon.icon-info
+              i.material-icons security
+            .description
+              h4.info-title = t('static_page.index.mobile_pin_title')
+              p = t('static_page.index.mobile_pin_desc')
+          .info.info-horizontal
+            .icon.icon-primary
+              i.fa.fa-btc
+            .description
+              h4.info-title = t('static_page.index.mobile_buy_btc_title')
+              p = t('static_page.index.mobile_buy_btc_desc').html_safe
+        .col-md-4
+          .phone-container
+            img src="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_500/v1511691102/assets/android-mockup/S7-iex-wallet.png" /
+        .col-md-3
+          .info.info-horizontal
+            .icon.icon-danger
+              i.fa.fa-send
+            .description
+              h4.info-title = t('static_page.index.mobile_sell_title')
+              p = t('static_page.index.mobile_sell_desc').html_safe
+          .info.info-horizontal
+            .icon.icon-success
+              i.fa.fa-file-text-o
+            .description
+              h4.info-title = t('static_page.index.mobile_accountable_title')
+              p = t('static_page.index.mobile_accountable_desc')
+      /.row
+        .col-md-3.col-md-offset-4
+          = link_to 'http://bit.ly/iex-wallet', target: "_blank" do
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_150/v1511700950/google-play-badge_3_sdmzrj.png', alt: "IndoExchanger", class: "img-center img-responsive"
+
+= render 'shared/testimony'
+= render 'shared/newslatter'
+= render 'shared/contact_section'
+
+-content_for :body_script_bottom
+  javascript:
+    jQuery( '#newsletter-form' ).formchimp( { 'buttonText': 'Thanks' } );
+  / script[type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgPpgOeWedR2DXbnJYcg0hI9rFGVJQ5dw"]
+// javascript:
+//   $().ready(function(){
+//     materialKitDemo.initContactUs2Map();
+//   });

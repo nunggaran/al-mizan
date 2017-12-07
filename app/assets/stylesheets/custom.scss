@@ -1,0 +1,110 @@
+@import 'material-kit/variables';
+$nprogress-color: #f1f1f1;
+$nprogress-height: 10px;
+$nprogress-zindex: 10100;
+
+@import 'nprogress';
+@import 'nprogress-bootstrap';
+
+.exhcanger-img{
+	margin-top: 70px;
+	max-width: 400px;
+}
+.ml-10 {
+	margin-left: 10px
+}
+.ml-20 {
+	margin-left: 20px
+}
+.ml-30 {
+	margin-left: 30px
+}
+.ml-40 {
+	margin-left: 40px
+}
+.ml-50 {
+	margin-left: 50px
+}
+.ml-60 {
+	margin-left: 60px
+}
+.mr-10{
+	margin-right: 10px
+}
+.mr-20{
+	margin-right: 20px
+}
+.mr-30{
+	margin-right: 30px
+}
+.mr-40{
+	margin-right: 40px
+}
+.mr-50{
+	margin-right: 50px
+}
+
+.mb-10{
+	margin-bottom: 10px
+}
+.mb-20{
+	margin-bottom: 20px
+}
+.mb-30{
+	margin-bottom: 30px
+}
+.mb-40{
+	margin-bottom: 40px
+}
+.mb-50{
+	margin-bottom: 50px
+}
+.mt-10{
+	margin-top: 10px
+}
+.mt-20{
+	margin-top: 20px
+}
+.mt-30{
+	margin-top: 30px
+}
+.mt-40{
+	margin-top: 40px
+}
+.mt-50{
+	margin-top: 50px
+}
+
+.img-center.img-responsive {
+    margin: 0 auto;
+}
+.features-5 h3 {
+	color: $white !important;
+}
+img .img-google-play{
+	height: 50;
+	width: 200;
+}
+.registration img {
+	margin:5px 0px 50px 0px;
+}
+.registration h4 {
+	margin:10px 0px 10px 0px;
+}
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 20.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    width: 100%;
+}

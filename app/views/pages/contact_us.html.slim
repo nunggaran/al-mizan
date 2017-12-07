@@ -1,0 +1,99 @@
+/.iframe-container
+  iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.6526386490075!2d106.84017482922268!3d-6.182846666416258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f436254c18eb%3A0x6bc0865e52cdbdf2!2sPT+Indonesia+Exchanger+Utama!5e0!3m2!1sen!2sid!4v1512187527439" width="600" height="450" frameborder="0" style="border:0" 
+#contactUsMap.big-map
+.main.main-raised
+  .contact-content
+    .container
+      h2.title Send us a message
+      .row
+        .col-md-6
+          p.description
+            | You can contact us with anything related to our Service. We'll get in touch with you as soon as possible.
+            br/
+            br/
+          = form_for @contact do |f|
+            .header.header-raised.header-primary.text-center
+              h4.card-title Contact Us
+            .card-content
+              .row
+                .col-md-6
+                  .form-group.label-floating.is-empty
+                    label.control-label First name
+                    = f.text_field :first_name, class: "form-control"
+                    span.material-input
+                .col-md-6
+                  .form-group.label-floating.is-empty
+                    label.control-label Last name
+                    = f.text_field :last_name, class: "form-control"
+                    span.material-input
+              .form-group.label-floating.is-empty
+                label.control-label Email address
+                = f.text_field :email, class: "form-control"
+                span.material-input
+              .form-group.label-floating.is-empty
+                label.control-label Your message
+                = f.text_area :message, class: "form-control", id: "message", rows: "6"
+                span.material-input
+              .row
+                .col-md-6
+                  .checkbox
+                    label
+                      input name="optionsCheckboxes" type="checkbox" /
+                      | I'm not a robot
+                .col-md-6
+                  = f.submit "Send Message", class: 'btn btn-primary pull-right'
+                  / button.btn.btn-primary.pull-right type="submit"  Send Message
+          /form#contact-form method="post" role="form" 
+            .form-group.label-floating
+              label.control-label Your name
+              input.form-control name="name" type="text" /
+            .form-group.label-floating
+              label.control-label Email address
+              input.form-control name="email" type="email" /
+            .form-group.label-floating
+              label.control-label Phone
+              input.form-control name="phone" type="text" /
+            .form-group.label-floating
+              label.control-label Your message
+              textarea#message.form-control name="message" rows="6" 
+            .submit.text-center
+              input.btn.btn-primary.btn-raised.btn-round type="submit" value=("Contact Us") /
+        .col-md-4.col-md-offset-2
+          .info.info-horizontal
+            .icon.icon-primary
+              i.material-icons pin_drop
+            .description
+              h4.info-title = t('static_page.contact_section.office_title')
+              p
+                = t('static_page.contact_section.office_content').html_safe
+          .info.info-horizontal
+            .icon.icon-primary
+              i.material-icons phone
+            .description
+              h4.info-title = t('static_page.contact_section.phone_title')
+              p
+                = link_to '+62812-2081-2265', 'tel:+62812-2081-2265'
+                br/
+                | Mon - Fri, 8:00-22:00
+          /.info.info-horizontal
+            .icon.icon-primary
+              i.material-icons business_center
+            .description
+              h4.info-title Legal Information
+              p
+                | PT Indonesia Exchanger Utama.
+                br/
+                | VAT &middot; EN2341241
+                br/
+                | IBAN &middot; EN8732ENGB2300099123
+                br/
+                | Bank &middot; Great Britain Bank
+br/
+br/
+-content_for :body_script_bottom
+  script  type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgPpgOeWedR2DXbnJYcg0hI9rFGVJQ5dw"
+  javascript:
+    $().ready(function(){
+      // the body of this function is in assets/material-kit.js
+      materialKitDemo.initContactUsMap();
+    });

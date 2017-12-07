@@ -1,0 +1,77 @@
+footer.footer.footer-white.footer-big
+  .container
+    .content
+      .row
+        .col-md-3
+          h5 = t('footer.column_one.title')
+          ul.links-vertical
+            
+            li
+              = link_to t('footer.column_one.about_us'), about_path
+            li
+              = link_to t('footer.column_one.cs'), "https://tawk.to/indoexchanger", target: "_blank"
+            li
+              = link_to t('footer.column_one.instruction'), how_to_register_path
+            li
+              = link_to 'contact us', contact_us_path, data: {turbolinks: false}
+            
+        .col-md-3
+          h5
+            = t('footer.column_two.title')
+          ul.links-vertical
+            li
+              = link_to t('footer.column_two.wallet'), "https://indoexchanger.co.id/private/", target: "_blank"
+            li 
+              = link_to 'Mobile wallet', 'http://bit.ly/iex-wallet', target: '_blank'
+            
+            
+        .col-md-3
+          h5
+            = t('footer.column_thrid.title')
+          ul.links-vertical
+            li
+              = link_to t('footer.column_thrid.about_us'), about_path
+            li 
+              / = link_to t('footer.column_thrid.legalitas'), "#"
+            li
+              = link_to t('footer.column_thrid.free_btc'), how_to_get_btc_path
+            
+        .col-md-3
+          h5
+            | Follow Us
+          ul.social-buttons
+            li
+              = link_to "https://twitter.com/ptindoexchanger", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank"
+                i.fa.fa-twitter
+            li
+              = link_to "http://www.facebook.com/indoexchanger", class: "btn btn-just-icon btn-simple btn-facebook", target: "_blank"
+                i.fa.fa-facebook-square
+            li
+              = link_to "https://plus.google.com/101349143818731344283", class: "btn btn-just-icon btn-simple btn-google", target: "_blank"
+                i.fa.fa-google-plus
+            li
+              = link_to "http://instagram.com/indoexchanger", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank"
+                i.fa.fa-instagram
+              
+          / h5
+          /   | Numbers Don't Lie
+          / h4.text-muted
+          /   | 14.521
+          /   small
+          /     | Freelancers
+          / h4
+          /   | 1.423.183
+          /   small
+          /     | Transactions
+    hr
+    .copyright.pull-center
+      /javascript:
+        TrustLogo("https://indoexchanger.co.id/file/img/comodo.png", "SC5", "none");
+      br/
+      |  Copyright ©
+      b
+      
+        |&nbsp; 2017 PT Indonesia Exchanger Utama.
+      
+      / a href="https://ssl.comodo.com/ev-ssl-certificates.php" id="comodoTL"
+      /   | Secure Connection

@@ -1,0 +1,97 @@
+#features.cd-section.section-white
+  .container
+    .features-1
+      .row
+        .col-md-8.col-md-offset-2
+          h2.title
+            = t('static_page.index.services').html_safe
+          h5.description
+            = t('static_page.index.description').html_safe
+      .row
+        .col-md-3
+          .info
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,h_100/v1511592939/bitcoin-exchange-rate-symbol_asclxt.png', class: "img-center img-responsive", alt: "Indo Exchanger"
+            h4.info-title
+              = t('static_page.index.buy_btc')
+            p = t('static_page.index.buy_btc_description')
+        .col-md-3
+          .info
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,h_100/v1511598335/bitcoin-in-a-pushcart_hrytq3.png', class: "img-center img-responsive", alt: "Indo Exchanger"
+            h4.info-title
+              = t('static_page.index.sell_btc')
+            p = t('static_page.index.sell_btc_description')
+        .col-md-3
+          .info
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,h_100/v1511595304/bitcoin-on-cloud-with-up-arrow-symbol_f9w55d.png', class: "img-center img-responsive", alt: "Indo Exchanger"
+            h4.info-title
+              = t('static_page.index.transfer_btc')
+            p = t('static_page.index.transfer_btc_description')
+        .col-md-3
+          .info
+            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,h_100/v1511594526/bitcoin-inside-a-mail-envelope-outline_hdjls0.png', class: "img-center img-responsive", alt: "Indo Exchanger"
+            h4.info-title
+              = t('static_page.index.receive_btc')
+            p = t('static_page.index.receive_btc_description').html_safe
+
+  .features-5[style="background-image: url('https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1000/v1511654797/assets/banner/indoexchanger-stamp-pen.jpg')"]
+    .col-md-8.col-md-offset-2.text-center
+      h2.title
+        = t('static_page.index.why_title')
+      h5.title  = t('static_page.index.why_indoexchanger').html_safe  
+
+    .container
+      .row
+        .col-sm-4
+          .info
+            .icon
+              i.material-icons
+                | verified_user
+            h4.info-title
+              = t('static_page.index.iex_trusted_title')
+            p = t('static_page.index.iex_trusted_description')
+              
+        .col-sm-4
+          .info
+            .icon
+              i.material-icons
+                | lock_outline
+            h4.info-title
+              = t('static_page.index.iex_security_title')
+            p = t('static_page.index.iex_security_description')
+              
+        .col-sm-4
+          .info
+            .icon
+              i.material-icons
+                | flash_on
+            h4.info-title
+              = t('static_page.index.iex_easy_title')
+            p = t('static_page.index.iex_easy_description').html_safe
+              
+      .row
+        .col-sm-4
+          .info
+            .icon
+              i.material-icons
+                | cloud_done
+            h4.info-title
+              = t('static_page.index.iex_secure_title')
+            p = t('static_page.index.iex_secure_description').html_safe
+              
+        .col-sm-4
+          .info
+            .icon
+              i.material-icons
+                | beenhere
+            h4.info-title
+              = t('static_page.index.iex_easy_two').html_safe
+            p = t('static_page.index.iex_easy_two_des').html_safe
+              
+        .col-sm-4
+          .info
+            .icon
+              i.material-icons
+                | chat
+            h4.info-title
+              = t('static_page.index.iex_cs_title')
+            p = t('static_page.index.iex_cs_desc').html_safe

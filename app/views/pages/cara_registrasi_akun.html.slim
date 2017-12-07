@@ -1,0 +1,100 @@
+-content_for :meta_tags
+  - set_meta_tags title: 'Cara Registrasi Akun Indoexchanger - PT Indonesia Exchanger Utama',
+                 description: 'Cara Mendapatkan Bitcoin Cara-Cara Untuk Menpatkan Bitcoin Dengan Mudah Ada beberapa cara untuk mendapatkan Bitcoin secara mudah dan gratis, salah satunya adalah dengan bermain game-game online dan Mining.',
+                 keywords: 'Indo Exchanger,Cara Mendapatkan Bitcoon, Indonesia Exchanger, Jual beli Bitcoin, jual bitcoin murah, beli bitcoin mahal, jual beli bitcoin aman, jual beli bitcoin,bitcoin murah,beli bitcoin,Free Bitcoin'
+  meta property="og:image" content="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1000/v1511654797/assets/banner/indoexchanger-stamp-pen.jpg"/
+  meta content="https://indoexchanger.co.id#{request.fullpath}" property="og:url" /
+  meta content="Cara Registrasi Akun Indoexchanger - PT Indonesia Exchanger Utama | Jual Beli Bitcoin" property="og:title" /
+  meta content="Cara Registrasi Akun Indoexchanger - PT Indonesia Exchanger Utama adalah tempat untuk membeli dan menjual Bitcoin di Indonesia. Keunggulan kami adalah selain proses yang cepat, mudah, aman dan legal serta biaya barter yang murah. Selain itu Kami menyiapkan berbagai metode barter dan pencairan dengan mekanisme transfer antar bank di Indonesia. " property="og:description" /
+  meta content="https://indoexchanger.co.id/file/img/indo-exchanger-iklan-jual-beli-bitcoin.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="Cara Registrasi Akun Indoexchanger - PT Indonesia Exchanger Utama" name="twitter:title" /
+  meta content="Cara Registrasi Akun Indoexchanger - PT Indonesia Exchanger Utama | Perusahaan kami merupakan perusahaan yang legal dan terdaftar secara resmi di badan Hukum Republik Indonesia " name="twitter:description" /
+  meta content="https://indoexchanger.co.id#{request.fullpath}" name="twitter:url" /
+.page-header.header-filter.header-small data-parallax="true" filter-color="orange" style="background-image: url('#{random_image_header}');"
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        h1.title = t('static_page.how_to_register.header_title')
+        h4 
+          = t('static_page.how_to_register.header_description')
+        
+.main.main-raised
+  .section
+    .container
+      .description.text-center
+        h2 = t('static_page.how_to_register.content_title').html_safe
+        hr/
+        h4 = t('static_page.get_btc.description').html_safe
+      br/ 
+      br/
+      .row.registration
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.step_one').html_safe
+        .col-md-8.col-md-offset-2         
+          = cl_image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/v1511878349/assets/tutorial/1.png', class: "img img-responsive", alt: "indoexchanger"
+          /=video_tag("https://res.cloudinary.com/indoexchanger/video/upload/c_scale,h_600/v1511879090/assets/tutorial/googleauth.mov", controls: true, autobuffer: true)
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.step_two').html_safe
+        .col-md-8.col-md-offset-2         
+          = cl_image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/v1511878384/assets/tutorial/step-two-indoexchanger.jpg', class: "img img-responsive", alt: "indoexchanger"
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.step_three').html_safe
+        .col-md-8.col-md-offset-2         
+          = cl_image_tag("assets/tutorial/step-three-indoexchanger.jpg", class: "img img-responsive", alt: "Indoexchanger")
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.step_four').html_safe
+        .col-md-8.col-md-offset-2         
+          = cl_image_tag("assets/tutorial/step-four-indoexchanger.jpg", class: "img img-responsive", alt: "Indoexchanger")
+          h3.text-center = t('static_page.how_to_register.successfully_login').html_safe
+      hr/
+      .row.registration
+        .col-md-12
+          .description
+            h2.text-center = t('static_page.how_to_register.login_step.title').html_safe   
+        .col-md-12
+          h4.text-center
+            = t('static_page.how_to_register.login_step.step_one').html_safe
+        .col-md-8.col-md-offset-2
+          = cl_image_tag 'assets/tutorial/step-five-indoexchanger.jpg', class: "img img-responsive", alt: "indoexchanger"
+        .col-md-12
+          h4.text-center
+            = t('static_page.how_to_register.login_step.step_two').html_safe
+        
+        .col-md-8.col-md-offset-2
+          = cl_image_tag 'assets/tutorial/step-six-indoexchanger.jpg', class: "img img-responsive", alt: "indoexchanger"
+        .col-md-12
+          h4.text-center 
+            = t('static_page.how_to_register.login_step.step_three').html_safe
+        .col-md-6.col-md-offset-4
+          = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,h_671/v1511878604/assets/tutorial/sms-indoexchanger.jpg', class: 'img img-responsive ', alt: 'indoexchanger'
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.login_step.step_four').html_safe
+        .col-md-8.col-md-offset-2
+          = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1668/v1511930435/assets/tutorial/Screen_Shot_2017-11-29_at_11.36.21_AM.png', class: "img img-responsive", alt: 'indoexchanger'
+        .col-md-12
+          h4.text-center
+            = t('static_page.how_to_register.login_step.step_five').html_safe
+        .col-md-4.col-md-offset-4
+          =video_tag("https://res.cloudinary.com/indoexchanger/video/upload/c_scale,h_600/v1511879090/assets/tutorial/googleauth.mov", controls: true, autobuffer: true)
+      .social-line.social-line-white.text-center.mt-50
+        .container
+          .row
+            .col-md-12
+              h4.title = t('static_page.how_to_register.share')
+            a.btn.btn-twitter.btn-round target="_blank" href="https://twitter.com/home?status=https%3A//indoexchanger.co.id/cara-registrasi-akun-indoexchanger" 
+              i.fa.fa-twitter
+              |&nbsp; Twitter 
+            a.btn.btn-facebook.btn-round target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//indoexchanger.co.id/cara-registrasi-akun-indoexchanger" 
+              i.fa.fa-facebook-square
+              |&nbsp; Facebook
+            a.btn.btn-google.btn-round target="_blank" href="https://plus.google.com/share?url=https%3A//indoexchanger.co.id/cara-registrasi-akun-indoexchanger" 
+              i.fa.fa-google-plus
+              |&nbsp; Google
+
+
+br/
+br/  
