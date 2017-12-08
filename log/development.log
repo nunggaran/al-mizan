@@ -1425,3 +1425,130 @@ Unpermitted parameter: locale
 Completed 200 OK in 693ms (Views: 683.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/sa" for 127.0.0.1 at 2017-12-08 10:18:56 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Parameters: {"locale"=>"sa"}
+Unpermitted parameter: locale
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pages/index.html.slim within layouts/application
+  Rendered shared/_section_one.html.slim (56.6ms)
+  Rendered shared/_testimony.html.slim (10.6ms)
+  Rendered shared/_newslatter.html.slim (9.9ms)
+  Rendered shared/_contact_section.html.slim (28.4ms)
+  Rendered pages/index.html.slim within layouts/application (197.5ms)
+  Rendered layouts/_analytics.html.slim (7.0ms)
+  Rendered shared/_navbar.html.slim (39.0ms)
+  Rendered shared/_footer.html.slim (13.8ms)
+  Rendered layouts/_analytics_bottom.html.slim (10.7ms)
+Completed 200 OK in 1096ms (Views: 1034.4ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/sa/contacts" for 127.0.0.1 at 2017-12-08 10:19:06 +0700
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RTEBakAkpH4i+pgEECVY9I5M/XsOU5h6mP3FfoKk1hYRspJph4YiALpIeXdWZlq8fCGfjnD0EsahTfu5QTgnVA==", "contact"=>{"first_name"=>"Muhammad yana", "last_name"=>"Mulyana", "email"=>"yanatamfan@gmail.com", "message"=>"asassas"}, "commit"=>"Send Message", "locale"=>"sa"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.3ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Muhammad yana"], ["last_name", "Mulyana"], ["email", "yanatamfan@gmail.com"], ["message", "asassas"], ["created_at", "2017-12-08 03:19:06.910476"], ["updated_at", "2017-12-08 03:19:06.910476"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/contact_mailer.html.slim within layouts/mailer
+  Rendered user_mailer/_footer.html.slim (15.7ms)
+  Rendered user_mailer/contact_mailer.html.slim within layouts/mailer (29.5ms)
+UserMailer#contact_mailer: processed outbound mail in 393.6ms
+Sent mail to muhammadyanaa@gmail.com (3223.9ms)
+Date: Fri, 08 Dec 2017 10:19:08 +0700
+From: Ponpes Modern Al-Mizan <no-reply@al-mizan.sch.id>
+To: muhammadyanaa@gmail.com
+Message-ID: <5a2a04ac12920_1bad3ff6faf0ee1c5187@yana-2.local.mail>
+Subject: Question from Muhammad yana Mulyana
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <table bgcolor=3D"#f6f6f6" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" height=3D"100%" style=3D"margin-bottom: 20px;" width=3D"100%"><tbo=
+dy><tr><td><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" height=3D"100%" style=3D" max-width:600px; border-radius:3px;"=
+ width=3D"100%"><tr><td align=3D"center"><img src=3D"https://res.cloudina=
+ry.com/muhammadyana/image/upload/c_scale,w_615/v1512631795/al-mizan/logo/=
+Graphic1-2.png" style=3D"padding-top: 25px;margin-bottom: 25px;" /></td><=
+/tr><tr bgcolor=3D"white"><td style=3D"padding:0 25px 25px 25px;font-size=
+:20px;color:#616161;font-weight:700;color:#1fb8ff;"></td></tr><tr bgcolor=
+=3D"white"><td style=3D"padding:0 25px 15px 25px;font-size:20px;color:#61=
+6161;">Hi Admin Ponpes Al-Mizan,</td></tr><tr bgcolor=3D"white"><td style=
+=3D"padding:0 25px 15px 25px;font-size:14px;color:#616161;font-weight:300=
+;line-height:22px;">Someone want to say hello :)<ul class=3D"list" style=3D=
+"padding:0px;list-style:none;"><li style=3D"margin:0px;"><b>Full name: &n=
+bsp;</b>Muhammad yana Mulyana</li><li style=3D"margin:0px;"><b>Email: &nb=
+sp;</b>yanatamfan@gmail.com</li></ul><div class=3D"tell" style=3D"margin:=
+ 0 auto;text-align: left;"><h4 style=3D"margin-bottom:0px;">Message:</h4>=
+<div class=3D"box-fill-tell" style=3D"width: 100%;padding:0px;"><p style=3D=
+"margin:0px">asassas</p></div></div></td></tr><tr bgcolor=3D"white"><td s=
+tyle=3D"background:url(https://res.cloudinary.com/indoexchanger/image/upl=
+oad/v1511945733/assets/logo/signature-full.png) no-repeat bottom;padding:=
+147px 25px 25px 65%;font-size:14px;color:#616161;font-weight:300;line-hei=
+ght:22px;"></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td>&n=
+bsp;</td></tr><tr><td>&nbsp;</td></tr><tr bgcolor=3D"white"><td style=3D"=
+background: url(https://s3-ap-southeast-1.amazonaws.com/41studio-email-as=
+sets/images/border-top-footer.png) no-repeat; background-size: 100%;"><ta=
+ble align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" hei=
+ght=3D"100%" style=3D"max-width:600px; padding-top: 40px; padding-bottom:=
+ 10px;" width=3D"100%"><tr><td style=3D"padding-right: 15px;" valign=3D"t=
+op"><img alt=3D"Icon" src=3D"https://s3-ap-southeast-1.amazonaws.com/41st=
+udio-email-assets/images/icon-marker.png" /></td><td><span style=3D"color=
+: #1fb8ff; display: block;"> Address :</span><span style=3D"color: #83838=
+3; font-size: 10px;">Jl Jend Sudirman KM 3<br />Ar-Royyan's Building 2nd =
+floor <br /> Narimbang - Rangkasbitung<br />Lebak - Banten </span><br /><=
+a href=3D"https://indoexchanger.co.id" style=3D"color: #1fb8ff; text-deco=
+ration: none; font-size: 10px;" target=3D"_blank"> www.al-mizan.sch.id</a=
+></td><td style=3D"padding-right: 15px;" valign=3D"top"><img alt=3D"Icon"=
+ src=3D"https://s3-ap-southeast-1.amazonaws.com/41studio-email-assets/ima=
+ges/icon-phone.png" /></td><td valign=3D"top"><span style=3D"color: #1fb8=
+ff; display: block;"> Phone :</span><span style=3D"color: #838383; font-s=
+ize: 10px;"><a href=3D"telp:0252206459" style=3D"color: #1fb8ff; text-dec=
+oration: none; font-size: 10px;">(0252) 206459</a></span></td><td style=3D=
+"padding-right: 15px;" valign=3D"top"><img alt=3D"Icon" src=3D"https://s3=
+-ap-southeast-1.amazonaws.com/41studio-email-assets/images/icon-envelop.p=
+ng" /></td><td valign=3D"top"><span style=3D"color: #1fb8ff; display: blo=
+ck;"> Email :</span><span style=3D"color: #838383; font-size: 10px;"><a h=
+ref=3D"mailto:muhammadyanaa@gmail.com" style=3D"color: #1fb8ff; text-deco=
+ration: none; font-size: 10px;">hello@al-mizan.sch.id</a></span></td></tr=
+></table></td></tr></tbody></table>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/sa
+Completed 302 Found in 4381ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/sa" for 127.0.0.1 at 2017-12-08 10:19:11 +0700
+Processing by PagesController#index as HTML
+  Parameters: {"locale"=>"sa"}
+Unpermitted parameter: locale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pages/index.html.slim within layouts/application
+  Rendered shared/_section_one.html.slim (14.3ms)
+  Rendered shared/_testimony.html.slim (9.1ms)
+  Rendered shared/_newslatter.html.slim (22.3ms)
+  Rendered shared/_contact_section.html.slim (10.3ms)
+  Rendered pages/index.html.slim within layouts/application (133.6ms)
+  Rendered layouts/_analytics.html.slim (14.1ms)
+  Rendered shared/_navbar.html.slim (32.6ms)
+  Rendered shared/_footer.html.slim (35.7ms)
+  Rendered layouts/_analytics_bottom.html.slim (4.9ms)
+Completed 200 OK in 447ms (Views: 440.3ms | ActiveRecord: 0.3ms)
+
+

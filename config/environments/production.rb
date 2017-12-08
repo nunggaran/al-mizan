@@ -71,7 +71,7 @@ Rails.application.configure do
     :address              => 'smtp.develmail.com',
     :port                 => '587',
     :domain               => 'www.al-mizan.herokuapp.com',
-    :authentication       => 'CRAM-MD5',
+    :authentication       => 'LOGIN',
     :enable_starttls_auto => true,
     :openssl_verify_mode  => 'none'
   }
