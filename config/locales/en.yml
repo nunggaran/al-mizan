@@ -71,6 +71,25 @@ en:
       visi_misi:
         title: "Vision and Mission of Modern Pesantren <b> Al-Mizan </b>"
         visi: "Pondok Pesantren Modern <b> Al-Mizan </ b> as a prosperous pesantren that is able to print santri berakhlaq noble, able-bodied, creative, knowledgeable and open-minded, sincere, modest, blessed Islamiyah and self-reliant."
+        one: "First"
+        two: "Second"
+        three: "Third"
+        four: "Fourth"
+        five: "Fivth"
+        six: "Sixth"
+        seven: "Seventh"
+        eight: "Eighth"
+        nine: "Ninth"
+        misi:
+          one: "Being a place in building spiritual values ​​and moral glory through the process of guidance and learning."
+          two: "Inculcating understanding and awareness of the meaning of 'lillah' , the meaning of charity, the meaning of taqwa, and sincerity as a torch that will bring the light of Islam"
+          three: "Organizing sports and arts activities in a focused and professional manner, as well as providing representative facilities and infrastructure."
+          four: "Build a strong, steadfast soul, and be able to master yourself through a simple and humble lifestyle."
+          five: "Building superior human resources that have intellectual capacity and professional readiness with a balance of religious and general knowledge"
+          six: "Educating students to be good at appreciating the ideas and thoughts of others independently with clear and strong ground of thought."
+          seven: "Building a creative soul to have the ability as a motivator, integrator and stabilizer for society"
+          eight: "Together with the sisrem of democracy and the fabric of religious feelings both within and outside the pesantren."
+          nine: "Instilling openness in thinking, doing, and determining the future in choosing the way of life in society."
 
       tagline: "<b>Sell and Buy Bitcoin</b> with <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Welcome to PT. Indonesia Exchanger Utama"
@@ -135,8 +154,8 @@ en:
     rivan: 
       title: "Link to rivan"
     testimony: 
-      title: "See Why Our Clients Love <b> indoexchanger.co.id </b>"
-      content: "Check what other persons are saying about our services. They are very happy with their transaction."
+      title: "See what alumni say about Ponpes <b> Al-Mizan </b>"
+      content: "Here are some views of alumni against Al-Mizan."
     about_us: 
       title: "About Us"
       description: "Meet the amazing team behind Indoe Exchanger and find out more about how we serve our customer."

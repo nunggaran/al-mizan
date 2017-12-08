@@ -69,6 +69,25 @@ id:
       visi_misi:
         title: "Visi dan Misi Pondok Pesantren Modern <b>Al-Mizan</b>"
         visi: "Pondok Pesantren Modern <b> Al-Mizan</b> sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari."
+        one: "Pertama"
+        two: "Ke-dua"
+        three: "Ke-tiga"
+        four: "Ke-empat"
+        five: "Ke-lima"
+        six: "Ke-enam"
+        seven: "Ke-tujuh"
+        eight: "Ke-delapan"
+        nine: "Ke-sembilan"
+        misi:
+          one: "Menjadi tempat dalam membangun nilai-nilai spiritual dan kemuliaan akhlaq melalui proses bimbingan dan pembelajaran."
+          two: "Menanamkan pengertian dan kesadaran tentang arti 'lillah', arti beramal, arti taqwa, dan arti ikhlas sebagai obor yang akan membawa cahaya penerangan islam"
+          three: "Menyelenggarakan kegiatan-kegiatan olahraga dan seni budaya secara terarah dan profesional, serta menyediakan sarana dan prasarana yang representatif."
+          four: "Membangun jiwa yang kuat, tabah, dan mampu menguasai diri melalui pola hidup sederhana dan bersahaja."
+          five: "Membangun sumber daya manusia unggul yang memiliki kapasitas intelektual dan kesiapan profesional dengan keseimbangan pengetahuan agama dan umum"
+          six: "Mendidik santri untuk pandai menghargai ide dan fikiran orang lain secara independen dengan landasan pola fikir yang jelas dan kuat."
+          seven: "Membangun jiwa kreatif untuk memiliki kemampuan sebagai motivator, integrator dan stabilisator bagi masyarakat"
+          eight: "Menjalin kebersamaan dengan sisrem demokrasi dan jalinan perasaan keagamaan baik di dalam maupun di luar pesantren."
+          nine: "Menanamkan keterbukaan dalam berfikir, berbuat, dan menentukan masa depan dalam memilih jalan hidup di masyarakat."
       tagline: "<b>Jual Beli Bitcoin</b> anda bersama <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Selamat Datang di PT. Indonesia Exchanger Utama"
       running_text_registrasi: "Untuk pendaftar baru silahkan lihat video cara register"
@@ -134,8 +153,8 @@ id:
     rivan: 
       title: "Link ke rivan"
     testimony: 
-      title: "Mengapa banyak nasabah menyukai <b> indoexchanger.co.id </b>"
-      content: "Periksa apa yang orang lain katakan tentang layanan kami. Mereka sangat senang dengan transaksi mereka."
+      title: "Apa kata para alumni tentang <b> Al-Mizan </b>"
+      content: "Berikut beberapa pandangan alumni terhadap Al-Mizan"
     about_us: 
       title: "Tentang Kami"
       description: "Temui tim luar biasa di balik indoexchanger ini dan cari tahu lebih banyak tentang bagaimana kami melayani nasabah."
