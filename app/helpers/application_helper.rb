@@ -47,6 +47,11 @@ module ApplicationHelper
     return images.sample
   end
 
+  def random_image_activiy
+    images = %w(https://res.cloudinary.com/muhammadyana/image/upload/c_scale,h_450/v1512717261/al-mizan/activity/KMD-6.jpg https://res.cloudinary.com/muhammadyana/image/upload/c_scale,h_450/v1512717250/al-mizan/activity/KMD-5.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512717236/al-mizan/activity/14212078_1172167089508025_2667288149476048747_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512717505/al-mizan/activity/14064071_1159726490752085_4614359848663542672_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512717747/al-mizan/activity/fata3.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512717188/al-mizan/activity/da1.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512717647/al-mizan/activity/UTS3.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512717591/al-mizan/activity/14729238_1069258419862201_117536813428468076_n.jpg)
+    return images.sample
+  end
+
   def random_image_home
     images = %w(https://res.cloudinary.com/muhammadyana/image/upload/v1512700816/al-mizan/background/13781848_1133994316658636_2663626792748662069_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512631618/al-mizan/background/13776027_1133994073325327_6243295768723387211_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512631708/al-mizan/background/silaturrahmi-4.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512632320/al-mizan/background/14330073_1179143412143726_4215595160823234128_n.jpg)
     return images.sample

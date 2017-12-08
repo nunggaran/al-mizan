@@ -139,35 +139,29 @@
           h5.description
             = t('static_page.index.iex_wallet_desc').html_safe
       .row
-        .col-md-3.col-md-offset-1
-          .info.info-horizontal
-            .icon.icon-info
-              i.material-icons security
-            .description
-              h4.info-title = t('static_page.index.mobile_pin_title')
-              p = t('static_page.index.mobile_pin_desc')
-          .info.info-horizontal
-            .icon.icon-primary
-              i.fa.fa-btc
-            .description
-              h4.info-title = t('static_page.index.mobile_buy_btc_title')
-              p = t('static_page.index.mobile_buy_btc_desc').html_safe
-        .col-md-4
-          .phone-container
-            img src="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_500/v1511691102/assets/android-mockup/S7-iex-wallet.png" /
-        .col-md-3
-          .info.info-horizontal
-            .icon.icon-danger
-              i.fa.fa-send
-            .description
-              h4.info-title = t('static_page.index.mobile_sell_title')
-              p = t('static_page.index.mobile_sell_desc').html_safe
-          .info.info-horizontal
-            .icon.icon-success
-              i.fa.fa-file-text-o
-            .description
-              h4.info-title = t('static_page.index.mobile_accountable_title')
-              p = t('static_page.index.mobile_accountable_desc')
+        - 6.times do
+          .col-md-4
+            .card.card-blog
+              .card-image
+                a href="#pablo" 
+                  img.img src="#{random_image_activiy}" /
+                .colored-shadow style=("background-image: url(#{random_image_activiy}); opacity: 1;") 
+                .ripple-container
+              .card-content
+                h6.category.text-success Legal
+                h4.card-title
+                  a href="#pablo"  5 Common Legal Mistakes That Can Trip-Up Your Startup
+                p.card-description
+                  | Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                .footer
+                  .author
+                    a href="#pablo" 
+                      img.avatar.img-raised alt="..." src="assets/img/faces/marc.jpg" /
+                      span Mike John
+                  .stats
+                    i.material-icons schedule
+                    | 5 min read
+
       /.row
         .col-md-3.col-md-offset-4
           = link_to 'http://bit.ly/iex-wallet', target: "_blank" do
