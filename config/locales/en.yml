@@ -33,9 +33,15 @@ en:
   static_page:
     index:
       header:
+        button_one: "Explore"
+        button_third: "See the answer"
         first_tagline: "Al-Mizan Islamic Boarding School"
-        second_tagline: "Let's School in Al-Mizan"
-        third_tagline: "Al-Mizan, school end of the world hereafter"
+        first_header_desc: "Al-Mizan as a prosperous pesantren capable of printing santri berakhlaq noble, able-bodied, creative, knowledgeable and open-minded, sincere spirit, modesty, berukhuwah Islamiyah and self-reliant."
+        second_tagline: "Welcome to Al-Mizan"
+        second_header_desc: "Welcome to Al-Mizan Pesantren Website. We dedicate to you all the information about Al-Mizan Boarding School. Please explore our simple site, hopefully give a little information and insight on Sundanese Al-Mizan pesantren."
+        third_tagline: "Al-Mizan, Stand above and for all factions"
+        third_header_desc: "To Al-Mizan, what are you looking for?"
+
       tagline: "<b>Sell and Buy Bitcoin</b> with <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Welcome to PT. Indonesia Exchanger Utama"
       running_text_registrasi: "For new registrants please see the video tutorial"

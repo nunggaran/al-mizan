@@ -43,12 +43,12 @@ module ApplicationHelper
   end
 
   def random_image_header
-    images = %w(https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1200/v1511617055/assets/banner/home-v3.jpg https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1200/v1511617114/assets/banner/home-indoexchanger.jpg https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1200/v1511617351/assets/banner/indo-home-v2.jpg https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1000/v1511654797/assets/banner/indoexchanger-stamp-pen.jpg)
+    images = %w(https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1200/v1511617055/assets/banner/home-v3.jpg  https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1200/v1511617114/assets/banner/home-indoexchanger.jpg https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1200/v1511617351/assets/banner/indo-home-v2.jpg https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_1000/v1511654797/assets/banner/indoexchanger-stamp-pen.jpg)
     return images.sample
   end
 
   def random_image_home
-    images = %w(https://res.cloudinary.com/muhammadyana/image/upload/v1512631618/al-mizan/background/13776027_1133994073325327_6243295768723387211_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512631708/al-mizan/background/silaturrahmi-4.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512632320/al-mizan/background/14330073_1179143412143726_4215595160823234128_n.jpg)
+    images = %w(https://res.cloudinary.com/muhammadyana/image/upload/v1512700816/al-mizan/background/13781848_1133994316658636_2663626792748662069_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512631618/al-mizan/background/13776027_1133994073325327_6243295768723387211_n.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512631708/al-mizan/background/silaturrahmi-4.jpg https://res.cloudinary.com/muhammadyana/image/upload/v1512632320/al-mizan/background/14330073_1179143412143726_4215595160823234128_n.jpg)
     return images.sample
   end
 

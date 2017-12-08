@@ -59,14 +59,13 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "indoexchanger-v2_#{Rails.env}"
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
-
   config.action_mailer.smtp_settings = {
-       :address => "smtp.gmail.com",
-       :port => 587,
-       :user_name => "billing@indoexchanger.co.id",
-       :password => "H4kun@M4tat4",
-       :authentication => :plain,
-       :enable_starttls_auto => true
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => 'asilah',
+      :password       => '@silahSendgrid22',
+      :domain         => 'www.al-mizan.herokuapp.com'
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
@@ -105,7 +104,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = {:host => "https://indoexchanger.co.id"}
+  config.action_mailer.default_url_options = {:host => "https://al-mizan.herokuapp.com/"}
 end
-Rails.application.routes.default_url_options[:host] = 'https://indoexchanger.co.id'
+Rails.application.routes.default_url_options[:host] = 'https://al-mizan.herokuapp.com/'
 

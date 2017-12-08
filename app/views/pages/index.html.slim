@@ -1,6 +1,6 @@
 -content_for :meta_tags
   = display_meta_tags site: "Al-Mizan - Pondok Pesantren Modern Al-Mizan"
-  = display_meta_tags description: "Pondok Pesantren Modern Al-Mizan adalah sebuah pondok pesantren yang modern dimana para santri tidak hanya diajarkan ilmu agama saja, tetapi semua bidang ilmu pengetahuan, seperti IPA, IPS dan IPTEK. Al-Mizan merupakan sekolah bertaraf dunia Akhirat yang terletak di narimbang rangkas bitung banteng indonesia"
+  = display_meta_tags description: "Pondok Pesantren Modern Al-Mizan sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari."
   = display_meta_tags keyword: "Al-Mizan, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih "
   = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
 
@@ -8,81 +8,69 @@
   meta content="https://al-mizan.herokuapp.com#{request.fullpath}" property="og:url" /
   meta content="Al-Mizan, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih " name="keyword" /
   meta content="Al-Mizan - Pondok Pesantren Modern Al-Mizan" property="og:title" /
-  meta content="Pondok Pesantren Modern Al-Mizan adalah sebuah pondok pesantren yang modern dimana para santri tidak hanya diajarkan ilmu agama saja, tetapi semua bidang ilmu pengetahuan, seperti IPA, IPS dan IPTEK. Al-Mizan merupakan sekolah bertaraf dunia Akhirat yang terletak di narimbang rangkas bitung banteng indonesia. " property="og:description" /
+  meta content="Pondok Pesantren Modern Al-Mizan sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari. " property="og:description" /
   meta content="https://res.cloudinary.com/muhammadyana/image/upload/v1512632320/al-mizan/background/14330073_1179143412143726_4215595160823234128_n.jpg" property="og:image:secure_url" /
   meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
   meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
   / twitter card
   meta content="summary" name="twitter:card" /
   meta content="Al-Mizan - Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
-  meta content="Al-Mizan - Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah pondok pesantren yang modern dimana para santri tidak hanya diajarkan ilmu agama saja, tetapi semua bidang ilmu pengetahuan, seperti IPA, IPS dan IPTEK. Al-Mizan merupakan sekolah bertaraf dunia Akhirat yang terletak di narimbang rangkas bitung banteng indonesia. " name="twitter:description" /
+  meta content="Al-Mizan - Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari. " name="twitter:description" /
   meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
 
 .header-3
-  #carousel-example-generic.carousel.slide data-ride="carousel" 
+  #carousel-header.carousel.slide data-ride="carousel" 
     .carousel.slide data-ride="carousel" 
       /! Indicators
       ol.carousel-indicators
-        li.active data-slide-to="0" data-target="#carousel-example-generic" 
-        li data-slide-to="1" data-target="#carousel-example-generic" 
-        li data-slide-to="2" data-target="#carousel-example-generic" 
+        li.active data-slide-to="0" data-target="#carousel-header" 
+        li data-slide-to="1" data-target="#carousel-header" 
+        li data-slide-to="2" data-target="#carousel-header" 
       /! Wrapper for slides
       .carousel-inner
         .item.active
           .page-header.header-filter style=("background-image: url('#{random_image_home}');") 
             .container
               .row
-                .col-md-12.text-left
-                  h1.title = t('static_page.index.header.first_tagline')
-                  h4 Dolce &amp; Gabbana is a luxury Italian fashion house founded in 1985 in Legnano by Italian designers Domenico Dolce and Stefano Gabbana. The two met in Milan in 1980 and designed for the same fashion house.
+                .col-md-10.col-md-offset-1.text-center
+                  h1.title = t('static_page.index.header.second_tagline')
+                  h4 = t('static_page.index.header.second_header_desc')
                   br/
                   .buttons
-                    a.btn.btn-primary.btn-lg href="#pablo" 
-                      | Read More
-                    a.btn.btn-just-icon.btn-white.btn-simple.btn-lg href="#pablo" 
-                      i.fa.fa-twitter
-                    a.btn.btn-just-icon.btn-white.btn-simple.btn-lg href="#pablo" 
-                      i.fa.fa-facebook-square
-                    a.btn.btn-just-icon.btn-white.btn-simple.btn-lg href="#pablo" 
-                      i.fa.fa-get-pocket
-        .item
+                    = link_to t('static_page.index.header.button_one'), '#', class: "btn btn-primary btn-lg"
+                    
+
+        .item.
           .page-header.header-filter style=("background-image: url('#{random_image_home}');") 
             .container
               .row
-                .col-md-10.col-md-offset-1.text-center
-                  h1.title = t('static_page.index.header.second_tagline')
-                  h4 Dolce &amp; Gabbana is a luxury Italian fashion house founded in 1985 in Legnano by Italian designers Domenico Dolce and Stefano Gabbana. The two met in Milan in 1980 and designed for the same fashion house.
+                .col-md-12.text-left
+                  h1.title = t('static_page.index.header.first_tagline')
+                  h4 = t('static_page.index.header.first_header_desc')
                   br/
                   h6 Connect with us on:
                   .buttons
-                    a.btn.btn-just-icon.btn-white.btn-simple.btn-lg href="#pablo" 
-                      i.fa.fa-twitter
-                    a.btn.btn-just-icon.btn-white.btn-simple.btn-lg href="#pablo" 
+                    = link_to 'https://www.facebook.com/Pondok-Pesantren-Modern-Al-Mizan-Putra-Rangkasbitung-165675903497223/', class: 'btn btn-just-icon btn-white btn-lg btn-simple', target: '_blank' do
                       i.fa.fa-facebook-square
-                    a.btn.btn-just-icon.btn-white.btn-simple.btn-lg href="#pablo" 
-                      i.fa.fa-google-plus
-                    a.btn.btn-just-icon.btn-white.btn-simple.btn-lg href="#pablo" 
+                    = link_to 'https://www.instagram.com/mizangraphy/', class: 'btn btn-just-icon btn-white btn-simple btn-lg', target: '_blank' do
                       i.fa.fa-instagram
         .item
           .page-header.header-filter style=("background-image: url('#{random_image_home}');") 
             .container
               .row
-                .col-md-7.col-md-offset-5.text-right
+                .col-md-10.col-md-offset-1.text-right
                   h1.title = t('static_page.index.header.third_tagline')
-                  h4 There's no doubt that Tesla is delighted with the interest, but the data also raises a few questions. How long will it take for Tesla to fulfill all those extra orders?
+                  h4 = t('static_page.index.header.third_header_desc')
                   br/
                   .buttons
-                    a.btn.btn-white.btn-simple.btn-lg href="#pablo" 
-                      i.material-icons share
-                      | Share Offer
-                    a.btn.btn-danger.btn-lg href="#pablo" 
-                      i.material-icons shopping_cart
-                      | Shop Now
+                    = link_to t('static_page.index.header.button_third'), '#', class: 'btn btn-primary btn-lg'
+                      
+        
       /! Controls
-      a.left.carousel-control data-slide="prev" href="#carousel-example-generic" 
-        i.material-icons keyboard_arrow_left
-      a.right.carousel-control data-slide="next" href="#carousel-example-generic" 
-        i.material-icons keyboard_arrow_right
+      / a.left.carousel-control data-slide="prev" href="#carousel-header" 
+      /   i.material-icons keyboard_arrow_left
+      / a.right.carousel-control data-slide="next" href="#carousel-header" 
+      /   i.material-icons keyboard_arrow_right
 
 /.page-header.header-filter style=("background-image: url('#{random_image_home}');")
   .container
