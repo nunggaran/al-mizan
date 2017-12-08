@@ -12,8 +12,12 @@ en:
       fasilitas: "Facility"
       ekstrakulikuler: "Extracurricular"
       kalender_akademik: "Academic Calendar"
+
     pengajaran: 
       pengajaran: "Education"
+      kurikulum: "Education curriculum"
+      program_pendidikan: "Education programs"
+      pengajar: "Instructor"
     pengasuhan: 
       pengasuhan: "Parenting"
     ekonomi_pondok: 

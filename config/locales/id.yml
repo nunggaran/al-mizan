@@ -12,8 +12,12 @@ id:
       fasilitas: "Fasilitas"
       ekstrakulikuler: "Ekstrakulikuler"
       kalender_akademik: "Kalender Akademik"
+
     pengajaran: 
       pengajaran: "Pengajaran"
+      kurikulum: "Kurikulum Pendidikan"
+      program_pendidikan: "Program Pendidikan"
+      pengajar: "Tenaga Pengajar"
     pengasuhan: 
       pengasuhan: "Pengasuhan"
     ekonomi_pondok: 

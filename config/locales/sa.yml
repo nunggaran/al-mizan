@@ -12,8 +12,12 @@ sa:
       fasilitas: "مرافق"
       ekstrakulikuler: "لا روتينى"
       kalender_akademik: "التقويم الأكاديمي"
+
     pengajaran: 
       pengajaran: "تعليم"
+      kurikulum: "منهج التعليم"
+      program_pendidikan: "برنامج التعليم"
+      pengajar: "محاضر"
     pengasuhan: 
       pengasuhan: "تغذية"
     ekonomi_pondok: 
