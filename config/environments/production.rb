@@ -59,13 +59,21 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "indoexchanger-v2_#{Rails.env}"
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #     :address        => 'smtp.sendgrid.net',
+  #     :port           => '587',
+  #     :authentication => :plain,
+  #     :user_name      => 'asilah',
+  #     :password       => '@silahSendgrid22',
+  #     :domain         => 'www.al-mizan.herokuapp.com'
+  # }
   config.action_mailer.smtp_settings = {
-      :address        => 'smtp.sendgrid.net',
-      :port           => '587',
-      :authentication => :plain,
-      :user_name      => 'asilah',
-      :password       => '@silahSendgrid22',
-      :domain         => 'www.al-mizan.herokuapp.com'
+    :address              => 'smtp.develmail.com',
+    :port                 => '587',
+    :domain               => 'www.al-mizan.herokuapp.com',
+    :authentication       => 'CRAM-MD5',
+    :enable_starttls_auto => true,
+    :openssl_verify_mode  => 'none'
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
