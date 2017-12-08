@@ -7,9 +7,9 @@ html lang="#{I18n.locale.downcase}"
     = csrf_meta_tags 
     meta charset="utf-8" /
     meta content="width=device-width, initial-scale=1.0" name="viewport"
-    meta name="google-site-verification" content="CwqI7wFzrXMHKVA7a6E_0_FHUGDBGF4y64XY7Lb-uPs"
-    meta name="google-site-verification" content="mAsg-zC-ouB1JtpOEntTcrVN4z36UFU_EhAjuXIAuhc" 
-    meta name="msvalidate.01" content="E417A73FEA992A2ED7E85DBC950ADCF1"
+    / meta name="google-site-verification" content="CwqI7wFzrXMHKVA7a6E_0_FHUGDBGF4y64XY7Lb-uPs"
+    / meta name="google-site-verification" content="mAsg-zC-ouB1JtpOEntTcrVN4z36UFU_EhAjuXIAuhc" 
+    / meta name="msvalidate.01" content="E417A73FEA992A2ED7E85DBC950ADCF1"
     = yield :meta_tags
     = display_meta_tags site: 'Pondok Pesantren Modern Al-Mizan'
     meta content="#{I18n.locale.upcase}" property="og:locale" /
@@ -17,18 +17,18 @@ html lang="#{I18n.locale.downcase}"
     meta content="website" property="og:type" /
     link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" rel="stylesheet" type="text/css" 
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
-    link href="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_52/v1511616558/assets/logo/2.png" rel="apple-touch-icon" sizes="52x52" /
-    link href="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_72/v1511616558/assets/logo/2.png" rel="apple-touch-icon" sizes="72x72" /
-    link href="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_76/v1511616558/assets/logo/2.png" rel="apple-touch-icon" sizes="76x76" /
-    link href="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_120/v1511616558/assets/logo/2.png" rel="apple-touch-icon" sizes="120x120" /
-    link href="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_144/v1511616558/assets/logo/2.png" rel="apple-touch-icon" sizes="144x144" /
-    link href="https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_152/v1511616558/assets/logo/2.png" rel="apple-touch-icon" sizes="152x152" /
-    = display_meta_tags icon: "https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_120/v1511616558/assets/logo/2.png"
+    link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_52/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="52x52" /
+    link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_72/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="72x72" /
+    link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_76/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="76x76" /
+    link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_120/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="120x120" /
+    link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_144/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="144x144" /
+    link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_152/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="152x152" /
+    = display_meta_tags icon: "https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_130/v1512720674/al-mizan/posting1.png"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     / = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     / = stylesheet_link_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'application','data-turbolinks-track': 'reload'
-    = render 'layouts/analytics'
+    / = render 'layouts/analytics'
   - if  action_array.include? params[:action]
     body.about-us
       = render 'shared/navbar'
