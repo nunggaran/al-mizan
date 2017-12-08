@@ -68,12 +68,12 @@ Rails.application.configure do
   #     :domain         => 'www.al-mizan.herokuapp.com'
   # }
   config.action_mailer.smtp_settings = {
-    :address              => 'smtp.develmail.com',
-    :port                 => '587',
-    :domain               => 'www.al-mizan.herokuapp.com',
-    :authentication       => 'LOGIN',
-    :enable_starttls_auto => true,
-    :openssl_verify_mode  => 'none'
+     :address => "smtp.gmail.com",
+     :port => 587,
+     :user_name => "yanamuhammad21@gmail.com",
+     :password => "yana_21091993!#%",
+     :authentication => :plain,
+     :enable_starttls_auto => true
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
