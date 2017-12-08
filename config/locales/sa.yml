@@ -57,7 +57,9 @@ sa:
         second_header_desc: "مرحبا بكم في موقع ميزان بيزانترن. نحن نكرس لكم كل المعلومات عن مدرسة الميزان الداخلية. يرجى استكشاف موقعنا بسيطة، ونأمل أن تعطي القليل من المعلومات والبصيرة على السندانيز ميزان بيزانترن."
         third_tagline: "الميزان، الوقوف أعلاه ولجميع الفصائل"
         third_header_desc: "إلى الميزان، ما الذي تبحث عنه؟"
-
+      sec_one: 
+        title: "<b> الميزان </b> الوقوف أعلاه ولجميع المجموعات"
+        desc: "<b> الميزان </b> باعتباره بيزانترن مزدهر قادر على طباعة سانتري البركلاق النبيلة، قادرة على الجسم، والإبداعية، والمعرفة، منفتحين، مخلصة، متواضعة، المباركة الإسلامية والاعتماد على الذات."
       tagline: "<b>Sell and Buy Bitcoin</b> with <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Welcome to PT. Indonesia Exchanger Utama"
       running_text_registrasi: "For new registrants please see the video tutorial"

@@ -30,7 +30,7 @@ en:
       rent_car: "Rent Car"
       tour: "Al-Mizan Travel"
       koperasi: "cooperative"
-      
+
     about: "About Al-Mizan"
     registrasi: "Student Registration"
     
@@ -59,7 +59,9 @@ en:
         second_header_desc: "Welcome to Al-Mizan Pesantren Website. We dedicate to you all the information about Al-Mizan Boarding School. Please explore our simple site, hopefully give a little information and insight on Sundanese Al-Mizan pesantren."
         third_tagline: "Al-Mizan, Stand above and for all factions"
         third_header_desc: "To Al-Mizan, what are you looking for?"
-
+      sec_one: 
+        title: "<b> Al-Mizan </b> Berdiri diatas dan Untuk Semua Golongan"
+        desc: "Pondok Pesantren Modern <b> Al-Mizan </ b> as a prosperous pesantren that is able to print santri berakhlaq noble, able-bodied, creative, knowledgeable and open-minded, sincere, modest, blessed Islamiyah and self-reliant."
       tagline: "<b>Sell and Buy Bitcoin</b> with <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Welcome to PT. Indonesia Exchanger Utama"
       running_text_registrasi: "For new registrants please see the video tutorial"
