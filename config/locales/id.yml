@@ -20,8 +20,15 @@ id:
       pengajar: "Tenaga Pengajar"
     pengasuhan: 
       pengasuhan: "Pengasuhan"
+      majlis: "Majlis Pengasuhan"
+      kegiatan: "Kegiatan Santri"
+      putra: "Male Parenting"
+      putri: "Female Parenting"
     ekonomi_pondok: 
       pondok: "Ekonomi Pondok"
+      rent_car: "Rental Mobil"
+      tour: "Al-Mizan Tour"
+      koperasi: "Koperasi"
     about: "Tentang Al-Mizan"
     
     registrasi: "Pendaftaran Santri Baru"

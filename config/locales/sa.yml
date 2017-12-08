@@ -20,8 +20,15 @@ sa:
       pengajar: "محاضر"
     pengasuhan: 
       pengasuhan: "تغذية"
+      majlis: "مجلس الأبوة والأمومة"
+      kegiatan: "نشاط الطالب"
+      putra: "ابن الأبوة والأمومة"
+      putri: "ابنة الأبوة والأمومة"
     ekonomi_pondok: 
       pondok: "المعهد الاقتصادي"
+      rent_car: "تأجير السيارات"
+      tour: "جولة الميزان"
+      koperasi: "تعاوني"
     about: "حول الميزان"
     registrasi: "تسجيل"
     

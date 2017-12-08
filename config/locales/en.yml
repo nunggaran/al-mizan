@@ -18,10 +18,19 @@ en:
       kurikulum: "Education curriculum"
       program_pendidikan: "Education programs"
       pengajar: "Instructor"
+
     pengasuhan: 
       pengasuhan: "Parenting"
+      majlis: "Parenting Majlis"
+      kegiatan: "Student Activities"
+      putra: "Pengasuhan Putra"
+      putri: "Pengasuhan Putri"
     ekonomi_pondok: 
       pondok: "College Economy"
+      rent_car: "Rent Car"
+      tour: "Al-Mizan Travel"
+      koperasi: "cooperative"
+      
     about: "About Al-Mizan"
     registrasi: "Student Registration"
     
