@@ -34,18 +34,24 @@ sa:
     
   footer:
     column_one: 
-      title: "Support Services"
-      instruction: "Getting Started"
-      cs: "Customer Services"
+      title: "الملف الشخصي"
+      profile: "الملف الشخصي"
+      history: "تاريخ"
+      visi_misi: "الرؤية والرسالة"
+      susunan_pengurus: "تكوين المجلس"
+      
     column_two: 
-      title: "Product"
-      wallet: "Wallet Address"
-      deposito: "Deposito Bitcoin"
+      title: "تعليم"
+      pengajaran: "تعليم"
+      kurikulum: "منهج التعليم"
+      program_pendidikan: "برنامج التعليم"
+      pengajar: "محاضر"
     column_thrid: 
-      title: "Other"
-      about_us: "About Us"
-      legalitas: "Our legalitas"
-      free_btc: "How to get Bitcoin"
+      title: "آخر"
+      about_us: "معلومات عنا"
+      contact_us: "اتصل بنا"
+      
+      
   static_page:
     index:
       header:
@@ -65,7 +71,8 @@ sa:
         berbadan_sehat: "لأجسام السليمة"
         berpengetahuan_luas: "العلوم المتبخرة"
         berpikiran_bebas: "الفكرة الحرّة"
-
+      blog: 
+        title: "الميزان أخبار، بلوق والمعلومات"
       visi_misi:
         title: "رؤية ورسالة بيزانترن الحديثة <b> الميزان </b>"
         visi: "<b> الميزان </b> باعتباره بيزانترن مزدهر قادر على طباعة سانتري البركلاق النبيلة، قادرة على الجسم، والإبداعية، والمعرفة، منفتحين، مخلصة، متواضعة، المباركة الإسلامية والاعتماد على الذات."

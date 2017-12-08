@@ -34,18 +34,20 @@ id:
     registrasi: "Pendaftaran Santri Baru"
   footer:
     column_one: 
-      title: "Support Services"
+      title: "Profile"
       instruction: "Petunjuk Memulai"
       cs: "Customer Services"
     column_two:
-      title: "Produk"
-      wallet: "Wallet Address"
-      deposito: "Deposito Bitcoin"
+      title: "Pengajaran"
+      pengajaran: "Pengajaran"
+      kurikulum: "Kurikulum Pendidikan"
+      program_pendidikan: "Program Pendidikan"
+      pengajar: "Tenaga Pengajar"
     column_thrid: 
       title: "lain-lain"
-      about_us: "Tentang kami"
-      legalitas: "legalitas perusahaan kami"
-      free_btc: "Cara mendapatkan Bitcoin"
+      about_us: "Tentang Al-Mizan"
+      contact_us: "Hubungi Kamu"
+      
   static_page:
     index:
       header:
@@ -88,6 +90,9 @@ id:
           seven: "Membangun jiwa kreatif untuk memiliki kemampuan sebagai motivator, integrator dan stabilisator bagi masyarakat"
           eight: "Menjalin kebersamaan dengan sisrem demokrasi dan jalinan perasaan keagamaan baik di dalam maupun di luar pesantren."
           nine: "Menanamkan keterbukaan dalam berfikir, berbuat, dan menentukan masa depan dalam memilih jalan hidup di masyarakat."
+      blog: 
+        title: "Al-Mizan News, Blog and Information"
+
       tagline: "<b>Jual Beli Bitcoin</b> anda bersama <b> PT Indonesia Exchanger Utama </b>"
       running_text_welcome: "Selamat Datang di PT. Indonesia Exchanger Utama"
       running_text_registrasi: "Untuk pendaftar baru silahkan lihat video cara register"

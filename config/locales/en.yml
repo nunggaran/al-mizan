@@ -36,18 +36,23 @@ en:
     
   footer:
     column_one: 
-      title: "Support Services"
+      title: "Profile"
+      profile: "Profile"
+      history: "History"
+      visi_misi: "vision and mission"
+      sususan_pengurus: "Board of Management"
       instruction: "Getting Started"
       cs: "Customer Services"
     column_two: 
-      title: "Product"
-      wallet: "Wallet Address"
-      deposito: "Deposito Bitcoin"
+      title: "Education"
+      pengajaran: "Education"
+      kurikulum: "Education curriculum"
+      program_pendidikan: "Education programs"
+      pengajar: "Instructor"
     column_thrid: 
       title: "Other"
-      about_us: "About Us"
-      legalitas: "Our legalitas"
-      free_btc: "How to get Bitcoin"
+      about_us: "About Al-Mizan"
+      contact_us: "Contact Us"
   static_page:
     index:
       header:
@@ -67,6 +72,8 @@ en:
         berbadan_sehat: "Berbadan Sehat"
         berpengetahuan_luas: "Healthy Body"
         berpikiran_bebas: "Free thinking"
+      blog: 
+        title: "Al-Mizan News, Blog and Information"
 
       visi_misi:
         title: "Vision and Mission of Modern Pesantren <b> Al-Mizan </b>"
