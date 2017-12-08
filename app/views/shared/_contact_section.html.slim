@@ -8,27 +8,29 @@
           .icon.icon-primary
             i.material-icons pin_drop
           .description
-            h4.info-title = t('static_page.contact_section.office_title')
-            p 
-              b = t('static_page.contact_section.male_campus')
-            p.text-white = t('static_page.contact_section.office_content').html_safe
-            p 
-              b = t('static_page.contact_section.woman_campus')
-            p Jl AMD Lintas Timur, Cikole Pendeglang Banten
+            .location
+              h4.info-title = t('static_page.contact_section.office_title')
+              p 
+                b = t('static_page.contact_section.male_campus')
+              p.text-white = t('static_page.contact_section.office_content').html_safe
+              p 
+                b = t('static_page.contact_section.woman_campus')
+              p Jl AMD Lintas Timur, Cikole Pendeglang Banten
               
         .info.info-horizontal
           .icon.icon-primary
             i.material-icons phone
           .description
             h4.info-title = t('static_page.contact_section.phone_title')
-            p
-              | Telp :
-              = link_to ' (0252) 206459', 'tel:0252206459'
-              br/
-              | Fax : (0252) 206460
-              br/
-              | HP  : 
-              = link_to '0821-4120-1105', 'tel:082141201105'
+            .location
+              p
+                | Telp :
+                = link_to ' (0252) 206459', 'tel:0252206459'
+                br/
+                | Fax : (0252) 206460
+                br/
+                | HP  : 
+                = link_to '0821-4120-1105', 'tel:082141201105'
       .col-md-5.col-md-offset-2
         .card.card-contact
           

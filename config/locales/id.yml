@@ -7,6 +7,11 @@ id:
     profile: 
       profile: "Profile"
       history: "Sejarah"
+      visi_misi: "Visi dan Misi"
+      sususan_pengurus: "Sususan Pengurus"
+      fasilitas: "Fasilitas"
+      ekstrakulikuler: "Ekstrakulikuler"
+      kalender_akademik: "Kalender Akademik"
     pengajaran: 
       pengajaran: "Pengajaran"
     pengasuhan: 

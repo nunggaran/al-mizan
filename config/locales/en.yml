@@ -7,6 +7,11 @@ en:
     profile: 
       profile: "Profile"
       history: "History"
+      visi_misi: "vision and mission"
+      sususan_pengurus: "Board of Management"
+      fasilitas: "Facility"
+      ekstrakulikuler: "Extracurricular"
+      kalender_akademik: "Academic Calendar"
     pengajaran: 
       pengajaran: "Education"
     pengasuhan: 

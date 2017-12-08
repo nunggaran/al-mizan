@@ -16,40 +16,40 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
             span.header-firstname = t('navbar.profile.profile')
             b.caret
           ul.dropdown-menu
-            li 
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 = t('navbar.profile.history')
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
-                | Visi dan Misi
-            li
+                = t('navbar.profile.visi_misi')  
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
-                | Susunan Pengurus
-            li
+                = t('navbar.profile.susunan_pengurus')
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
-                | Fasilitas
-            li
+                = t('navbar.profile.fasilitas')
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
-                | Ekstrakulikuler
-            li
+                = t('navbar.profile.ekstrakulikuler')
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
-                | Kalender Akademik
+                = t('navbar.profile.kalender_akademik')
 
         li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
             span.header-firstname = t('navbar.pengajaran.pengajaran')
             b.caret
           ul.dropdown-menu
-            li 
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' ) 
               a href="#" 
                 | Kurikulum Pendidikan
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | Program Pendidikan
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | Tenaga Pengajar
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | KBM
         
@@ -58,16 +58,16 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
             span.header-firstname = t('navbar.pengasuhan.pengasuhan')
             b.caret
           ul.dropdown-menu
-            li 
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' ) 
               a href="#" 
                 | Majlis Pengasuhan
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | Kegiatan Santri
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | Pengasuhan Putra
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | Pengasuhan Putri
         
@@ -76,17 +76,17 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
             span.header-firstname = t('navbar.ekonomi_pondok.pondok')
             b.caret
           ul.dropdown-menu
-            li 
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' ) 
               a href="#" 
                 | Rental Mobil
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | Al-Mizan Tour
-            li
+            li class=(params[:locale].eql?('sa') ? 'text-right' : '' )
               a href="#" 
                 | Koprasi
 
-        li = link_to t('navbar.about'), calculator_path
+        li = link_to t('navbar.about'), '#'
         li = link_to t('navbar.registrasi'), '#'
         li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
