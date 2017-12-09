@@ -47,6 +47,14 @@ html lang="#{I18n.locale.downcase}"
       
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
+  - elsif params[:controller].eql?('users/sessions') && params[:action].eql?('create')
+    body.login-page
+      = render 'shared/sign_up_navbar'
+      = yield
+      / = render 'shared/footer'
+      
+      = yield :body_script_bottom
+      = render 'layouts/analytics_bottom'
   - else
     body.signup-page
       = render 'shared/sign_up_navbar'
