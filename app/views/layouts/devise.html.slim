@@ -48,12 +48,9 @@ html lang="#{I18n.locale.downcase}"
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
   - else
-    body
-      = render 'shared/navbar'
-
+    body.signup-page
+      = render 'shared/sign_up_navbar'
       = yield
-
-      = render 'shared/footer'
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
