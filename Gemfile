@@ -27,6 +27,15 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'gibbon', github: "amro/gibbon"
+# Authentication
+gem 'devise'
+gem 'devise_invitable'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
+gem 'omniauth-github', github: 'intridea/omniauth-github'
+gem 'omniauth-openid', github: 'intridea/omniauth-openid'
+
 gem 'cloudinary'
 # gem "lazyload-rails"
 gem 'angularjs-rails'

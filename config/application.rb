@@ -13,7 +13,7 @@ module AlMizan
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = 'Jakarta'
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*','*.{rb,yml}').to_s]
-    config.i18n.default_locale = :sa
+    config.i18n.default_locale = :id
     config.i18n.available_locales = [:en, :id, :sa]
     config.action_controller.permit_all_parameters = true
     def secrets
