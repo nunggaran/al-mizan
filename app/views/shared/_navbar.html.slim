@@ -74,6 +74,8 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
         li = link_to t('navbar.registrasi'), '#'
         - if user_signed_in?
           li = link_to 'Logout', logout_path, method: :delete
+        -else
+          li = link_to 'Login', new_user_session_path
         /li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
             = current_language_flag

@@ -1,0 +1,69 @@
+/ <h2>Log in</h2>
+
+/ = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+/   .form-inputs
+/     = f.input :email, required: false, autofocus: true 
+/     = f.input :password, required: false 
+/     = f.input :remember_me, as: :boolean if devise_mapping.rememberable? 
+  
+
+/   .form-actions
+/     = f.button :submit, "Log in" 
+  
+
+
+/ = render "users/shared/links"
+.page-header.header-filter style=("background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;") 
+	.container
+		.row
+			.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+				.card.card-signup
+					= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+						.header.header-primary.text-center
+							h4.card-title Log in
+							.social-line
+								a.btn.btn-just-icon.btn-simple href="#pablo" 
+									i.fa.fa-facebook-square
+								a.btn.btn-just-icon.btn-simple href="#pablo" 
+									i.fa.fa-twitter
+								a.btn.btn-just-icon.btn-simple href="#pablo" 
+									i.fa.fa-google-plus
+						p.description.text-center Or Be Classical
+						.card-content
+							.input-group
+								span.input-group-addon
+									i.material-icons email
+								.form-group.is-empty
+									= f.input :email, required: false, autofocus: true, class: "form-control"
+									span.material-input
+							.input-group
+								span.input-group-addon
+									i.material-icons lock_outline
+								.form-group.is-empty
+									= f.input :password, required: false, class: "form-control"
+									span.material-input
+					  
+							= f.button :submit, "Log in" 
+          
+	footer.footer
+		.container
+			nav.pull-left
+				ul
+					li
+						a href="http://www.creative-tim.com" 
+							| Creative Tim
+					li
+						a href="http://presentation.creative-tim.com" 
+							| About Us
+					li
+						a href="http://blog.creative-tim.com" 
+							| Blog
+					li
+						a href="http://www.creative-tim.com/license" 
+							| Licenses
+			.copyright.pull-right
+				| ©
+				| 2017, made with
+				i.fa.fa-heart.heart
+				| by
+				a href="http://www.creative-tim.com" target="_blank"  Creative Tim
