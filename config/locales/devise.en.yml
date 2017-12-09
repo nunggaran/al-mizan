@@ -17,6 +17,13 @@ en:
       unauthenticated: "You need to sign in or sign up before continuing."
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
+      invitation: "Yo have been invitation by Admin Al-Mizan to join"
+      invitation_instructions:
+        hello: "Hallo"
+        someone_invited_you: "Yo have been invitation by Admin Al-Mizan to join"
+        accept: "Accept"
+        accept_until: "This invitation just valid until"
+        ignore: "Ignore"
       confirmation_instructions:
         subject: "Confirmation instructions"
       reset_password_instructions:
