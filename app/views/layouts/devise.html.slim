@@ -57,6 +57,7 @@ html lang="#{I18n.locale.downcase}"
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
+  
   - if notice
     javascript:
       $.notify({
