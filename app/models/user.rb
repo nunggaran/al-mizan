@@ -3,6 +3,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   devise :database_authenticatable, :registerable,
-       	:recoverable, :rememberable, :validatable, :confirmable, :invitable, :trackable,
-       	:omniauthable, :omniauth_providers => [:facebook, :google_oauth2, :twitter]
+       	:recoverable, :rememberable, :validatable, :confirmable, :invitable, :trackable
 end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   
-  devise_for :users
+  
   namespace :api do
   	namespace :v1 do
   		resources :price
@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   end
 
   scope '(:locale)', locale: /en|id|sa/  do 
+    devise_for :users, controllers: {
+      :sessions           => 'users/sessions',
+      :registrations      => 'users/registrations',
+      # :omniauth_callbacks => "users/omniauth_callbacks" ,
+      :invitations        => 'users/invitations'
+    }
     # resources :contacts
     post 'contacts' => 'contacts#create'
     	# mount Monologue::Engine, at: '/blog', :as => :blog	
