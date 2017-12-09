@@ -17,6 +17,12 @@ Rails.application.routes.draw do
       # :omniauth_callbacks => "users/omniauth_callbacks" ,
       :invitations        => 'users/invitations'
     }
+    devise_scope :user do
+      delete 'logout', to: 'devise/sessions#destroy'
+      get 'resetpassword', to: 'users/passwords#new'
+      # get 'signup', to: 'devise/registrations#new'
+      # get 'login', to: 'devise/sessions#new'
+    end
     # resources :contacts
     post 'contacts' => 'contacts#create'
     	# mount Monologue::Engine, at: '/blog', :as => :blog	
