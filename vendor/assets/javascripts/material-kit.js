@@ -13,7 +13,7 @@
 
 var big_image;
 
- $(document).ready(function(){
+ $(document).on('ready page:load', function (){
 
      // Init Material scripts for buttons ripples, inputs animations etc, more info on the next link https://github.com/FezVrasta/bootstrap-material-design#materialjs
      $.material.init();

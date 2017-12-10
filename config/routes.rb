@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     post 'contacts' => 'contacts#create'
     get 'sejarah-al-mizan', to: 'pages#sejarah', as: :sejarah
     get 'visi-misi-al-mizan', to: 'pages#visi', as: :visi_misi
+    get 'fasilitas-al-mizan', to: 'pages#facility', as: :facility
     	# mount Monologue::Engine, at: '/blog', :as => :blog	
 	  root 'pages#index'
 	  
