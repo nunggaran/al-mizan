@@ -327,7 +327,7 @@ var big_image;
      }, 4),
 
      initContactUsMap: function(){
-         var myLatlng = new google.maps.LatLng(-6.182862,106.84072100000003);
+         var myLatlng = new google.maps.LatLng(-6.353423,106.285007);
          var mapOptions = {
            zoom: 14,
            center: myLatlng,
@@ -345,8 +345,8 @@ var big_image;
      },
 
      initContactUs2Map: function(){
-         var lat = -6.182862;
-         var long = 106.84072100000003;
+         var lat = -6.353423;
+         var long = 106.285007;
 
          var centerLong = long - 0.025;
 
