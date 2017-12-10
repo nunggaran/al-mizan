@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: indoexchanger
-  api_key: '181782398221198'
-  api_secret: j_k5DSITkps4R_crovzYAAIWSd0
+  cloud_name: al-mizan
+  api_key: '241343835381937'
+  api_secret: C6VKRzU0f7VQJ-ItUY687o_mJHE
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: indoexchanger
-  api_key: '181782398221198'
-  api_secret: j_k5DSITkps4R_crovzYAAIWSd0
+  cloud_name: al-mizan
+  api_key: '241343835381937'
+  api_secret: C6VKRzU0f7VQJ-ItUY687o_mJHE
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: indoexchanger
-  api_key: '181782398221198'
-  api_secret: j_k5DSITkps4R_crovzYAAIWSd0
+  cloud_name: al-mizan
+  api_key: '241343835381937'
+  api_secret: C6VKRzU0f7VQJ-ItUY687o_mJHE
   enhance_image_tag: true
   static_image_support: false
