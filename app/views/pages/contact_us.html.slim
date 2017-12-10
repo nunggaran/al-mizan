@@ -1,14 +1,31 @@
 /.iframe-container
   iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.6526386490075!2d106.84017482922268!3d-6.182846666416258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f436254c18eb%3A0x6bc0865e52cdbdf2!2sPT+Indonesia+Exchanger+Utama!5e0!3m2!1sen!2sid!4v1512187527439" width="600" height="450" frameborder="0" style="border:0" 
+-content_for :meta_tags
+  - set_meta_tags title: 'Hubungi Kami - Pesantren Modern Al-Mizan',
+                 description: 'Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya',
+                 keywords: 'Fasilitas Pondok Pesantren Modern Al-Mizan, faislitas pondok, faislitas Al-Mizan, al-mizan, pondok al-mizan, pondok bagus, pondok pesantren di banten, pondok pesantren'
+  meta property="og:image" content="https://res.cloudinary.com/al-mizan/image/upload/v1512891646/assets/image/mudir/10320555_727174234014051_4375366234204518173_n.jpg"/
+  meta content="www.al-mizan.sch.id#{request.fullpath}" property="og:url" /
+  meta name="author" content="Pondok Pesantren Modern Al-Mizan"/
+  meta content="Hubungi Kami - Pesantren Modern Al-Mizan" property="og:title" /
+  meta content="Hubungi Kami - Pesantren Modern Al-Mizan - Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya" property="og:description" /
+  meta content="https://res.cloudinary.com/al-mizan/image/upload/v1512891646/assets/image/mudir/10320555_727174234014051_4375366234204518173_n.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="Hubungi Kami - Pesantren Modern Al-Mizan" name="twitter:title" /
+  meta content="Hubungi Kami - Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya" name="twitter:description" /
+  meta content="www.al-mizan.sch.id#{request.fullpath}" name="twitter:url" /
 #contactUsMap.big-map
 .main.main-raised
   .contact-content
     .container
-      h2.title Send us a message
+      h2.title = t('static_page.contact_section.title')
       .row
         .col-md-6
           p.description
-            | You can contact us with anything related to our Service. We'll get in touch with you as soon as possible.
+            = t('static_page.contact_section.content')
             br/
             br/
           = form_for @contact do |f|
@@ -63,16 +80,23 @@
             .icon.icon-primary
               i.material-icons pin_drop
             .description
-              h4.info-title = t('static_page.contact_section.office_title')
+              h4.info-title = t('static_page.contact_section.male_campus')
               p
                 = t('static_page.contact_section.office_content').html_safe
+          .info.info-horizontal
+            .icon.icon-primary
+              i.material-icons pin_drop
+            .description
+              h4.info-title = t('static_page.contact_section.female_campus')
+              p Jl AMD Lintas Timur, Cikole Pendeglang Banten
+                
           .info.info-horizontal
             .icon.icon-primary
               i.material-icons phone
             .description
               h4.info-title = t('static_page.contact_section.phone_title')
               p
-                = link_to '+62812-2081-2265', 'tel:+62812-2081-2265'
+                = link_to ' (0252) 206459', 'tel:0252206459'
                 br/
                 | Mon - Fri, 8:00-22:00
           /.info.info-horizontal
