@@ -16,6 +16,10 @@ class PagesController < ApplicationController
     
   end
 
+  def visi
+    
+  end
+
   def contact_us
     @contact = Contact.new(contact_params)
     if @contact.save
