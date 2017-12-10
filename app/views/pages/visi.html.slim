@@ -19,41 +19,46 @@
   .container
     .row
       .col-md-10.col-md-offset-1
-        h1.title = t('static_page.sejarah_al_mizan.header_title')
+        h1.title = t('static_page.visi_misi.header_title')
         h4 Pondok Pesantren Modern Al-Mizan 
         
 .main.main-raised
   .section
     .container
-      .description.text-center
-        h2 = t('static_page.sejarah_al_mizan.header_title').html_safe
+      .text-center
+        h2 = t('static_page.visi_misi.visi.title').html_safe
         hr/
-        / h4 = t('static_page.get_btc.description').html_safe
+        h4 = t('static_page.visi_misi.visi.visi').html_safe
       br/ 
-      br/
-      .row.registration
-        .col-md-12
-          h4.text-justify = t('static_page.sejarah_al_mizan.first_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.second_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.third_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.fourth_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.fifth_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.sixth_align').html_safe
-          h4.text-justify
-            ul
-              li H Kustani, Rangkasbitung 14.000 m
-              li H Tryana Sjam’un, Jakarta 9000 m
-              li H Dani Setiawan, Bandung 8.000 m
-              li  H Mulyadi Jayabaya, Rangkasbitung, wakaf atas nama orangtuanya H Datu Jayabaya (alm) 2000 m
-              li Selebihnya adalah wakaf dari para muhsinin
-          h4.text-justify = t('static_page.sejarah_al_mizan.seventh_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.eight_align').html_safe
-          h4.text-justify 
-            ul
-              li = t('static_page.sejarah_al_mizan.kompetensi_spiritual').html_safe
-              li = t('static_page.sejarah_al_mizan.kompetensi_personal').html_safe 
-              li = t('static_page.sejarah_al_mizan.kompetensi_sosial').html_safe 
-        
+      .text-center
+        h2 = t('static_page.visi_misi.visi.title').html_safe
+        hr/
+      .text-justify
+        ol
+          h4 
+            li = t('static_page.index.visi_misi.misi.one')
+            li = t('static_page.index.visi_misi.misi.two')
+            li = t('static_page.index.visi_misi.misi.three').html_safe
+            li = t('static_page.index.visi_misi.misi.four').html_safe
+            li = t('static_page.index.visi_misi.misi.five').html_safe
+            li = t('static_page.index.visi_misi.misi.six').html_safe
+            li = t('static_page.index.visi_misi.misi.seven').html_safe
+            li = t('static_page.index.visi_misi.misi.eight').html_safe
+            li = t('static_page.index.visi_misi.misi.nine').html_safe
+      br/ 
+      .text-center
+        h2 = t('static_page.visi_misi.tujuan.title').html_safe
+        hr/
+      .text-justify
+        h4 = t('static_page.visi_misi.tujuan.description').html_safe
+        ol
+          h4 
+            li = t('static_page.visi_misi.tujuan.one').html_safe
+            li = t('static_page.visi_misi.tujuan.two').html_safe
+            li = t('static_page.visi_misi.tujuan.three').html_safe
+            li = t('static_page.visi_misi.tujuan.four').html_safe
+            li = t('static_page.visi_misi.tujuan.five').html_safe
+            li = t('static_page.visi_misi.tujuan.six').html_safe
       hr/
       .social-line.social-line-white.text-center.mt-50
         .container
@@ -63,6 +68,7 @@
               .sharethis-inline-share-buttons
               /.sharethis-inline-reaction-buttons
             
-
+/ -content_for :body_script_bottom
+/   script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a2cc196d0739000123acd69&product=inline-share-buttons' async='async'
 br/
 br/  

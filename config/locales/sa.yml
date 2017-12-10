@@ -159,6 +159,20 @@ sa:
       kompetensi_personal: "Kompetensi Personal     : Berakhlaqul Karimah, Mandiri, Kreatif dan Inovatif."
       kompetensi_sosial: "Kompetensi Sosial       : Mampu berinteraksi  dan berkomunikasi aktif dan memiliki kepedulian tinggi."
       share: "Yuk share ke social media teman-teman ajak pemuda pemudi <b> Indonesia </b> untuk mondok dan menjadi Manusia yg <i>berakhlak karimah</i>."
+    visi_misi: 
+      header_title: "Visi, Misi dan Tujuan"
+      visi:
+        title: "Visi Ponpes <b>Al-Mizan</b>"
+        visi: "<b>Al-Mizan</b> sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari."
+      tujuan: 
+        title: "Tujuan Ponpes <b>Al-Mizan</b>"
+        description: "Sebagai lembaga pendidikan Islam yang berorientasi pada masyarakat (approach social oriented) maka Pondok Pesantren Modern <b>Al-Mizan</b> menetapkan arah dan tujuan pendidikan kepada pembentukan pribadi-pribadi yang :"
+        one: "Cinta kepada Islam, Nusa dan Bangsa."
+        two: "Berakhlaq mulia."
+        three: "Berbadan sehat, berpengetahuan luas dan berfikiran bebas."
+        four: "Berjiwa keikhlasan, kesederhanan, ukhuwah islamiyah, kebebasan dan menolong diri sendiri."
+        five: "Mengutamakan keseimbangan antara ilmu dan amal."
+        six: "Siap terjun ke masyarakat meneruskan estafet perjuangan ulama sebagai syuhada alannas dalam rangka menegakan kalimat Allah SWT."
     newslatter:
       title: "معلومات الميزان"
       content: "اشترك في البريد الإلكتروني ل ميزان" 

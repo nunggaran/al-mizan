@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def action_array
-    %W(sejarah about_us cara_registrasi_akun)
+    %W(sejarah visi about_us cara_registrasi_akun)
   end
 
   def amount_btc

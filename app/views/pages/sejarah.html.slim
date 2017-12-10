@@ -25,7 +25,7 @@
 .main.main-raised
   .section
     .container
-      .description.text-center
+      .text-center
         h2 = t('static_page.sejarah_al_mizan.header_title').html_safe
         hr/
         / h4 = t('static_page.get_btc.description').html_safe
@@ -33,26 +33,27 @@
       br/
       .row.registration
         .col-md-12
-          h4.text-justify = t('static_page.sejarah_al_mizan.first_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.second_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.third_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.fourth_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.fifth_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.sixth_align').html_safe
-          h4.text-justify
-            ul
-              li H Kustani, Rangkasbitung 14.000 m
-              li H Tryana Sjam’un, Jakarta 9000 m
-              li H Dani Setiawan, Bandung 8.000 m
-              li  H Mulyadi Jayabaya, Rangkasbitung, wakaf atas nama orangtuanya H Datu Jayabaya (alm) 2000 m
-              li Selebihnya adalah wakaf dari para muhsinin
-          h4.text-justify = t('static_page.sejarah_al_mizan.seventh_align').html_safe
-          h4.text-justify = t('static_page.sejarah_al_mizan.eight_align').html_safe
-          h4.text-justify 
-            ul
-              li = t('static_page.sejarah_al_mizan.kompetensi_spiritual').html_safe
-              li = t('static_page.sejarah_al_mizan.kompetensi_personal').html_safe 
-              li = t('static_page.sejarah_al_mizan.kompetensi_sosial').html_safe 
+          .text-justify
+            h4 = t('static_page.sejarah_al_mizan.first_align').html_safe
+            h4 = t('static_page.sejarah_al_mizan.second_align').html_safe
+            h4 = t('static_page.sejarah_al_mizan.third_align').html_safe
+            h4 = t('static_page.sejarah_al_mizan.fourth_align').html_safe
+            h4 = t('static_page.sejarah_al_mizan.fifth_align').html_safe
+            h4 = t('static_page.sejarah_al_mizan.sixth_align').html_safe
+            h4
+              ul
+                li H Kustani, Rangkasbitung 14.000 m
+                li H Tryana Sjam’un, Jakarta 9000 m
+                li H Dani Setiawan, Bandung 8.000 m
+                li  H Mulyadi Jayabaya, Rangkasbitung, wakaf atas nama orangtuanya H Datu Jayabaya (alm) 2000 m
+                li Selebihnya adalah wakaf dari para muhsinin
+            h4 = t('static_page.sejarah_al_mizan.seventh_align').html_safe
+            h4 = t('static_page.sejarah_al_mizan.eight_align').html_safe
+            h4 
+              ul
+                li = t('static_page.sejarah_al_mizan.kompetensi_spiritual').html_safe
+                li = t('static_page.sejarah_al_mizan.kompetensi_personal').html_safe 
+                li = t('static_page.sejarah_al_mizan.kompetensi_sosial').html_safe 
         
       hr/
       .social-line.social-line-white.text-center.mt-50
