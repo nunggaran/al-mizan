@@ -23,13 +23,12 @@ html lang="#{I18n.locale.downcase}"
     link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_120/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="120x120" /
     link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_144/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="144x144" /
     link href="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_152/v1512720674/al-mizan/posting1.png" rel="apple-touch-icon" sizes="152x152" /
-
-    script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a2cc196d0739000123acd69&product=inline-share-buttons' async='async'
     = display_meta_tags icon: "https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_130/v1512720674/al-mizan/posting1.png"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     / = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     / = stylesheet_link_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'application','data-turbolinks-track': 'reload'
+    script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a2cc196d0739000123acd69&product=inline-share-buttons' async='async'
     / = render 'layouts/analytics'
   - if  action_array.include? params[:action]
     body.about-us
