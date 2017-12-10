@@ -1,0 +1,69 @@
+-content_for :meta_tags
+  - set_meta_tags title: 'Sejarah Berdirinya Pondok Pesantren Modern Al-Mizan - Al-Mizan',
+                 description: 'Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya',
+                 keywords: 'Sejarah Berdirinya Pondok Pesantren Modern Al-Mizan, al-mizan, pondok al-mizan, sejarah al-mizan, Berdirinya al-mizan, pondok pesantren'
+  meta property="og:image" content="https://res.cloudinary.com/al-mizan/image/upload/v1512880250/assets/image/mudir/20106502_1494377470620317_6161044047394628790_n.jpg"/
+  meta content="www.al-mizan.sch.id#{request.fullpath}" property="og:url" /
+  meta content="Sejarah Berdirinya Pondok Pesantren Modern Al-Mizan -  Al-Mizan" property="og:title" /
+  meta content="Sejarah Berdirinya Pondok Pesantren Modern Al-Mizan - Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya" property="og:description" /
+  meta content="https://res.cloudinary.com/al-mizan/image/upload/v1512880250/assets/image/mudir/20106502_1494377470620317_6161044047394628790_n.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="Sejarah Berdirinya Pondok Pesantren Modern Al-Mizan - Al-Mizan" name="twitter:title" /
+  meta content="Sejarah Berdirinya Pondok Pesantren Modern Al-Mizan - Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya" name="twitter:description" /
+  meta content="www.al-mizan.sch.id#{request.fullpath}" name="twitter:url" /
+.page-header.header-filter.header-small data-parallax="true" filter-color="green" style="background-image: url('#{random_image_mudir}');"
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1.title = t('static_page.sejarah_al_mizan.header_title')
+        h4 Pondok Pesantren Modern Al-Mizan 
+        
+.main.main-raised
+  .section
+    .container
+      .description.text-center
+        h2 = t('static_page.sejarah_al_mizan.header_title').html_safe
+        hr/
+        / h4 = t('static_page.get_btc.description').html_safe
+      br/ 
+      br/
+      .row.registration
+        .col-md-12
+          h4.text-justify = t('static_page.sejarah_al_mizan.first_align').html_safe
+          h4.text-justify = t('static_page.sejarah_al_mizan.second_align').html_safe
+        
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.step_two').html_safe
+        .col-md-8.col-md-offset-2         
+          = cl_image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/v1511878384/assets/tutorial/step-two-indoexchanger.jpg', class: "img img-responsive", alt: "indoexchanger"
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.step_three').html_safe
+        .col-md-8.col-md-offset-2         
+          = cl_image_tag("assets/tutorial/step-three-indoexchanger.jpg", class: "img img-responsive", alt: "Indoexchanger")
+        .col-md-12
+          h4.text-center = t('static_page.how_to_register.step_four').html_safe
+        .col-md-8.col-md-offset-2         
+          = cl_image_tag("assets/tutorial/step-four-indoexchanger.jpg", class: "img img-responsive", alt: "Indoexchanger")
+          h3.text-center = t('static_page.how_to_register.successfully_login').html_safe
+      hr/
+      .social-line.social-line-white.text-center.mt-50
+        .container
+          .row
+            .col-md-12
+              h4.title = t('static_page.how_to_register.share')
+            a.btn.btn-twitter.btn-round target="_blank" href="https://twitter.com/home?status=https%3A//indoexchanger.co.id/cara-registrasi-akun-indoexchanger" 
+              i.fa.fa-twitter
+              |&nbsp; Twitter 
+            a.btn.btn-facebook.btn-round target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//indoexchanger.co.id/cara-registrasi-akun-indoexchanger" 
+              i.fa.fa-facebook-square
+              |&nbsp; Facebook
+            a.btn.btn-google.btn-round target="_blank" href="https://plus.google.com/share?url=https%3A//indoexchanger.co.id/cara-registrasi-akun-indoexchanger" 
+              i.fa.fa-google-plus
+              |&nbsp; Google
+
+
+br/
+br/  

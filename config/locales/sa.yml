@@ -145,6 +145,10 @@ sa:
       mobile_sell_desc: "Send and Receive <b> Bitcoin </b> easily and fastly in one application. When transfer <b> Bitcoin </b> you have to enter Mobile PIN and confirmation via email"
       mobile_accountable_title: "Accountable"
       mobile_accountable_desc: "All transaction has been recorded in Web apllication and Mobile Application, which is has syncrhonized with your Account in Mobile and Website. "
+    sejarah_al_mizan: 
+      header_title: "Sejarah Berdirinya Pondok Pesantren Modern Al-Mizan"
+      first_align: "Pondok Pesantren Modern <b>Al-Mizan</b> adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya"
+      second_align: "Pondok Pesantren Modern <b>Al-Mizan</b> berdiri pada tanggal 1 Mei 1993 berdasarkan Akta Notaris Nuzwar, SH Rangkasbitung Nomor 16 tanggal 15 maret 1993. Pondok Pesantren Modern Al-Mizan pertama membuka penerimaan siswa/i tanggal 10 juni 1993, alhamdulillah pada tahun pertama Pondok Pesantren Modern AL-Mizan menerima 67 santri putra dan putri dari berbagai daerah."
     newslatter:
       title: "معلومات الميزان"
       content: "اشترك في البريد الإلكتروني ل ميزان" 

@@ -12,23 +12,7 @@ class PagesController < ApplicationController
     end
   end
 
-  def deposito_bitcoin
-  	
-  end
-
-  def calculator_bitcoin
-  	
-  end
-
-  def cara_registrasi_akun
-  	
-  end
-
-  def about_us
-    
-  end
-
-  def cara_mendapatkan_bitcoin
+  def sejarah
     
   end
 
@@ -52,20 +36,4 @@ class PagesController < ApplicationController
     def contact_params
       params.permit(:first_name, :last_name, :email, :message)
     end
-    # def amount_btc
-    #   response = HTTParty.post('https://indoexchanger.co.id/private/rest/indoExchanger/amountBitcoin', format: :plain)
-    #   parsing = JSON.parse response
-    #   # Rails.logger.info("#{parsing} yeah.. 🎉")
-    #   return parsing
-    # end
-
-    # def amount_params
-    #   [
-    #     {
-    #       amount_idr: amount_btc["amountIDR"],
-    #       amount_usd: amount_btc["amountUSD"],
-    #       time:       amount_btc["time"]
-    #     }
-    #   ]
-    # end
 end
