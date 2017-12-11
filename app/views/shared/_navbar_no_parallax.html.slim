@@ -71,7 +71,7 @@ nav.navbar.navbar-primary.navbar-fixed-top
               = link_to t('navbar.ekonomi_pondok.koperasi'), '#'
 
         li = link_to t('navbar.about'), '#'
-        / li = link_to t('navbar.registrasi'), '#'
+        li = link_to t('navbar.registrasi'), '#'
         - if user_signed_in?
           li = link_to 'Logout', logout_path, method: :delete
         -else
