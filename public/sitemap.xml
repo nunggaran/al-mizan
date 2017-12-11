@@ -7,68 +7,43 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/en</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/id</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/en/calculator-bitcoin</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/id/sejarah-al-mizan</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/en/cara-registrasi-akun-indoexchanger</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/id/visi-misi-al-mizan</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/id</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/id/fasilitas-al-mizan</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/en/about-us</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/id/ekstrakurikuler</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/en/contact-us</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/id/alumni/sign_in</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://indoexchanger-v2.herokuapp.com/en/cara-mendapatkan-bitcoin</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
+  <loc>https://al-mizan.herokuapp.com/id/hubungi-kami</loc>
+  <lastmod>2017-12-11T14:42:30+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://indoexchanger-v2.herokuapp.com/id/calculator-bitcoin</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://indoexchanger-v2.herokuapp.com/id/cara-registrasi-akun-indoexchanger</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://indoexchanger-v2.herokuapp.com/id/about-us</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://indoexchanger-v2.herokuapp.com/id/contact-us</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://indoexchanger-v2.herokuapp.com/id/cara-mendapatkan-bitcoin</loc>
-  <lastmod>2017-12-06T14:23:31+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 </urlset>
