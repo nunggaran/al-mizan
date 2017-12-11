@@ -50,8 +50,7 @@ sa:
       title: "آخر"
       about_us: "معلومات عنا"
       contact_us: "اتصل بنا"
-      
-      
+
   static_page:
     index:
       header:
@@ -178,6 +177,9 @@ sa:
     facility: 
       header_title: "Fasilitas-fasilitas di Al-Mizan"
       title: "Berikut fasilitas-fasilitas yang disediakan oleh pondok untuk para santri."
+    ekstrakulikuler: 
+      header_title: "Kegiatan Ekstrakurikrler di Al-Mizan"
+      title: "Program ekstrakurikuler di pondok pesantren modern al-mizan sangat beragam."
     newslatter:
       title: "معلومات الميزان"
       content: "اشترك في البريد الإلكتروني ل ميزان" 

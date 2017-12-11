@@ -24,6 +24,10 @@ class PagesController < ApplicationController
     
   end
 
+  def ekskul
+    
+  end
+
   def contact_us
     @contact = Contact.new(contact_params)
     if @contact.save

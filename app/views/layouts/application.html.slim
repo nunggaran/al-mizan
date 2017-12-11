@@ -30,7 +30,7 @@ html lang="#{I18n.locale.downcase}"
     / = stylesheet_link_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'application','data-turbolinks-track': 'reload'
     script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a2cc196d0739000123acd69&product=inline-share-buttons' async='async'
-    script async src="https://www.googletagmanager.com/gtag/js?id=UA-111019082-1"
+    script async='async' src="https://www.googletagmanager.com/gtag/js?id=UA-111019082-1"
     = render 'layouts/analytics'
   - if  action_array.include? params[:action]
     body.about-us

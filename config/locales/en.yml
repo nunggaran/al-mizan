@@ -52,7 +52,6 @@ en:
 
     about: "About Al-Mizan"
     registrasi: "Student Registration"
-    
   footer:
     column_one: 
       title: "Profile"
@@ -197,6 +196,9 @@ en:
     facility: 
       header_title: "Fasilitas-fasilitas di Al-Mizan"
       title: "Berikut fasilitas-fasilitas yang disediakan oleh pondok untuk para santri."
+    ekstrakulikuler: 
+      header_title: "Kegiatan Ekstrakurikrler di Al-Mizan"
+      title: "Program ekstrakurikuler di pondok pesantren modern al-mizan sangat beragam."
     newslatter:
       title: "Al-Mizan Information"
       content: "Subscribe your email to get information from Al-Mizan" 
