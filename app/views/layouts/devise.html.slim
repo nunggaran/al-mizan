@@ -1,15 +1,11 @@
 doctype html
 html lang="#{I18n.locale.downcase}" 
   head itemtype="http://schema.org/WebSite" itemscope=""
-    /javascript:
-      var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
-      document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
     = csrf_meta_tags 
     meta charset="utf-8" /
     meta content="width=device-width, initial-scale=1.0" name="viewport"
-    / meta name="google-site-verification" content="CwqI7wFzrXMHKVA7a6E_0_FHUGDBGF4y64XY7Lb-uPs"
-    / meta name="google-site-verification" content="mAsg-zC-ouB1JtpOEntTcrVN4z36UFU_EhAjuXIAuhc" 
-    / meta name="msvalidate.01" content="E417A73FEA992A2ED7E85DBC950ADCF1"
+    meta name="google-site-verification" content="3AuKCl7qjkhGicZwaiqy2hemTlOn1E65HGh2OiAItVc"
+    meta name="msvalidate.01" content="E417A73FEA992A2ED7E85DBC950ADCF1"
     = yield :meta_tags
     = display_meta_tags site: 'Pondok Pesantren Modern Al-Mizan'
     meta content="#{I18n.locale.upcase}" property="og:locale" /
@@ -28,7 +24,8 @@ html lang="#{I18n.locale.downcase}"
     / = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     / = stylesheet_link_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'application','data-turbolinks-track': 'reload'
-    / = render 'layouts/analytics'
+    script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a2cc196d0739000123acd69&product=inline-share-buttons' async='async'
+    script async='async' src="https://www.googletagmanager.com/gtag/js?id=UA-111019082-1"
   -if params[:controller].eql?('users/registrations') && params[:action].eql?('new')  
     body.signup-page
       = render 'shared/sign_up_navbar'
