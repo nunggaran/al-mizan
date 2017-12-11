@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     get 'visi-misi-al-mizan', to: 'pages#visi', as: :visi_misi
     get 'fasilitas-al-mizan', to: 'pages#facility', as: :facility
     get 'hubungi-kami', to: 'pages#contact_us', as: :contact
-    get 'ekstrakulikuler', to: 'pages#ekskul', as: :ekskul
+    get 'ekstrakurikuler', to: 'pages#ekskul', as: :ekskul
     	# mount Monologue::Engine, at: '/blog', :as => :blog	
 	  root 'pages#index'
 	  
