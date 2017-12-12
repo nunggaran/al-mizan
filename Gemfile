@@ -36,7 +36,13 @@ gem 'omniauth-twitter'
 gem 'omniauth-github', github: 'intridea/omniauth-github'
 gem 'omniauth-openid', github: 'intridea/omniauth-openid'
 
+#image cloud uploading
 gem 'cloudinary'
+
+# Image processing
+gem 'carrierwave'
+gem 'mini_magick'
+
 # gem "lazyload-rails"
 gem 'angularjs-rails'
 gem 'jbuilder', '~> 2.5'
@@ -52,14 +58,12 @@ gem 'nprogress-rails'
 gem 'metamagic'
 gem 'meta-tags'
 gem "font-awesome-rails"
-# gem 'monologue'
 gem 'httparty'
-# Use Capistrano for deployment
 gem 'dotenv'
 gem 'awesome_print'
 
+#redis
 gem 'redis-rails'
-
 gem 'redis'
 # Cron job 
 gem 'whenever', :require => false
