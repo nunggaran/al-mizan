@@ -138,8 +138,8 @@
                   | ...
                 .footer
                   .author
-                    a href="#pablo" 
-                      img.avatar.img-raised alt="..." src="https://res.cloudinary.com/muhammadyana/image/upload/v1512718080/al-mizan/user.svg" /
+                    = link_to '#' do
+                      = gravatar_for(article.user, "avatar img-raised")
                       span = article.user.first_name
                   .stats
                     i.material-icons schedule
