@@ -1,12 +1,40 @@
-= simple_form_for(@article) do |f|
+/ = form_for(@article) do |f|
+/   / = f.error_notification
+
+/   .form-inputs
+/     = f.text_field :title
+/     = f.text_field :content
+    
+    
+/     = f.file_field :image
+
+/   .form-actions
+/     = f.button :submit
+
+= simple_form_for @article, html: { class: "form-horizontal", multipart: true }, wrapper: :horizontal_form, wrapper_mappings: { check_boxes: :horizontal_radio_and_checkboxes, radio_buttons: :horizontal_radio_and_checkboxes, file: :horizontal_file_input, boolean: :horizontal_boolean } do |f|
   = f.error_notification
+  = f.input :title, label: false, placeholder: 'Article Title'
+  
+  p = "Please fill article"
+  = f.input :content
+  br
+  = f.file_field :image
+  /= f.input :image, as: :'file', class:'btn'
+  /.form-group
+    .col-md-12.col-lg-12.col-sm-12
+      = f.association :categories, as: :'check_boxes', class:'checkbox-inline input_chekcbox'
+  /= f.input :tag_list, label: false, placeholder: 'Tag'
+  .form-group
+    .col-md-12.col-lg-12.col-sm-12
+      = f.submit nil, class: 'btn btn-primary'
+      = link_to t('.cancel', default: t("helpers.links.cancel")), articles_path, class: 'btn btn-danger'
 
-  .form-inputs
-    = f.input :title
-    = f.input :content
-    = f.input :slug
-    = f.input :user_id
-    = f.input :image
+- if @article.errors.any?
+  #error_explanation
+    = pluralize(@article.errors.count, "error")
 
-  .form-actions
-    = f.button :submit
+    ul
+      - @article.errors.full_messages.each do |message|
+        li = message
+	    
+	

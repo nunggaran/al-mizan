@@ -38,10 +38,13 @@ gem 'omniauth-openid', github: 'intridea/omniauth-openid'
 
 #image cloud uploading
 gem 'cloudinary'
-
 # Image processing
 gem 'carrierwave'
 gem 'mini_magick'
+
+# This is the right gem to use summernote editor in Rails projects.
+gem 'summernote-rails'
+gem 'codemirror-rails'
 
 # gem "lazyload-rails"
 gem 'angularjs-rails'

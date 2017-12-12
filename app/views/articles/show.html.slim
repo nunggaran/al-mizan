@@ -14,7 +14,8 @@ p
   = @article.user_id
 p
   strong Image:
-  = @article.image
+  = image_tag @article.image.thumbnail.url
+  
 
 = link_to 'Edit', edit_article_path(@article)
 '|
