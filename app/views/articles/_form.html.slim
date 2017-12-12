@@ -16,7 +16,7 @@
   = f.input :title, label: false, placeholder: 'Article Title'
   
   p = "Please fill article"
-  = f.input :content
+  = f.input :content, as: :summernote
   br
   = f.file_field :image
   /= f.input :image, as: :'file', class:'btn'

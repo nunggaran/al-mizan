@@ -3,6 +3,12 @@ $nprogress-color: #ff9800 !important;;
 $nprogress-height: 10px;
 $nprogress-zindex: 10100;
 
+@import "font-awesome";
+@import "summernote";
+@import "codemirror";
+@import "codemirror/themes/solarized";
+
+
 @import 'nprogress';
 @import 'nprogress-bootstrap';
 
