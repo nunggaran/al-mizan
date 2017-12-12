@@ -125,14 +125,14 @@
           .col-md-4
             .card.card-blog
               .card-image
-                = link_to article_path(article) do
+                = link_to article_path(article), target: '_blank' do
                   = image_tag article.image.thumbnail.url, class: "img"
                 .colored-shadow style=("background-image: url(#{article.image.thumbnail.url}); opacity: 1;") 
                 .ripple-container
               .card-content
                 h6.category.text-success Category
                 h5.card-title
-                  = link_to article.title.titleize, article_path(article)
+                  = link_to article.title.titleize, article_path(article), target: '_blank'
                 p.card-description
                   = article.content[0..100].html_safe
                   | ...

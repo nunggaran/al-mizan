@@ -27,8 +27,18 @@ html lang="#{I18n.locale.downcase}"
     script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a2cc196d0739000123acd69&product=inline-share-buttons' async='async'
     script async='async' src="https://www.googletagmanager.com/gtag/js?id=UA-111019082-1"
     = render 'layouts/analytics'
+
   - if  action_array.include? params[:action]
     body.about-us
+      = render 'shared/navbar'
+      = yield
+      = render 'shared/footer'
+      / = javascript_include_tag 'application', 'data-turbolinks-track' => true
+      = yield :body_script_bottom
+      = render 'layouts/analytics_bottom'
+      
+  -elsif params[:controller].eql?('articles') && params[:action].eql?('show')
+    body.blog-post
       = render 'shared/navbar'
       = yield
       = render 'shared/footer'

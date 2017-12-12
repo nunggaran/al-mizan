@@ -1,22 +1,63 @@
-p#notice = notice
+.page-header.header-filter data-parallax="true" style=("background-image: url('#{@article.image.url}');") 
+  .container
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        h1.title = @article.title
+        h4 
+          | Posted on  
+          = @article.posted_on
+          |&nbsp; by &nbsp;
+          = @article.user.full_name
 
-p
-  strong Title:
-  = @article.title
-p
-  strong Content:
-  = @article.content.html_safe
-p
-  strong Slug:
-  = @article.slug
-p
-  strong User:
-  = @article.user_id
-p
-  strong Image:
-  = image_tag @article.image.thumbnail.url
+        br/
+        / a.btn.btn-rose.btn-round.btn-lg href="#pablo" 
+        /   i.material-icons format_align_left
+        /   | Read Article
+.main.main-raised.mb-50
+  .container
+    .section.section-text
+      .row
+        .col-md-12
+          - if user_signed_in? && current_user.eql?(@article.user)
+            = link_to edit_article_path(@article), data: {turbolinks: false}, class: "btn btn-warning btn-fab btn-round" do
+              i.material-icons mode_edit
+              .ripple-container
+          h3.title = @article.title
+          = @article.content.html_safe
+            
+        
+    .section.section-blog-info
+      .row
+        .col-md-12
+          .row
+            .col-md-12
+              .sharethis-inline-share-buttons
+              
+          hr/
+
+          
+          /! end media-post
+
+
+/ p#notice = notice
+
+/ p
+/   strong Title:
+/   = @article.title
+/ p
+/   strong Content:
+/   = @article.content.html_safe
+/ p
+/   strong Slug:
+/   = @article.slug
+/ p
+/   strong User:
+/   = @article.user_id
+/ p
+/   strong Image:
+/   = image_tag @article.image.thumbnail.url
   
 
-= link_to 'Edit', edit_article_path(@article)
-'|
-= link_to 'Back', articles_path
+/ = link_to 'Edit', edit_article_path(@article)
+/ '|
+/ = link_to 'Back', articles_path
