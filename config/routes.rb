@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   
   
-  resources :articles
+  
   # namespace :api do
   # 	namespace :v1 do
   # 		resources :price
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       # :omniauth_callbacks => "users/omniauth_callbacks" ,
       :invitations        => 'users/invitations'
     }
+    resources :articles
     devise_scope :user do
       delete 'logout', to: 'devise/sessions#destroy'
       get 'resetpassword', to: 'users/passwords#new'

@@ -62,6 +62,8 @@ gem 'httparty'
 gem 'dotenv'
 gem 'awesome_print'
 
+# beutifull url
+gem 'friendly_id', '~> 5.0.0'
 #redis
 gem 'redis-rails'
 gem 'redis'
