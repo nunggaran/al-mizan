@@ -1,4 +1,45 @@
 id:
+  datetime: 
+    distance_in_words:
+      about_x_hours:
+        one: "%{count} jam lalu"
+        other: "%{count} jam lalu"
+      about_x_months:
+        one: "%{count} bulan lalu"
+        other: "%{count} bulan lalu"
+      about_x_years:
+        one: "%{count} tahun lalu"
+        other: "%{count} tahun lalu"
+      almost_x_years:
+        one: "hampir setahun"
+        other: "hampir %{count} tahun"
+      half_a_minute: "setengah menit"
+      less_than_x_minutes:
+        zero: "kurang dari satu menit"
+        one: "kurang dari satu menit"
+        other: "kurang dari %{count} menit"
+      less_than_x_seconds:
+        zero: "kurang dari sedetik"
+        one: "kurang dari sedetik"
+        other: "kurang dari %{count} detik"
+      over_x_years:
+        one: "lebih dari setahun"
+        other: "lebih dari %{count} tahun"
+      x_days:
+        one: 1 jam
+        other: "%{count} jam"
+      x_minutes:
+        one: 1 menit
+        other: "%{count} menit"
+      x_months:
+        one: 1 bulan
+        other: "%{count} bulan"
+      x_years:
+        one: "satu tahun"
+        other: "%{count} Tahun"
+      x_seconds:
+        one: 1 detik
+        other: "%{count} detik"
   simple_form:
     labels:
       user:
