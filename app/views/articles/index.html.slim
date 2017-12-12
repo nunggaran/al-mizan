@@ -1,29 +1,89 @@
-h1 Listing articles
+.page-header.header-filter.header-small data-parallax="true" style="background-image: url('#{random_image_mudir}'); transform: translate3d(0px);" 
+  .container
+    .row
+      .col-md-8.col-md-offset-2.text-center
+        h2.title A Place for Entrepreneurs to Share and Discover New Stories
 
-table
-  thead
-    tr
-      th Title
-      th Content
-      th Slug
-      th User
-      th Image
-      th
-      th
-      th
+.main.main-raised.mb-50
+  .container
+    .section
+      h3.title.text-center You may also be interested in
+      br/
+      .row
+        - @articles.each do |article|
+          .col-md-4
+            .card.card-blog
+              .card-image
+                = link_to article_path(article), target: '_blank' do
+                  = image_tag article.image.thumbnail.url, class: "img"
+                .colored-shadow style=("background-image: url(#{article.image.thumbnail.url}); opacity: 1;") 
+                .ripple-container
+              .card-content
+                h5.card-title
+                  = link_to article.title.titleize, article_path(article), target: '_blank'
+                p.card-description
+                  = article.content[0..100].html_safe
+                  | ...
+                .footer
+                  .author
+                    = link_to '#' do
+                      = gravatar_for(article.user, "avatar img-raised")
+                      span = article.user.first_name
+                  .stats
+                    i.material-icons schedule
+                    | &nbsp;
+                    = time_ago_in_words(article.created_at)
+      .row.text-center
+        .col-md-6.col-md-offset-3
+          = will_paginate @articles, :previous_label => 'Previous', :next_label => 'Next'
+  
+  /.subscribe-line
+    .container
+      .row
+        .col-md-6
+          h3.title Get Tips &amp; Tricks every Week!
+          p.description
+            | Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
+        .col-md-6
+          .card.card-plain.card-form-horizontal
+            .card-content
+              form action="" method="" 
+                .row
+                  .col-md-8
+                    .input-group
+                      span.input-group-addon
+                        i.material-icons mail
+                      .form-group.is-empty
+                        input.form-control placeholder=("Your Email...") type="email" value="" /
+                        span.material-input
+                  .col-md-4
+                    button.btn.btn-primary.btn-round.btn-block type="button"  Subscribe
 
-  tbody
-    - @articles.each do |article|
-      tr
-        td = article.title
-        td = article.content
-        td = article.slug
-        td = article.user_id
-        td = article.image
-        td = link_to 'Show', article
-        td = link_to 'Edit', edit_article_path(article)
-        td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete
 
-br
+/ table
+/   thead
+/     tr
+/       th Title
+/       th Content
+/       th Slug
+/       th User
+/       th Image
+/       th
+/       th
+/       th
 
-= link_to 'New Article', new_article_path
+/   tbody
+/     - @articles.each do |article|
+/       tr
+/         td = article.title
+/         td = article.content
+/         td = article.slug
+/         td = article.user_id
+/         td = article.image
+/         td = link_to 'Show', article
+/         td = link_to 'Edit', edit_article_path(article)
+/         td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete
+
+/ br
+
+/ = link_to 'New Article', new_article_path

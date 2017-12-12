@@ -2,7 +2,7 @@
   = display_meta_tags site: "#{@article.title} - Ponpes Al-Mizan"
   = display_meta_tags description: @article.content[0..200].html_safe
   = display_meta_tags keyword: "Sejarah Al-Mizan, Pondok Al-Mizan, Visi dan Misi Pondok Pesantren Modern Al-Mizan, al-mizan, pondok al-mizan, sejarah al-mizan, Berdirinya al-mizan, pondok pesantren "
-  = display_meta_tags author: @article.user.full_name
+  = display_meta_tags author: @article.user.full_name.titleize
 
   meta property="og:image" content="#{@article.image.url}"/
   meta content="www.al-mizan.sch.id#{request.fullpath}" property="og:url" /
@@ -21,12 +21,12 @@
   .container
     .row
       .col-md-10.col-md-offset-1.text-center
-        h1.title = @article.title
+        h1.title = @article.title.titleize
         h4 
           | Posted on  
           = @article.posted_on
           |&nbsp; by &nbsp;
-          = @article.user.full_name
+          = @article.user.full_name.titleize
 
         br/
         / a.btn.btn-rose.btn-round.btn-lg href="#pablo" 

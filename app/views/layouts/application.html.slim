@@ -36,7 +36,14 @@ html lang="#{I18n.locale.downcase}"
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
-      
+  -elsif params[:controller].eql?('articles') && params[:action].eql?('index')
+    body.blog-posts
+      = render 'shared/navbar'
+      = yield
+      = render 'shared/footer'
+      / = javascript_include_tag 'application', 'data-turbolinks-track' => true
+      = yield :body_script_bottom
+      = render 'layouts/analytics_bottom'
   -elsif params[:controller].eql?('articles') && params[:action].eql?('show')
     body.blog-post
       = render 'shared/navbar'

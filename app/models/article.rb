@@ -25,6 +25,7 @@ class Article < ApplicationRecord
 
 	mount_uploader :image, ArticleUploader
 
+	scope :article_order, ->(page) { order('created_at DESC').paginate(page: page, :per_page => 12) }
 
 	def posted_on
     created_at.strftime("#{created_at.day.ordinalize} %b %Y at %H:%M")
