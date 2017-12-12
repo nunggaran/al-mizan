@@ -1,3 +1,22 @@
+-content_for :meta_tags
+  = display_meta_tags site: "#{@article.title} - Ponpes Al-Mizan"
+  = display_meta_tags description: @article.content[0..200].html_safe
+  = display_meta_tags keyword: "Sejarah Al-Mizan, Pondok Al-Mizan, Visi dan Misi Pondok Pesantren Modern Al-Mizan, al-mizan, pondok al-mizan, sejarah al-mizan, Berdirinya al-mizan, pondok pesantren "
+  = display_meta_tags author: @article.user.full_name
+
+  meta property="og:image" content="#{@article.image.url}"/
+  meta content="www.al-mizan.sch.id#{request.fullpath}" property="og:url" /
+  meta name="author" content="Pondok Pesantren Modern Al-Mizan"/
+  meta content="#{@article.title} -  Ponpes Al-Mizan" property="og:title" /
+  meta content="#{@article.title} - #{@article.title[0..150]}" property="og:description" /
+  meta content="#{@article.image.url}" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="#{@article.title} -  Ponpes Al-Mizan" name="twitter:title" /
+  meta content="#{@article.title} - #{@article.title[0..150]}" name="twitter:description" /
+  meta content="www.al-mizan.sch.id#{request.fullpath}" name="twitter:url" /
 .page-header.header-filter data-parallax="true" style=("background-image: url('#{@article.image.url}');") 
   .container
     .row
