@@ -19,8 +19,8 @@
 //= require cleave.min
 //= require notie.min
 //= require summernote
-//= require jquery.formchimp
 //= require custom
+//= require jquery.formchimp
 
 
 
