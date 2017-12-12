@@ -44,8 +44,8 @@
 									span.material-input
 					  
 						.footer.text-center
-							= f.submit "Log in", class: "btn btn-primary btn-round btn-lg mb-50"
-
+							= f.submit "Log in", class: "btn btn-primary btn-round btn-lg"
+							= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "btn btn-warning btn-simple btn-wd"
 							/ a.btn.btn-primary.btn-simple.btn-wd.btn-lg href="#pablo"  Get Started
 
 	footer.footer

@@ -72,7 +72,7 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
 
         / li = link_to t('navbar.about'), '#'
         li = link_to t('navbar.registrasi'), '#'
-        li = link_to 'Blog', articles_path
+        li = link_to 'Blog', articles_path, data: {turbolinks: false}
         - if user_signed_in?
           li = link_to 'Logout', logout_path, method: :delete
         -else
