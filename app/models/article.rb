@@ -25,4 +25,9 @@ class Article < ApplicationRecord
 
 	mount_uploader :image, ArticleUploader
 
+
+	def posted_on
+    created_at.strftime("#{created_at.day.ordinalize} %b %Y at %H:%M")
+  end
+  
 end

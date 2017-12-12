@@ -18,7 +18,7 @@ Rails.application.routes.draw do
       # :omniauth_callbacks => "users/omniauth_callbacks" ,
       :invitations        => 'users/invitations'
     }
-    resources :articles
+    resources :articles, :path => "blog"
     devise_scope :user do
       delete 'logout', to: 'devise/sessions#destroy'
       get 'resetpassword', to: 'users/passwords#new'

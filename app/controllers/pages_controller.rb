@@ -6,6 +6,7 @@ class PagesController < ApplicationController
     # Rails.logger.info(amount_btc)
     # Price.create(amount_params)
     # Rails.logger.info("=== Data Saved === ")
+    @articles = Article.all.order('created_at DESC').limit(6)
     @contact = Contact.new(contact_params)
     if @contact.save
       flash[:notice] = "Thank u for cantacting us, We'll contact u back soon"

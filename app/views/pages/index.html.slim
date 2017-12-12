@@ -121,33 +121,33 @@
           h5.description
             / = t('static_page.index.blog.description').html_safe
       .row
-        - 6.times do
+        - @articles.each do |article|
           .col-md-4
             .card.card-blog
               .card-image
-                a href="#pablo" 
-                  img.img src="#{random_image_activiy}" /
-                .colored-shadow style=("background-image: url(#{random_image_activiy}); opacity: 1;") 
+                = link_to article_path(article) do
+                  = image_tag article.image.thumbnail.url, class: "img"
+                .colored-shadow style=("background-image: url(#{article.image.thumbnail.url}); opacity: 1;") 
                 .ripple-container
               .card-content
                 h6.category.text-success Category
-                h4.card-title
-                  a href="#pablo"  Demo Judul Article Disini
+                h5.card-title
+                  = link_to article.title.titleize, article_path(article)
                 p.card-description
-                  | Isi deskripsi dari article yang dibuat oleh admin al-mizan atau ustadz ustadazah Al-Mizan, bisa juga santriwan dan santriwati menulis blog di sini dan harus melalui approval admin terlebih dahulu, maka article akan muncul di web
+                  = article.content[0..100].html_safe
+                  | ...
                 .footer
                   .author
                     a href="#pablo" 
                       img.avatar.img-raised alt="..." src="https://res.cloudinary.com/muhammadyana/image/upload/v1512718080/al-mizan/user.svg" /
-                      span Admin Mizan
+                      span = article.user.first_name
                   .stats
                     i.material-icons schedule
-                    | 5 min read
+                    = article.posted_on
 
-      /.row
-        .col-md-3.col-md-offset-4
-          = link_to 'http://bit.ly/iex-wallet', target: "_blank" do
-            = image_tag 'https://res.cloudinary.com/indoexchanger/image/upload/c_scale,w_150/v1511700950/google-play-badge_3_sdmzrj.png', alt: "IndoExchanger", class: "img-center img-responsive"
+      .row
+        .col-md-6.col-md-offset-3.text-center
+          = link_to 'All Blog', articles_path, class: "btn btn-primary btn-lg"
 
 = render 'shared/testimony'
 = render 'shared/newslatter'
