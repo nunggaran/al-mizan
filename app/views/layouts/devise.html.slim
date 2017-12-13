@@ -35,13 +35,24 @@ html lang="#{I18n.locale.downcase}"
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
   - elsif params[:controller].eql?('users/sessions') && params[:action].eql?('new')
-    - Rails.logger.info params[:controller]
-    - Rails.logger.info params[:action]
     body.login-page
       = render 'shared/sign_up_navbar'
       = yield
       / = render 'shared/footer'
-      
+      = yield :body_script_bottom
+      = render 'layouts/analytics_bottom'
+  - elsif params[:controller].eql?('devise/confirmations') && params[:action].eql?('new')
+    body.login-page
+      = render 'shared/sign_up_navbar'
+      = yield
+      / = render 'shared/footer'
+      = yield :body_script_bottom
+      = render 'layouts/analytics_bottom'
+  - elsif params[:controller].eql?('devise/confirmations') && params[:action].eql?('create')
+    body.login-page
+      = render 'shared/sign_up_navbar'
+      = yield
+      / = render 'shared/footer'
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
   - elsif params[:controller].eql?('users/sessions') && params[:action].eql?('create')
@@ -54,6 +65,8 @@ html lang="#{I18n.locale.downcase}"
       = render 'layouts/analytics_bottom'
   - else
     body.signup-page
+      - Rails.logger.info params[:controller]
+      - Rails.logger.info params[:action]
       = render 'shared/sign_up_navbar'
       = yield
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true

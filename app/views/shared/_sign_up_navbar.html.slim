@@ -17,15 +17,17 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-absolute
             b.caret
           ul.dropdown-menu
             li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
-              = link_to t('navbar.profile.history'), '#'
+              = link_to t('navbar.profile.history'), sejarah_path
             li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
-              = link_to t('navbar.profile.visi_misi')  , '#'
-            li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+              = link_to t('navbar.profile.visi_misi'), visi_misi_path
+            /li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
               = link_to t('navbar.profile.susunan_pengurus') , '#'
             li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
-              = link_to t('navbar.profile.fasilitas') , '#'
+              = link_to t('navbar.profile.fasilitas') , facility_path, data: {turbolinks: false}
             li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
-              = link_to t('navbar.profile.ekstrakulikuler') , '#'
+              = link_to t('navbar.profile.ekstrakulikuler') , ekskul_path
+            li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+              = link_to t('navbar.about'), '#'
             li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
               = link_to t('navbar.profile.kalender_akademik') , '#'
 
@@ -70,8 +72,13 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-absolute
             li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
               = link_to t('navbar.ekonomi_pondok.koperasi'), '#'
 
-        li = link_to t('navbar.about'), '#'
+        / li = link_to t('navbar.about'), '#'
         li = link_to t('navbar.registrasi'), '#'
+        li = link_to 'Blog', articles_path, data: {turbolinks: false}
+        - if user_signed_in?
+          li = link_to 'Logout', logout_path, method: :delete
+        -else
+          li = link_to 'Login Alumni', new_user_session_path
         /li.dropdown
           = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
             = current_language_flag

@@ -1,0 +1,70 @@
+
+
+/= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| 
+  = f.error_notification
+  = f.full_error :confirmation_token
+
+  .form-inputs
+    = f.input :email, required: true, autofocus: true
+  
+
+  .form-actions
+    = f.button :submit, "Resend confirmation instructions"
+  
+
+
+/ = render "users/shared/links"
+.page-header.header-filter style=("background-image: url('https://res.cloudinary.com/muhammadyana/image/upload/v1512805549/al-mizan/background/10697211_817842171613923_342413348611805822_o.jpg'); background-size: cover; background-position: top center;") 
+	.container
+		.row.mt-50
+			.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+				.card.card-signup
+					= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post } ) do |f|
+						.header.header-primary.text-center
+							h4.card-title Resend Confirmation email
+							/.social-line
+								a.btn.btn-just-icon.btn-simple href="#pablo" 
+									i.fa.fa-facebook-square
+								a.btn.btn-just-icon.btn-simple href="#pablo" 
+									i.fa.fa-twitter
+								a.btn.btn-just-icon.btn-simple href="#pablo" 
+									i.fa.fa-google-plus
+						p.description.text-center enter your email to resend confirmation activation
+						= devise_error_messages!
+						.card-content
+							.input-group
+								span.input-group-addon
+									i.material-icons email
+								.form-group.is-empty
+									= f.email_field :email,required: true, class: "form-control", placeholder: "Email"
+									span.material-input
+					  
+						.footer.text-center
+							= f.submit "Resend confirmation instruction", class: "btn btn-warning btn-simple btn-wd"
+							| &nbsp; &nbsp; &nbsp;
+							= link_to "Register", new_user_registration_path, class: "btn btn-warning btn-simple btn-wd"
+							= link_to "Login", new_user_session_path, class: "btn btn-warning btn-simple btn-wd"
+							
+							/ a.btn.btn-primary.btn-simple.btn-wd.btn-lg href="#pablo"  Get Started
+
+	footer.footer
+		.container
+			/nav.pull-left
+				ul
+					li
+						a href="http://www.creative-tim.com" 
+							| Creative Tim
+					li
+						a href="http://presentation.creative-tim.com" 
+							| About Us
+					li
+						a href="http://blog.creative-tim.com" 
+							| Blog
+					li
+						a href="http://www.creative-tim.com/license" 
+							| Licenses
+			.copyright
+				| © &nbsp; Copyright 2017, made with &nbsp;
+				i.fa.fa-heart.heart
+				| &nbsp; by
+				| &nbsp; Muhammad Yana Mulyana
