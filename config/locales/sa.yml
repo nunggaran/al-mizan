@@ -1,4 +1,17 @@
 sa:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "Oppss..!! Email sudah terdaftar"
+            username: 
+              invalid: "Oppss..!! Username sudah ada"
+            password_confirmation:
+              confirmation: "Oppss..! Password confirmation tidak sama"
+            password:
+              too_short: "Oppss..! Password terlalu pendek, minimal 6 characters dan harus mengandung huruf dan angka"
   datetime: 
     distance_in_words:
       about_x_hours:

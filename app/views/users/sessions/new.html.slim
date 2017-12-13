@@ -45,7 +45,10 @@
 					  
 						.footer.text-center
 							= f.submit "Log in", class: "btn btn-primary btn-round btn-lg"
+							| &nbsp; &nbsp; &nbsp;
+							= link_to "Register", new_user_registration_path, class: "btn btn-warning btn-simple btn-wd"
 							= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "btn btn-warning btn-simple btn-wd"
+							
 							/ a.btn.btn-primary.btn-simple.btn-wd.btn-lg href="#pablo"  Get Started
 
 	footer.footer

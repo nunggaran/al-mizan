@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"
+  body style="background-color: #ffffff;font-family: 'Open Sans', sans-serif;"
+    table bgcolor="#f6f6f6" border="0" cellpadding="0" cellspacing="0" height="100%" style=("margin-bottom: 20px;") width="100%"
+		  tbody
+		    tr
+		      td
+		        table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" style=(" max-width:600px; border-radius:3px;") width="100%"
+		          tr
+		            td align="center"
+		              img src="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_615/v1512631795/al-mizan/logo/Graphic1-2.png" style=("padding-top: 25px;margin-bottom: 25px;") /
+		          tr bgcolor="white"
+		            td style=("padding:0 25px 25px 25px;font-size:20px;color:#616161;font-weight:700;color:#1fb8ff;")
+		          tr bgcolor="white"
+		            td style=("padding:0 25px 15px 25px;font-size:20px;color:#616161;") 
+		              | Hi  
+		              = @email
+		          tr bgcolor="white"
+		          	td style=("padding:0 25px 15px 25px;font-size:14px;color:#616161;font-weight:300;line-height:22px;")
+		          		| Welcome to Alumni Al-Mizan
+		          tr bgcolor="white"
+		            td style=("padding:0 25px 15px 25px;font-size:14px;color:#616161;font-weight:300;line-height:22px;")
+		              | You can confirm your account email through the link below and complete your profile alumni :
+		              | &nbsp;
+		              = link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token)
+		              
+		          tr bgcolor="white"
+		            td style=("background:url(https://res.cloudinary.com/indoexchanger/image/upload/v1511945733/assets/logo/signature-full.png) no-repeat bottom;padding:147px 25px 25px 65%;font-size:14px;color:#616161;font-weight:300;line-height:22px;")
+		    tr
+		      td &nbsp;
+		    tr
+		      td &nbsp;
+		    tr
+		      td &nbsp;
+		    tr bgcolor="white"
+				  td style=("background: url(https://s3-ap-southeast-1.amazonaws.com/41studio-email-assets/images/border-top-footer.png) no-repeat; background-size: 100%;")
+				    table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" style=("max-width:600px; padding-top: 40px; padding-bottom: 10px;") width="100%"
+				      tr
+				        td style=("padding-right: 15px;") valign="top"
+				          img alt="Icon" src="https://s3-ap-southeast-1.amazonaws.com/41studio-email-assets/images/icon-marker.png" /
+				        td
+				          span style=("color: #1fb8ff; display: block;")  Address :
+				          span style=("color: #838383; font-size: 10px;")
+				            | Jl Jend Sudirman KM 3
+				            br/
+				            | Ar-Royyan's Building 2nd floor 
+				            br/
+				            |  Narimbang - Rangkasbitung
+				            br/
+				            | Lebak - Banten 
+				          br/
+				          a href="https://indoexchanger.co.id" target="_blank" style=("color: #1fb8ff; text-decoration: none; font-size: 10px;")  www.al-mizan.sch.id
+				        td style=("padding-right: 15px;") valign="top"
+				          img alt="Icon" src="https://s3-ap-southeast-1.amazonaws.com/41studio-email-assets/images/icon-phone.png" /
+				        td valign="top"
+				          span style=("color: #1fb8ff; display: block;")  Phone :
+				          span style=("color: #838383; font-size: 10px;")
+				            a href='telp:0252206459' style="color: #1fb8ff; text-decoration: none; font-size: 10px;" (0252) 206459
+
+				        td style=("padding-right: 15px;") valign="top"
+				          img alt="Icon" src="https://s3-ap-southeast-1.amazonaws.com/41studio-email-assets/images/icon-envelop.png" /
+				        td valign="top"
+				          span style=("color: #1fb8ff; display: block;")  Email :
+				          span style=("color: #838383; font-size: 10px;")
+				            a href='mailto:muhammadyanaa@gmail.com' style="color: #1fb8ff; text-decoration: none; font-size: 10px;" hello@al-mizan.sch.id
+
+

@@ -22,6 +22,7 @@
 //= require custom
 //= require jasny-bootstrap.min
 //= require jquery.formchimp
+//= require bootstrap-datetimepicker
 
 
 

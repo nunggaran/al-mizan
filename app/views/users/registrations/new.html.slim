@@ -21,39 +21,11 @@
         .card.card-signup
           h3.card-title.text-center Bagi Alumni Al-Mizan, harap mendaftarkan dirinya pada form berikut
           .row
-            / .col-md-5.col-md-offset-1
-              .info.info-horizontal
-                .icon.icon-rose
-                  i.material-icons timeline
-                .description
-                  h4.info-title Marketing
-                  p.description
-                    | We've created the marketing campaign of the website. It was a very interesting collaboration.
-              .info.info-horizontal
-                .icon.icon-primary
-                  i.material-icons code
-                .description
-                  h4.info-title Fully Coded in HTML5
-                  p.description
-                    | We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
-              .info.info-horizontal
-                .icon.icon-info
-                  i.material-icons group
-                .description
-                  h4.info-title Built Audience
-                  p.description
-                    | There is also a Fully Customizable CMS Admin Dashboard for this product.
-            .col-md-6.col-md-offset-3
-              .social.text-center
-                button.btn.btn-just-icon.btn-round.btn-twitter
-                  i.fa.fa-twitter
-                button.btn.btn-just-icon.btn-round.btn-dribbble
-                  i.fa.fa-dribbble
-                button.btn.btn-just-icon.btn-round.btn-facebook
-                  i.fa.fa-facebook
-                h4 or be classical
-              = devise_error_messages!
-              = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
+            = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+              .col-md-12
+                .card-content
+                  = devise_error_messages!
+              .col-md-6
                 .card-content
                   .input-group
                     span.input-group-addon
@@ -69,10 +41,53 @@
                       span.material-input
                   .input-group
                     span.input-group-addon
+                      i.material-icons accessibility
+                    .form-group.is-empty
+                      = f.text_field :username, required: true, class: "form-control", placeholder: "username"
+                      span.material-input
+                  .input-group
+                    span.input-group-addon
                       i.material-icons email
                     .form-group.is-empty
                       = f.email_field :email, required: true, class: "form-control", placeholder: "Email"
                       span.material-input
+                  /.input-group
+                    span.input-group-addon
+                      i.material-icons smartphone
+                    .form-group.is-empty
+                      = f.text_field :handphone, required: true, class: "form-control", placeholder: "Handphone Number"
+                      span.material-input
+              .col-md-6
+                /.social.text-center
+                  button.btn.btn-just-icon.btn-round.btn-twitter
+                    i.fa.fa-twitter
+                  button.btn.btn-just-icon.btn-round.btn-dribbble
+                    i.fa.fa-dribbble
+                  button.btn.btn-just-icon.btn-round.btn-facebook
+                    i.fa.fa-facebook
+                  h4 or be classical
+                
+                .card-content
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons date_range
+                    .form-group.is-empty
+                      = f.text_field :date_of_birth, require: true, class: "form-control datepicker", placeholder: "Tanggal Lahir"
+                    span.material-input
+
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons place
+                    .form-group.is-empty
+                      = f.text_field :address, required: true, class: "form-control", placeholder: "Alamat Sekarang"
+                      span.material-input
+                  /.input-group
+                    span.input-group-addon
+                      i.material-icons place
+                    .form-group.is-empty
+                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year + 1) ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+                      
+                      / span.material-input
                   .input-group
                     span.input-group-addon
                       i.material-icons lock_outline
@@ -87,16 +102,20 @@
                       = f.password_field :password_confirmation, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password Confirmation"
                       span.material-input
                   /! If you want to add a checkbox to this form, uncomment this code
-                  
-                  .checkbox
-                    label
-                      input checked="" name="optionsCheckboxes" type="checkbox" /
-                      span.checkbox-material
-                      span.check
-                      | I agree to the
-                      a href="#something"  terms and conditions
-                .footer.text-center
-                  = f.submit "Daftar", class: "btn btn-primary btn-round mb-50"
+              .row
+                .col-md-6.pull-left
+                  .container-fluid
+                    .input-group
+                      .checkbox
+                        label
+                          input checked="" name="optionsCheckboxes" require="true" type="checkbox" /
+                          span.checkbox-material
+                          span.check
+                          | I agree to the
+                          a href="#something"  terms and conditions
+                .col-md-6.pull-right
+                  .footer.text-center
+                    = f.submit "Daftar", class: "btn btn-primary btn-round mb-50"
   footer.footer
     .container
       /nav.pull-left
@@ -118,3 +137,8 @@
         i.fa.fa-heart.heart
         | &nbsp; by
         | &nbsp; Muhammad Yana Mulyana
+- content_for :body_script_bottom
+  javascript:
+    $(document).ready(function(){
+      materialKit.initFormExtendedDatetimepickers();
+    });

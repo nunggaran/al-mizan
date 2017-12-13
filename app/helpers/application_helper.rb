@@ -14,6 +14,10 @@ module ApplicationHelper
     return image_local
   end
 
+  def year_of_entry
+    
+  end
+
   def gravatar_for(user, class_names=nil, options = { size: 500 })
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
