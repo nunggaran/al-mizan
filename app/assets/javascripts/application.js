@@ -20,6 +20,7 @@
 //= require notie.min
 //= require summernote
 //= require custom
+//= require jasny-bootstrap.min
 //= require jquery.formchimp
 
 

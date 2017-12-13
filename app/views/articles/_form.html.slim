@@ -10,8 +10,45 @@
 
 /   .form-actions
 /     = f.button :submit
+.col-md-12
+  .card.card-contact
+    = simple_form_for @article, html: { class: "form-horizontal", multipart: true }, wrapper: :horizontal_form, wrapper_mappings: { file: :horizontal_file_input } do |f|
+      .header.header-raised.header-success.text-center
+        h4.card-title Create new Article
+      .card-content
+        .row
+          .col-md-12
+            .form-group
+              = f.input :title, label: false, class: "form-control", placeholder: "Judul Artikel"
+              span.material-input
+        .form-group.label-floating.is-empty
+          = f.input :content, as: :summernote, class: "form-control"
+          span.material-input
+        .fileinput.fileinput-new.text-center data-provides="fileinput" 
+          .fileinput-new.thumbnail.img-raised
+          	= image_tag 'https://res.cloudinary.com/al-mizan/image/upload/v1513133933/image_placeholder_ksgu3i.jpg'
+          .fileinput-preview.fileinput-exists.thumbnail.img-raised
+          div
+            span.btn.btn-raised.btn-round.btn-default.btn-file
+              span.fileinput-new Select image
+              span.fileinput-exists Change
+              = f.file_field :image
+            a.btn.btn-danger.btn-round.fileinput-exists data-dismiss="fileinput" href="#pablo" 
+              i.fa.fa-times
+              | Remove
 
-= simple_form_for @article, html: { class: "form-horizontal", multipart: true }, wrapper: :horizontal_form, wrapper_mappings: { check_boxes: :horizontal_radio_and_checkboxes, radio_buttons: :horizontal_radio_and_checkboxes, file: :horizontal_file_input, boolean: :horizontal_boolean } do |f|
+       	
+        .row
+          .col-md-6
+            .checkbox
+              label
+                input name="optionsCheckboxes" type="checkbox" /
+                | I'm not a robot
+          .col-md-6
+            = f.submit "Create Blog", class: 'btn btn-success pull-right'
+
+         
+/= simple_form_for @article, html: { class: "form-horizontal", multipart: true }, wrapper: :horizontal_form, wrapper_mappings: { check_boxes: :horizontal_radio_and_checkboxes, radio_buttons: :horizontal_radio_and_checkboxes, file: :horizontal_file_input, boolean: :horizontal_boolean } do |f|
   = f.error_notification
   = f.input :title, label: false, placeholder: 'Article Title'
   

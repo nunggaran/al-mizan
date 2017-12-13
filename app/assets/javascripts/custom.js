@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('[data-provider="summernote"]').each(function(){
 	  $(this).summernote({ 
-	  	height: 500,   //set editable area's height
+	  	height: 600,   //set editable area's height
   		codemirror: { // codemirror options
     		theme: 'monokai'
   		},
