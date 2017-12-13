@@ -137,7 +137,10 @@
                   | Views
                   
                 h5.card-title
-                  = link_to "#{article.title.titleize[0..26]}...", article_path(article), target: '_blank'
+                  - if article.title.length > 25
+                    = link_to "#{article.title.titleize[0..25]}...", article_path(article), target: '_blank'
+                  -else
+                    = link_to article.title.titleize, article_path(article), target: '_blank'
                 p.card-description
                   = article.content[0..100].html_safe
                   | ...
