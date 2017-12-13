@@ -28,8 +28,12 @@
           = @article.posted_on
           |&nbsp; by &nbsp;
           = @article.user.full_name.titleize
-
-        br/
+        h4
+          i.fa.fa-eye
+          | &nbsp;
+          = @article.impressionist_count
+          | &nbsp;
+          | Views
         / a.btn.btn-rose.btn-round.btn-lg href="#pablo" 
         /   i.material-icons format_align_left
         /   | Read Article

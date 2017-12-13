@@ -65,6 +65,8 @@ gem 'httparty'
 gem 'dotenv'
 gem 'awesome_print'
 
+#impressionist
+gem 'impressionist'
 #paging
 gem 'will_paginate', '~> 3.1.1'
 gem 'bootstrap-will_paginate', '~> 0.0.10'

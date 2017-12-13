@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  impressionist
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
@@ -12,6 +13,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    impressionist(@article)
   end
 
   # GET /articles/new

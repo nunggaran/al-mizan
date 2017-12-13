@@ -129,9 +129,15 @@
                 .colored-shadow style=("background-image: url(#{article.image.thumbnail.url}); opacity: 1;") 
                 .ripple-container
               .card-content
-                h6.category.text-success Category
+                .stats
+                  i.fa.fa-eye
+                  | &nbsp;
+                  = article.impressionist_count
+                  | &nbsp;
+                  | Views
+                  
                 h5.card-title
-                  = link_to article.title.titleize, article_path(article), target: '_blank'
+                  = link_to "#{article.title.titleize[0..29]} ...", article_path(article), target: '_blank'
                 p.card-description
                   = article.content[0..100].html_safe
                   | ...
