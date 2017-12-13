@@ -58,7 +58,7 @@ gem 'simple_form'
 gem 'material_icons'
 gem 'nprogress-rails'
 # gem 'apipie-rails'
-# gem 'metamagic'
+gem 'metamagic'
 gem 'meta-tags'
 gem "font-awesome-rails"
 gem 'httparty'
