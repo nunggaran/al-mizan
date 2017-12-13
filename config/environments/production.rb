@@ -63,8 +63,8 @@ Rails.application.configure do
       :address        => 'smtp.sendgrid.net',
       :port           => '587',
       :authentication => :plain,
-      :user_name      => 'apikey',
-      :password       => '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',
+      :user_name      => ENV['SENDGIRD_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
       :domain         => 'www.al-mizan.herokuapp.com'
   }
   # config.action_mailer.smtp_settings = {
