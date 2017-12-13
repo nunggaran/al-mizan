@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_writer!, only: [:create, :update]
   # GET /articles
   # GET /articles.json
   def index
@@ -62,6 +63,11 @@ class ArticlesController < ApplicationController
   end
 
   private
+    def authenticate_writer!
+      unless current_user.is_writer? || current_user.is_admin?
+        redirect_to root_path, alert: "You are not authorized!"
+      end
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.friendly.find(params[:id])

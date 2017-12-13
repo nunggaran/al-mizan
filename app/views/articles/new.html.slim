@@ -27,5 +27,6 @@
         h4 = current_user.email        	
 
 .section.section-text 	
-	== render 'form'
-	= link_to 'Back', articles_path
+	.container-fluid
+		== render 'form'
+	/ = link_to articles_path

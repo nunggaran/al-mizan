@@ -46,11 +46,24 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, 
 				length: { minimum: 4, maximum: 45 },
 				format: { with: VALID_EMAIL_REGEX }
-  has_many  :articles
+  has_many  :articles, dependent: :destroy
   validates :first_name, :last_name, presence: true
-  # validates :username, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 4, maximum: 20 },format: { without: /\s/ }
+  validates :username, uniqueness: { case_sensitive: false }, length: { minimum: 4, maximum: 20 },format: { without: /\s/ }
   devise :invitable, :database_authenticatable, :registerable,
        	:recoverable, :rememberable, :validatable, :confirmable, :trackable, :invite_for => 2.weeks
+
+
+  extend FriendlyId
+  friendly_id :username, use: :slugged
+
+
+  ROLES = ["alumni", "admin", "writer"]
+
+  User::ROLES.each do |role|
+    define_method("is_#{role}?".to_s) do
+      self.role.eql?(role)
+    end
+  end
 
   def full_name
     "#{first_name} #{last_name}"

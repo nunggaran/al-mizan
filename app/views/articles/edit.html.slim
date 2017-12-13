@@ -1,8 +1,35 @@
-h1 Editing article
+-content_for :meta_tags
+  = display_meta_tags site: "Create new Article - Ponpes Al-Mizan"
+  = display_meta_tags description: "Create new Article - Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya."
+  = display_meta_tags keyword: "Create new Article, al-mizan, pondok al-mizan, sejarah al-mizan, Berdirinya al-mizan, pondok pesantren "
+  = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
 
-== render 'form'
+  meta property="og:image" content="https://res.cloudinary.com/al-mizan/image/upload/v1512880159/assets/image/mudir/20280540_1502939066430824_4309184607117713317_o.jpg"/
+  meta content="www.al-mizan.sch.id#{request.fullpath}" property="og:url" /
+  / meta name="author" content="Pondok Pesantren Modern Al-Mizan"/
+  meta content="Create new Article -  Ponpes Al-Mizan" property="og:title" /
+  meta content="Create new ArticleMizan - Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya" property="og:description" /
+  meta content="https://res.cloudinary.com/al-mizan/image/upload/v1512880159/assets/image/mudir/20280540_1502939066430824_4309184607117713317_o.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="Create new Article - Ponpes Al-Mizan" name="twitter:title" /
+  meta content="Create new Article - Ponpes Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya" name="twitter:description" /
+  meta content="www.al-mizan.sch.id#{request.fullpath}" name="twitter:url" /
+.page-header.header-filter.header-small filter-color="green" style="background-image: url('#{random_image_mudir}');"
+  .container
+    .row
+      .col-md-12
+        h1.title
+        	| Hallo 
+        	= current_user.full_name.titleize
+        h4 = current_user.email   
+        h4 = current_user.role    
 
-= link_to 'Show', @article
-'|
-= link_to 'Back', articles_path
+.section.section-text 	
+  .container-fluid
+  	== render 'form'
+  
+
 
