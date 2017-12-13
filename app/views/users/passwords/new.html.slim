@@ -3,17 +3,10 @@
 		.row.mt-50
 			.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
 				.card.card-signup
-					= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+					= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
 						.header.header-primary.text-center
-							h4.card-title Log in
-							.social-line
-								a.btn.btn-just-icon.btn-simple href="#pablo" 
-									i.fa.fa-facebook-square
-								a.btn.btn-just-icon.btn-simple href="#pablo" 
-									i.fa.fa-twitter
-								a.btn.btn-just-icon.btn-simple href="#pablo" 
-									i.fa.fa-google-plus
-						p.description.text-center Or Be Classical
+							h4.card-title Reset Password
+						p.description.text-center Enter your email to reset password, we'll sent password link reset
 						.card-content
 							.input-group
 								span.input-group-addon
@@ -21,19 +14,13 @@
 								.form-group.is-empty
 									= f.email_field :email,required: true, class: "form-control", placeholder: "Email"
 									span.material-input
-							.input-group
-								span.input-group-addon
-									i.material-icons lock_outline
-								.form-group.is-empty
-									= f.password_field :password, required: true, class: "form-control", placeholder: "Password"
-									span.material-input
 					  
 						.footer.text-center
-							= f.submit "Log in", class: "btn btn-primary btn-round btn-lg"
+							= f.submit "Reset Password", class: "btn btn-primary btn-round btn-lg"
 							| &nbsp; &nbsp; &nbsp;
 							= link_to "Register", new_user_registration_path, class: "btn btn-warning btn-simple btn-wd"
 							= link_to "Reset password", new_password_path(resource_name), class: "btn btn-warning btn-simple btn-wd"
-							= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "btn btn-warning btn-simple btn-wd"
+							/ = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "btn btn-warning btn-simple btn-wd"
 							
 							/ a.btn.btn-primary.btn-simple.btn-wd.btn-lg href="#pablo"  Get Started
 
