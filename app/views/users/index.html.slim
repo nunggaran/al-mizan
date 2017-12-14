@@ -1,1 +1,34 @@
-h1 Hello Word
+.page-header.header-filter.header-small data-parallax="true" filter-color="green" style="background-image: url('#{random_image_mudir}');"
+  .container
+    .row
+      .col-md-12
+        h1.title Listing Semua Alumni Pondok Pesantren Modern Al-Mizan
+        h4 Pondok Pesantren Modern Al-Mizan
+
+.main.main-raised.mb-50
+  .section
+    .container
+    	.row
+    		- @alumni.each do |alumni|
+	    		.col-md-3
+					  .card.card-profile.card-plain
+					    .card-avatar
+					      = link_to user_path(alumni.username) do
+					        = gravatar_for(alumni, "img")
+					        
+					    .card-content
+					      = link_to user_path(alumni.username) do
+					        h4.card-title = alumni.full_name.titleize
+					      h6.category.text-muted = alumni.email
+					      p.card-description
+					        | And I love you like Kanye loves Kanye. We need to restart the human foundation.
+					      .footer
+					        - unless alumni.twitter.blank? 
+					          = link_to "https://twitter.com/#{alumni.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
+					            i.fa.fa-twitter
+					        - unless alumni.fb.blank?
+					          = link_to "https://facebook.com/#{alumni.fb}", class: "btn btn-just-icon btn-simple btn-facebook", target: "_blank" do
+					            i.fa.fa-facebook-square
+					        - unless alumni.ig.blank?
+					          = link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
+					            i.fa.fa-instagram

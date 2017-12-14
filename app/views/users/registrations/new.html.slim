@@ -83,9 +83,9 @@
                       span.material-input
                   /.input-group
                     span.input-group-addon
-                      i.material-icons place
+                      i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year + 1) ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
                       
                       / span.material-input
                   .input-group

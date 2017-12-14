@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171213092328) do
+ActiveRecord::Schema.define(version: 20171214030036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -110,6 +110,9 @@ ActiveRecord::Schema.define(version: 20171213092328) do
     t.string   "role",                   default: "alumni"
     t.string   "year_of_entry"
     t.string   "year_graduated"
+    t.string   "fb"
+    t.string   "ig"
+    t.string   "twitter"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
