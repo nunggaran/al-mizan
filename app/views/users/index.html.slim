@@ -37,9 +37,12 @@
 					    .card-content
 					      = link_to user_path(alumni.username) do
 					        h4.card-title = alumni.full_name.titleize
-					      h6.category.text-muted = alumni.email
+					      - if alumni.job.present?
+					        h6.category.text-muted = alumni.job
+					      -elsif alumni.faculty.present?
+					        h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
 					      p.card-description
-					        | And I love you like Kanye loves Kanye. We need to restart the human foundation.
+					        = alumni.address
 					      .footer
 					      	- if alumni.twitter.blank? &&  alumni.fb.blank? && alumni.ig.blank?
 					      		h2.text-white Not found
