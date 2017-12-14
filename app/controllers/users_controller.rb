@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = current_user
   end
 
   # POST /users
@@ -46,9 +47,11 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @user = current_user
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        bypass_sign_in(@user)
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -75,13 +78,13 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
+      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation, :ig, :fb, :twitter, :handphone, :year_graduated, :year_of_entry, :alumni)
     end
     #cant't edit or delete if user not belong to owner user
     def require_same_user
       if current_user != @user
         flash[:alert] = "You only can edit or delet your own user"
-        redirect_to root_path
+        redirect_to users_path
       end
     end
 end
