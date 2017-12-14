@@ -23,6 +23,8 @@
 					      p.card-description
 					        | And I love you like Kanye loves Kanye. We need to restart the human foundation.
 					      .footer
+					      	- if alumni.twitter.blank? &&  alumni.fb.blank? && alumni.ig.blank?
+					      		h2.text-white Not found
 					        - unless alumni.twitter.blank? 
 					          = link_to "https://twitter.com/#{alumni.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
 					            i.fa.fa-twitter
