@@ -78,7 +78,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :address, :password_confirmation, :ig, :fb, :twitter, :handphone, :year_graduated, :faculty, :university, :job, :year_of_entry, :alumni)
+      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :address, :date_of_birth, :password_confirmation, :ig, :fb, :twitter, :handphone, :year_graduated, :faculty, :university, :job, :year_of_entry, :alumni)
     end
     #cant't edit or delete if user not belong to owner user
     def require_same_user

@@ -72,11 +72,14 @@
                     / = f.text_field :year_graduated, class: "form-control"
                     span.material-input
                 .col-md-6
-                  / input type="text" class="form-control" ng-model="newEntry.name"
-                  / | {{newEntry.name + 2}}
                   .form-group.is-empty
                     label.control-label No HP
                     = f.text_field :handphone, class: "form-control"
+                    span.material-input
+                .col-md-6
+                  .form-group.is-empty
+                    label.control-label Tgl Lahir
+                    = f.text_field :date_of_birth, require: true, class: "form-control datepicker", placeholder: "Tanggal Lahir"
                     span.material-input
                 .col-md-6
                   .form-group.is-empty
@@ -133,103 +136,17 @@
                     = f.text_field :university, class: "form-control"
                     span.material-input
                 
-              .row
+              .row.mb-50
                 .col-md-6
                   .checkbox
                     label
                       input name="optionsCheckboxes" type="checkbox" /
                       | I'm not a robot
                 .col-md-6
-                  = f.submit "Send Message", class: 'btn btn-primary pull-right'
-        /.col-md-4.col-md-offset-2
-          .info.info-horizontal
-            .icon.icon-primary
-              i.material-icons pin_drop
-            .description
-              h4.info-title = t('static_page.contact_section.male_campus')
-              p
-                = t('static_page.contact_section.office_content').html_safe
-          .info.info-horizontal
-            .icon.icon-primary
-              i.material-icons pin_drop
-            .description
-              h4.info-title = t('static_page.contact_section.woman_campus')
-              p Jl AMD Lintas Timur, Cikole Pendeglang Banten
-                
-          .info.info-horizontal
-            .icon.icon-primary
-              i.material-icons phone
-            .description
-              h4.info-title = t('static_page.contact_section.phone_title')
-              p
-                = link_to ' (0252) 206459', 'tel:0252206459'
-                br/
-                | Mon - Fri, 8:00-22:00
-          /.info.info-horizontal
-            .icon.icon-primary
-              i.material-icons business_center
-            .description
-              h4.info-title Legal Information
-              p
-                | PT Indonesia Exchanger Utama.
-                br/
-                | VAT &middot; EN2341241
-                br/
-                | IBAN &middot; EN8732ENGB2300099123
-                br/
-                | Bank &middot; Great Britain Bank
-/ .main.main-raised.mb-50
-	.section
-		.container
+                  = f.submit "Update Profile", class: 'btn btn-primary pull-right'
 
-			= form_for(@user) do |f|
-				.row
-					.col-md-6
-						.form-group.label-floating.is-empty
-							label.control-label First name
-							= f.text_field :first_name, class: "form-control"
-							span.material-input
-					.col-md-6
-						.form-group.label-floating.is-empty
-							label.control-label First Name
-							= f.text_field :first_name, class: "form-control"
-					.col-md-6
-						.form-group.label-floating.is-empty
-							label.control-label With Floating Label
-							input.form-control type="email" /
-							span.material-input
-
-
-					.col-md-6
-						.input-group
-							.form-group.is-empty
-								label Last Name
-								= f.text_field :last_name, class: "form-control"
-								/ span.material-input
-
-					.form-inputs
-
-						= f.text_field :username, class: "form-control"
-						= f.text_field :address, class: "form-control"
-						= f.text_field :year_of_entry, class: "form-control"
-						= f.text_field :year_graduated, class: "form-control"
-						= f.text_field :handphone, class: "form-control"
-						= f.text_field :ig, class: "form-control"
-						= f.text_field :fb, class: "form-control"
-						= f.text_field :twitter, class: "form-control"
-						= f.text_field :faculty, class: "form-control"
-						= f.text_field :university, class: "form-control"
-						= f.text_field :job, class: "form-control"
-
-				    / = f.input :password
-				    / = f.input :password_confirmation
-						= f.email_field :email
-
-					.form-actions
-						= f.button :submit
-				- if @user.errors.any?
-				  #error_explanation
-				    = pluralize(@user.errors.count, "error")
-				    ul
-				      - @user.errors.full_messages.each do |message|
-				        li = message
+- content_for :body_script_bottom
+  javascript:
+    $(document).ready(function(){
+      materialKit.initFormExtendedDatetimepickers();
+    });
