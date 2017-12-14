@@ -44,8 +44,13 @@
 												= link_to user_path(alumni.slug) do
 													h4.card-title = alumni.full_name.titleize
 												- if alumni.job.present?
-													h6.category.text-muted = alumni.job
-													h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
+													h6.text-muted.capitalize 
+														-if alumni.job.length > 30
+															= alumni.job[0..30]
+															= link_to '[...]', user_path(alumni.slug)
+														- else
+															= alumni.job
+													h6.text-muted.capitalize = "#{alumni.faculty} at #{alumni.university }" 
 												-elsif alumni.faculty.present?
 													h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
 												p.card-description
