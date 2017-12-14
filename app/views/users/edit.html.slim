@@ -1,3 +1,22 @@
+-content_for :meta_tags
+  = display_meta_tags site: "Edit Data Alumni Pondok Pesantren Modern Al-Mizan"
+  = display_meta_tags description: "Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya."
+  = display_meta_tags keyword: "Blog dan Berita Pondok Pesantren Modern Al-Mizan, blog al-mizan, al-mizan post, mizan blog, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih, pondok di banten "
+  = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
+
+  meta property="og:image" content="https://res.cloudinary.com/al-mizan/image/upload/v1512879375/assets/image/20121206_1495176167207114_2865656083753650746_o.jpg"/
+  meta content="https://al-mizan.herokuapp.com#{request.fullpath}" property="og:url" /
+  meta content="Edit Data Alumni Pondok Pesantren Modern Al-Mizan" property="og:title" /
+  meta content="Pondok Pesantren Modern Al-Mizan sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari. " property="og:description" /
+  meta content="https://res.cloudinary.com/al-mizan/image/upload/v1512879375/assets/image/20121206_1495176167207114_2865656083753650746_o.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="Edit Data Alumni Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
+  meta content="Edit Data Alumni Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya. " name="twitter:description" /
+  meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
+
 .page-header.header-filter.header-small data-parallax="true" filter-color="green" style="background-image: url('#{random_image_mudir}');"
 	.container
 		.row
@@ -8,10 +27,10 @@
   .contact-content
     .container
       h2.title Edit Biodata
+      h5 Semua data-data anda dapat dilihat oleh semua alumni
+      hr/
       .row(ng-app='')
         .col-md-8
-          p.description
-            | Semua data-data anda dapat dilihat oleh semua alumni
           = form_for @user do |f|
             .card-content
               .row
@@ -43,12 +62,14 @@
                 .col-md-6
                   .form-group.is-empty
                     label.control-label Tahun Masuk
-                    = f.text_field :year_of_entry, class: "form-control"
+                    = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year), selected:  @user.year_of_entry ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+                    / = f.text_field :year_of_entry, class: "form-control"
                     span.material-input
                 .col-md-6
                   .form-group.is-empty
                     label.control-label Tahun Lulus
-                    = f.text_field :year_graduated, class: "form-control"
+                    = f.select :year_graduated, options_for_select( (Time.zone.now.year - 18)..(Time.zone.now.year), selected:  @user.year_graduated ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+                    / = f.text_field :year_graduated, class: "form-control"
                     span.material-input
                 .col-md-6
                   / input type="text" class="form-control" ng-model="newEntry.name"
@@ -59,20 +80,42 @@
                     span.material-input
                 .col-md-6
                   .form-group.is-empty
-                    label.control-label 
-                    	| Instagram Username 
-                    	| {{newEntry.name}}
-                    = f.text_field :ig, class: "form-control", 'ng-model': 'newEntry.name'
+                    - if @user.ig.present?
+                      label.control-label 
+                        | Instagram Username, 
+                        = link_to "https://instagram.com/#{@user.ig}", "https://instagram.com/#{@user.ig}",  target: "_blank"  
+                      = f.text_field :ig, class: "form-control"
+                    - else
+                      label.control-label 
+                        | Instagram Username, like  
+                        = link_to "https://instagram.com/{{instagram.name}}","https://instagram.com/{{instagram.name}}", target: "_blank"
+                      = f.text_field :ig, class: "form-control", 'ng-model': 'instagram.name'
                     span.material-input
                 .col-md-6
                   .form-group.is-empty
-                    label.control-label Facebook Username
-                    = f.text_field :fb, class: "form-control"
+                    - if @user.fb.present?
+                      label.control-label 
+                        | Instagram Username, 
+                        = link_to "https://facebook.com/#{@user.fb}", "https://facebook.com/#{@user.fb}",  target: "_blank"  
+                      = f.text_field :fb, class: "form-control"
+                    - else
+                      label.control-label 
+                        | Instagram Username, like  
+                        = link_to "https://facebook.com/{{facebook.name}}","https://facebook.com/{{facebook.name}}", target: "_blank"
+                      = f.text_field :fb, class: "form-control", 'ng-model': 'facebook.name'
                     span.material-input
                 .col-md-6
                   .form-group.is-empty
-                    label.control-label Twitter Username
-                    = f.text_field :twitter, class: "form-control"
+                    - if @user.twitter.present?
+                      label.control-label 
+                        | Instagram Username, 
+                        = link_to "https://twitter.com/#{@user.fb}", "https://twitter.com/#{@user.fb}",  target: "_blank"  
+                      = f.text_field :twitter, class: "form-control"
+                    - else
+                      label.control-label 
+                        | Instagram Username, like  
+                        = link_to "https://twitter.com/{{twitter.name}}","https://twitter.com/{{twitter.name}}", target: "_blank"
+                      = f.text_field :twitter, class: "form-control", 'ng-model': 'twitter.name'
                     span.material-input
                 .col-md-6
                   .form-group.is-empty

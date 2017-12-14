@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @alumni = User.order('created_at ASC')
+    @alumni = User.alumni.order('created_at ASC')
     # @user_articles_count = @user_articles
   end
 
