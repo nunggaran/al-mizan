@@ -21,8 +21,9 @@
                 = link_to "https://instagram.com/#{@user.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
                   i.fa.fa-instagram
         .col-xs-2.follow
-          button.btn.btn-fab.btn-primary data-original-title=("Follow this user") rel="tooltip" title="" 
-            i.material-icons add
+          -if current_user.eql?(@user)
+            = link_to edit_user_path(current_user.slug), rel: "tooltip", data: {turbolinks: false, original_title: 'Edit Profile'}, class: "btn btn-fab btn-primary" do
+              i.material-icons mode_edit
       .description.text-center
         /p An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure.
       .row

@@ -21,8 +21,10 @@
 	.container
 		.row
 			.col-md-12
-				h1.title Listing Semua Alumni Pondok Pesantren Modern Al-Mizan
-				h4 Pondok Pesantren Modern Al-Mizan
+				h1.title
+					| Hallo 
+					= @user.full_name
+				h4 = @user.email
 .main.main-raised.mb-50
   .contact-content
     .container
