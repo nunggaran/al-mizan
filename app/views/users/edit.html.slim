@@ -33,6 +33,19 @@
       hr/
       .row(ng-app='')
         .col-md-8
+          - if @user.errors.any?
+            .alert.alert-danger
+              .container
+                .alert-icon
+                  i.material-icons error_outline
+                button.close aria-label="Close" data-dismiss="alert" type="button" 
+                  span aria-hidden="true" 
+                    i.material-icons clear
+                b = pluralize(@user.errors.count, "Error")
+                ul 
+                  -@user.errors.full_messages.each do |message|
+                    li = message
+
           = form_for @user do |f|
             .card-content
               .row
