@@ -36,7 +36,7 @@ html lang="#{I18n.locale.downcase}"
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
-  -elsif params[:controller].eql?('articles') && params[:action].eql?('index')
+  -elsif params[:controller].eql?('articles') && article_action.include?(params[:action])
     body.blog-posts
       = render 'shared/navbar'
       = yield
@@ -44,19 +44,12 @@ html lang="#{I18n.locale.downcase}"
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
-  -elsif params[:controller].eql?('articles') && params[:action].eql?('show')
-    body.blog-post
+  -elsif params[:controller].eql?('users') && user_action.include?(params[:action])
+    body.profile-page
       = render 'shared/navbar'
       = yield
       = render 'shared/footer'
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true
-      = yield :body_script_bottom
-      = render 'layouts/analytics_bottom'
-  - elsif params[:action].eql? 'calculator_bitcoin'
-    body.product-page
-      = render 'shared/navbar'
-      = yield
-      = render 'shared/footer'
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
   - elsif params[:action].eql? 'contact_us'

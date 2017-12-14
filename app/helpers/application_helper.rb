@@ -18,6 +18,14 @@ module ApplicationHelper
     
   end
 
+  def article_action
+    %w(index show)
+  end
+
+  def user_action
+    %w(edit show)
+  end
+
   def gravatar_for(user, class_names=nil, options = { size: 500 })
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]

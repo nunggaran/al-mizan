@@ -1,4 +1,165 @@
-h1 Hallo
-h1 = @user.full_name
-h1 = @user.email
-h1 = @user.username
+.page-header.header-filter data-parallax="true" style=("background-image: url('#{random_image_mudir}');") 
+
+.main.main-raised
+  .profile-content
+    .container
+      .row
+        .col-xs-6.col-xs-offset-3
+          .profile
+            .avatar
+              = gravatar_for(@user, "img-circle img-responsive img-raised")
+            .name
+              h3.title = @user.full_name
+              h6 = @user.email
+              - unless @user.twitter.blank? 
+                = link_to "https://twitter.com/#{@user.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
+                  i.fa.fa-twitter
+              - unless @user.fb.blank?
+                = link_to "https://facebook.com/#{@user.fb}", class: "btn btn-just-icon btn-simple btn-facebook", target: "_blank" do
+                  i.fa.fa-facebook-square
+              - unless @user.ig.blank?
+                = link_to "https://instagram.com/#{@user.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
+                  i.fa.fa-instagram
+        .col-xs-2.follow
+          button.btn.btn-fab.btn-primary data-original-title=("Follow this user") rel="tooltip" title="" 
+            i.material-icons add
+      .description.text-center
+        /p An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure.
+      .row
+        .col-md-6.col-md-offset-3
+          .profile-tabs
+            /.nav-align-center
+              ul.nav.nav-pills.nav-pills-icons role="tablist" 
+                li.active
+                  a data-toggle="tab" href="#work" role="tab" 
+                    i.material-icons palette
+                    | Work
+                li
+                  a data-toggle="tab" href="#connections" role="tab" 
+                    i.material-icons people
+                    | Connections
+                li
+                  a data-toggle="tab" href="#media" role="tab" 
+                    i.material-icons camera
+                    | Media
+          /! End Profile Tabs
+      /.tab-content
+        #work.tab-pane.active.work
+          .row
+            .col-md-7.col-md-offset-1
+              h4.title Latest Collections
+              .row.collections
+                .col-md-6
+                  .card.card-background style=("background-image: url('../assets/img/examples/chris4.jpg')") 
+                    a href="#pablo" 
+                    .card-content
+                      label.label.label-primary Spring 2016
+                      a href="#pablo" 
+                      h2.card-title Stilleto
+                .col-md-6
+                  .card.card-background style=("background-image: url('../assets/img/examples/chris6.jpg')") 
+                    a href="#pablo" 
+                    .card-content
+                      label.label.label-primary Spring 2016
+                      a href="#pablo" 
+                      h2.card-title High Heels
+                .col-md-6
+                  .card.card-background style=("background-image: url('../assets/img/examples/chris5.jpg')") 
+                    a href="#pablo" 
+                    .card-content
+                      label.label.label-primary Summer 2016
+                      a href="#pablo" 
+                      h2.card-title Flats
+                .col-md-6
+                  .card.card-background style=("background-image: url('../assets/img/examples/chris1.jpg')") 
+                    a href="#pablo" 
+                    .card-content
+                      label.label.label-primary Winter 2015
+                      a href="#pablo" 
+                      h2.card-title Men's Sneakers
+            .col-md-2.col-md-offset-1.stats
+              h4.title Stats
+              ul.list-unstyled
+                li
+                  b 60
+                  | Products
+                li
+                  b 4
+                  | Collections
+                li
+                  b 331
+                  | Influencers
+                li
+                  b 1.2K
+                  | Likes
+              hr/
+              h4.title About his Work
+              p.description French luxury footwear and fashion. The footwear has incorporated shiny, red-lacquered soles that have become his signature.
+              hr/
+              h4.title Focus
+              span.label.label-primary Footwear
+              span.label.label-rose Luxury
+        #connections.tab-pane.connections
+          .row
+            .col-md-5.col-md-offset-1
+              .card.card-profile.card-plain
+                .col-md-5
+                  .card-image
+                    a href="#pablo" 
+                      img.img src="../assets/img/faces/avatar.jpg" /
+                    .colored-shadow style=("background-image: url(&quot;../assets/img/faces/avatar.jpg&quot;); opacity: 1;") 
+                .col-md-7
+                  .card-content
+                    h4.card-title Gigi Hadid
+                    h6.category.text-muted Model
+                    p.card-description
+                      | Don't be scared of the truth because we need to restart the human foundation in truth...
+            .col-md-5
+              .card.card-profile.card-plain
+                .col-md-5
+                  .card-image
+                    a href="#pablo" 
+                      img.img src="../assets/img/faces/marc.jpg" /
+                    .colored-shadow style=("background-image: url(&quot;../assets/img/faces/marc.jpg&quot;); opacity: 1;") 
+                .col-md-7
+                  .card-content
+                    h4.card-title Marc Jacobs
+                    h6.category.text-muted Designer
+                    p.card-description
+                      | Don't be scared of the truth because we need to restart the human foundation in truth...
+          .row
+            .col-md-5.col-md-offset-1
+              .card.card-profile.card-plain
+                .col-md-5
+                  .card-image
+                    a href="#pablo" 
+                      img.img src="../assets/img/faces/kendall.jpg" /
+                    .colored-shadow style=("background-image: url(&quot;../assets/img/faces/kendall.jpg&quot;); opacity: 1;") 
+                .col-md-7
+                  .card-content
+                    h4.card-title Kendall Jenner
+                    h6.category.text-muted Model
+                    p.card-description
+                      | I love you like Kanye loves Kanye. Don't be scared of the truth.
+            .col-md-5
+              .card.card-profile.card-plain
+                .col-md-5
+                  .card-image
+                    a href="#pablo" 
+                      img.img src="../assets/img/faces/card-profile2-square.jpg" /
+                    .colored-shadow style=("background-image: url(&quot;../assets/img/faces/card-profile2-square.jpg&quot;); opacity: 1;") 
+                .col-md-7
+                  .card-content
+                    h4.card-title George West
+                    h6.category.text-muted Model/DJ
+                    p.card-description
+                      | I love you like Kanye loves Kanye.
+        #media.tab-pane.text-center.gallery
+          .row
+            .col-md-3.col-md-offset-3
+              img.img-rounded src="../assets/img/examples/chris4.jpg" /
+              img.img-rounded src="../assets/img/examples/chris6.jpg" /
+            .col-md-3
+              img.img-rounded src="../assets/img/examples/chris7.jpg" /
+              img.img-rounded src="../assets/img/examples/chris5.jpg" /
+              img.img-rounded src="../assets/img/examples/chris9.jpg" /
