@@ -80,7 +80,7 @@ class UsersController < ApplicationController
     #cant't edit or delete if user not belong to owner user
     def require_same_user
       if current_user != @user
-        flash[:danger] = "You only can edit or delet your own user"
+        flash[:alert] = "You only can edit or delet your own user"
         redirect_to root_path
       end
     end
