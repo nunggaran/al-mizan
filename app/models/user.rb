@@ -52,6 +52,7 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable,
        	:recoverable, :rememberable, :validatable, :confirmable, :trackable, :invite_for => 2.weeks
 
+  scope :alumni, -> { where(role: "alumni")}
 
   extend FriendlyId
   friendly_id :username, use: :slugged

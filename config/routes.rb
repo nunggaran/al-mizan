@@ -25,6 +25,7 @@ Rails.application.routes.draw do
       # get 'signup', to: 'devise/registrations#new'
       # get 'login', to: 'devise/sessions#new'
     end
+    resources :users, :path => 'alumni' 
     # resources :contacts
     post 'contacts' => 'contacts#create'
     get 'sejarah-al-mizan', to: 'pages#sejarah', as: :sejarah
