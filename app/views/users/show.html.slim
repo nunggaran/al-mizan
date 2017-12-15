@@ -4,7 +4,7 @@
   = display_meta_tags keyword: "Blog dan Berita Pondok Pesantren Modern Al-Mizan, blog al-mizan, al-mizan post, mizan blog, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih, pondok di banten "
   = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
 
-  meta property="og:image" content="#{@user.avatar.present? ? @user.avatar.url : gravatar_for(@user) }"/
+  meta content="#{@user.avatar.present? ? @user.avatar.url : gravatar_for(@user) }" property="og:image" /
   meta content="www.al-mizan.sch.id#{request.fullpath}" property="og:url" /
   meta content="#{@user.full_name.titleize} Profile - Pondok Pesantren Modern Al-Mizan" property="og:title" /
   meta content="#{@user.full_name} - Angkatan #{@user.year_of_entry} s/d #{@user.year_graduated} - #{@user.faculty} at #{@user.university} - #{@user.job}" property="og:description" /
