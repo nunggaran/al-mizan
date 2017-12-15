@@ -50,7 +50,7 @@
 												- if alumni.job.present?
 													h6.text-muted.capitalize 
 														-if alumni.job.length > 30
-															= alumni.job[0..30] 
+															= alumni.job[0..36] 
 															| &nbsp;
 															= link_to '[...]', user_path(alumni.slug)
 														- else
