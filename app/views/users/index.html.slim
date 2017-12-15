@@ -24,78 +24,80 @@
         h4 Pondok Pesantren Modern Al-Mizan
 
 .main.main-raised.mb-50
-	.section
-		h2.text-center = "#{@alumni.count} Alumni yang sudah terdaftar"
-		.team-3
-			.container-fluid
-				.row
-					.col-md-10.col-md-offset-1
-						.row
-							- @alumni.each do |alumni|
-								.col-md-6
-									.card.card-profile.card-plain
-										.col-md-5
-											.card-image
-												= link_to user_path(alumni.slug) do
-													- if alumni.avatar.present?
-														= image_tag alumni.avatar.thumbnail.url, class: "img"
-													- else
-														= gravatar_for(alumni, "img")
-								        
-												.ripple-container
-										.col-md-7
-											.card-content.pad-top-1
-												= link_to user_path(alumni.slug), data: {turbolinks: false} do
-													h4.card-title = alumni.full_name.titleize
-												- if alumni.job.present?
-													h6.text-muted.capitalize 
-														-if alumni.job.length > 30
-															= alumni.job[0..36] 
-															| &nbsp;
-															= link_to '[...]', user_path(alumni.slug)
-														- else
-															= alumni.job
-													h6.text-muted.capitalize = "#{alumni.faculty} at #{alumni.university }" 
-												-elsif alumni.faculty.present?
-													h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
-												p.card-description
-													= alumni.address
-												.footer
-													- unless alumni.twitter.blank? 
-														= link_to "https://twitter.com/#{alumni.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
-															i.fa.fa-twitter
-													- unless alumni.fb.blank?
-														= link_to "https://facebook.com/#{alumni.fb}", class: "btn btn-just-icon btn-simple btn-facebook", target: "_blank" do
-															i.fa.fa-facebook-square
-													- unless alumni.ig.blank?
-														= link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
-															i.fa.fa-instagram
+	.profile-content
+		.container
+			.row
+				.col-xs-8.col-xs-offset-2
+					.profile
+						.avatar
+							= image_tag "https://res.cloudinary.com/al-mizan/image/upload/c_fill,h_640,w_640/v1513323003/10320555_727174234014051_4375366234204518173_n_rlwl3a.jpg", class: "img-circle img-responsive img-raised"
+	.row.team-3
+		h2.text-center = "#{@alumni.count} Alumni yang terdaftar"
+		.col-md-10.col-md-offset-1
+			- @alumni.each do |alumni|
+				.col-md-6
+					.card.card-profile.card-plain
+						.col-md-5
+							.card-image
+								= link_to user_path(alumni.slug) do
+									- if alumni.avatar.present?
+										= image_tag alumni.avatar.thumbnail.url, class: "img"
+									- else
+										= gravatar_for(alumni, "img")
+								.ripple-container
+						.col-md-7
+							.card-content.pad-top-1
+								= link_to user_path(alumni.slug), data: {turbolinks: false} do
+									h4.card-title = alumni.full_name.titleize
+								- if alumni.job.present?
+									h6.text-muted.capitalize 
+										-if alumni.job.length > 30
+											= alumni.job[0..36] 
+											| &nbsp;
+											= link_to '[...]', user_path(alumni.slug)
+										- else
+											= alumni.job
+									h6.text-muted.capitalize = "#{alumni.faculty} at #{alumni.university }" 
+								-elsif alumni.faculty.present?
+									h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
+								p.card-description
+									= alumni.address
+								.footer
+									- unless alumni.twitter.blank? 
+										= link_to "https://twitter.com/#{alumni.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
+											i.fa.fa-twitter
+									- unless alumni.fb.blank?
+										= link_to "https://facebook.com/#{alumni.fb}", class: "btn btn-just-icon btn-simple btn-facebook", target: "_blank" do
+											i.fa.fa-facebook-square
+									- unless alumni.ig.blank?
+										= link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
+											i.fa.fa-instagram
 
-		    		/ .col-md-3
-						  / .card.card-profile.card-plain
-						  /   .card-avatar
-						  /     = link_to user_path(alumni.username) do
-						  /       = gravatar_for(alumni, "img")
-						        
-						  /   .card-content
-						  /     = link_to user_path(alumni.username) do
-						  /       h4.card-title = alumni.full_name.titleize
-						  /     - if alumni.job.present?
-						  /       h6.category.text-muted = alumni.job
-						  /       h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
-						  /     -elsif alumni.faculty.present?
-						  /       h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
-						  /     p.card-description
-						  /       = alumni.address
-						  /     .footer
-						  /     	- if alumni.twitter.blank? &&  alumni.fb.blank? && alumni.ig.blank?
-						  /     		h2.text-white Not found
-						  /       - unless alumni.twitter.blank? 
-						  /         = link_to "https://twitter.com/#{alumni.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
-						  /           i.fa.fa-twitter
-						  /       - unless alumni.fb.blank?
-						  /         = link_to "https://facebook.com/#{alumni.fb}", class: "btn btn-just-icon btn-simple btn-facebook", target: "_blank" do
-						  /           i.fa.fa-facebook-square
-						  /       - unless alumni.ig.blank?
-						  /         = link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
-						  /           i.fa.fa-instagram
+	  		/ .col-md-3
+				  / .card.card-profile.card-plain
+				  /   .card-avatar
+				  /     = link_to user_path(alumni.username) do
+				  /       = gravatar_for(alumni, "img")
+				        
+				  /   .card-content
+				  /     = link_to user_path(alumni.username) do
+				  /       h4.card-title = alumni.full_name.titleize
+				  /     - if alumni.job.present?
+				  /       h6.category.text-muted = alumni.job
+				  /       h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
+				  /     -elsif alumni.faculty.present?
+				  /       h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
+				  /     p.card-description
+				  /       = alumni.address
+				  /     .footer
+				  /     	- if alumni.twitter.blank? &&  alumni.fb.blank? && alumni.ig.blank?
+				  /     		h2.text-white Not found
+				  /       - unless alumni.twitter.blank? 
+				  /         = link_to "https://twitter.com/#{alumni.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
+				  /           i.fa.fa-twitter
+				  /       - unless alumni.fb.blank?
+				  /         = link_to "https://facebook.com/#{alumni.fb}", class: "btn btn-just-icon btn-simple btn-facebook", target: "_blank" do
+				  /           i.fa.fa-facebook-square
+				  /       - unless alumni.ig.blank?
+				  /         = link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
+				  /           i.fa.fa-instagram
