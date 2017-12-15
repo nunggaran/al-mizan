@@ -44,7 +44,7 @@
 												.ripple-container
 										.col-md-7
 											.card-content.pad-top-1
-												= link_to user_path(alumni.slug) do
+												= link_to user_path(alumni.slug), data: {turbolinks: false} do
 													h4.card-title = alumni.full_name.titleize
 												- if alumni.job.present?
 													h6.text-muted.capitalize 

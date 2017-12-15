@@ -4,17 +4,17 @@
   = display_meta_tags keyword: "Blog dan Berita Pondok Pesantren Modern Al-Mizan, blog al-mizan, al-mizan post, mizan blog, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih, pondok di banten "
   = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
 
-  meta property="og:image" content="https://res.cloudinary.com/al-mizan/image/upload/v1512879375/assets/image/20121206_1495176167207114_2865656083753650746_o.jpg"/
+  meta property="og:image" content="#{@user.avatar.present? ? @user.avatar.url : gravatar_for(@user) }"/
   meta content="https://al-mizan.herokuapp.com#{request.fullpath}" property="og:url" /
   meta content="#{@user.full_name.titleize} - Pondok Pesantren Modern Al-Mizan" property="og:title" /
-  meta content="Pondok Pesantren Modern Al-Mizan sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari. " property="og:description" /
-  meta content="https://res.cloudinary.com/al-mizan/image/upload/v1512879375/assets/image/20121206_1495176167207114_2865656083753650746_o.jpg" property="og:image:secure_url" /
+  meta content="#{@user.full_name} - #{@user.faculty} at #{@user.university} - #{@user.job}" property="og:description" /
+  meta content="#{@user.avatar.present? ? @user.avatar.url : gravatar_for(@user) }" property="og:image:secure_url" /
   meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
   meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
   / twitter card
   meta content="summary" name="twitter:card" /
   meta content="#{@user.full_name.titleize} - Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
-  meta content="#{@user.full_name.titleize} - Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya. " name="twitter:description" /
+  meta content="#{@user.full_name.titleize} - #{@user.faculty} at #{@user.university} - #{@user.job}" name="twitter:description" /
   meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
 .page-header.header-filter data-parallax="true" style=("background-image: url('#{random_image_mudir}');") 
 
@@ -75,6 +75,10 @@
                     i.material-icons camera
                     | Media
           /! End Profile Tabs
+      .row.mb-50
+        .col-md-12
+          .h4.text-center Share your profile
+          .sharethis-inline-share-buttons
       /.tab-content
         #work.tab-pane.active.work
           .row
