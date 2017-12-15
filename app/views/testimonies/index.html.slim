@@ -1,0 +1,23 @@
+h1 Listing testimonies
+
+table
+  thead
+    tr
+      th Content
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @testimonies.each do |testimony|
+      tr
+        td = testimony.content
+        td = testimony.user_id
+        td = link_to 'Show', testimony
+        td = link_to 'Edit', edit_testimony_path(testimony)
+        td = link_to 'Destroy', testimony, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Testimony', new_testimony_path

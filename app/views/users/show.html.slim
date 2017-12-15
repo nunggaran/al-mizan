@@ -62,6 +62,9 @@
                 dd = @user.email
                 dt No Handphone
                 dd = @user.handphone.present? ? @user.handphone : "None"
+              hr/
+              b Sosial Media
+              
               - unless @user.twitter.blank? 
                 = link_to "https://twitter.com/#{@user.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
                   i.fa.fa-twitter
@@ -71,7 +74,7 @@
               - unless @user.ig.blank?
                 = link_to "https://instagram.com/#{@user.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
                   i.fa.fa-instagram
-              hr/
+              
               / h6 Pekerjaan dan Sekolah
               / .description.text-center
               /   = @user.job.present? ? @user.job : "-"

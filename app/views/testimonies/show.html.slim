@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Content:
+  = @testimony.content
+p
+  strong User:
+  = @testimony.user_id
+
+= link_to 'Edit', edit_testimony_path(@testimony)
+'|
+= link_to 'Back', testimonies_path

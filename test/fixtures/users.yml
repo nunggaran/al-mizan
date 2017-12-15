@@ -37,6 +37,13 @@
 #  invitation_limit       :integer
 #  invited_by_id          :integer
 #  invited_by_type        :string
+#  role                   :string           default("alumni")
+#  year_of_entry          :string
+#  year_graduated         :string
+#  fb                     :string
+#  ig                     :string
+#  twitter                :string
+#  avatar                 :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   
   
+  
   # namespace :api do
   # 	namespace :v1 do
   # 		resources :price
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
       :invitations        => 'users/invitations'
     }
     resources :articles, :path => "blog"
+    resources :testimonies
     devise_scope :user do
       delete 'logout', to: 'devise/sessions#destroy'
       get 'resetpassword', to: 'users/passwords#new'

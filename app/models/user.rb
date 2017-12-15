@@ -37,6 +37,13 @@
 #  invitation_limit       :integer
 #  invited_by_id          :integer
 #  invited_by_type        :string
+#  role                   :string           default("alumni")
+#  year_of_entry          :string
+#  year_graduated         :string
+#  fb                     :string
+#  ig                     :string
+#  twitter                :string
+#  avatar                 :string
 #
 
 class User < ApplicationRecord
@@ -52,6 +59,7 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable,
        	:recoverable, :rememberable, :validatable, :confirmable, :trackable, :invite_for => 2.weeks
 
+  has_one :testimony, dependent: :destroy
   scope :alumni, -> { where(role: "alumni")}
   is_impressionable
   extend FriendlyId
