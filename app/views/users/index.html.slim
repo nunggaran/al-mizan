@@ -32,7 +32,8 @@
 						.avatar
 							= image_tag "https://res.cloudinary.com/al-mizan/image/upload/c_fill,h_640,w_640/v1513323003/10320555_727174234014051_4375366234204518173_n_rlwl3a.jpg", class: "img-circle img-responsive img-raised"
 	.row.team-3
-		h2.text-center = "#{@alumni.count} Alumni yang terdaftar"
+		.container-fluid
+			h2.text-center = "#{@alumni.count} Alumni yang terdaftar"
 		.col-md-10.col-md-offset-1
 			- @alumni.each do |alumni|
 				.col-md-6
@@ -71,6 +72,8 @@
 									- unless alumni.ig.blank?
 										= link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
 											i.fa.fa-instagram
+
+									/ = link_to "Detail", user_path(alumni.slug), class: "btn btn-primary btn-round"
 
 	  		/ .col-md-3
 				  / .card.card-profile.card-plain
