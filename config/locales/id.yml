@@ -17,7 +17,7 @@ id:
         testimony:
           attributes: 
             content: 
-              too_short: "Oppss..! Minimum content adalah 150 characters dan maksimum 280 characters"
+              too_short: "Oppss..! Minimum content adalah 70 characters dan maksimum 280 characters"
               too_long: "Oppss..! Maximum content adalah 280 characters"
   datetime: 
     distance_in_words:
