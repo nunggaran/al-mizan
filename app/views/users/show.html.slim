@@ -1,28 +1,28 @@
 -content_for :meta_tags
-  = display_meta_tags site: "#{@user.full_name.titleize} - Pondok Pesantren Modern Al-Mizan"
-  = display_meta_tags description: "Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya."
+  = display_meta_tags site: "#{@user.full_name.titleize} Profile - Pondok Pesantren Modern Al-Mizan"
+  = display_meta_tags description: "#{@user.full_name} - Angkatan #{@user.year_of_entry} s/d #{@user.year_graduated} - #{@user.faculty} at #{@user.university} - #{@user.job}"
   = display_meta_tags keyword: "Blog dan Berita Pondok Pesantren Modern Al-Mizan, blog al-mizan, al-mizan post, mizan blog, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih, pondok di banten "
   = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
 
   meta property="og:image" content="#{@user.avatar.present? ? @user.avatar.url : gravatar_for(@user) }"/
-  meta content="https://al-mizan.herokuapp.com#{request.fullpath}" property="og:url" /
-  meta content="#{@user.full_name.titleize} - Pondok Pesantren Modern Al-Mizan" property="og:title" /
-  meta content="#{@user.full_name} - #{@user.faculty} at #{@user.university} - #{@user.job}" property="og:description" /
+  meta content="www.al-mizan.sch.id#{request.fullpath}" property="og:url" /
+  meta content="#{@user.full_name.titleize} Profile - Pondok Pesantren Modern Al-Mizan" property="og:title" /
+  meta content="#{@user.full_name} - Angkatan #{@user.year_of_entry} s/d #{@user.year_graduated} - #{@user.faculty} at #{@user.university} - #{@user.job}" property="og:description" /
   meta content="#{@user.avatar.present? ? @user.avatar.url : gravatar_for(@user) }" property="og:image:secure_url" /
-  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
-  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  meta content="#{@user.created_at}" property="article:published_time" /
+  meta content="#{@user.created_at}" property="article:modified_time" /
   / twitter card
   meta content="summary" name="twitter:card" /
-  meta content="#{@user.full_name.titleize} - Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
-  meta content="#{@user.full_name.titleize} - #{@user.faculty} at #{@user.university} - #{@user.job}" name="twitter:description" /
-  meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
+  meta content="#{@user.full_name.titleize} Profile - Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
+  meta content="#{@user.full_name} - Angkatan #{@user.year_of_entry} s/d #{@user.year_graduated} - #{@user.faculty} at #{@user.university} - #{@user.job}" name="twitter:description" /
+  meta content="www.al-mizan.sch.id" name="twitter:url" /
 .page-header.header-filter data-parallax="true" style=("background-image: url('#{random_image_mudir}');") 
 
 .main.main-raised.mb-50
   .profile-content
     .container
       .row
-        .col-xs-6.col-xs-offset-3
+        .col-xs-8.col-xs-offset-2
           .profile
             .avatar
               - if @user.avatar.present?
@@ -32,16 +32,27 @@
               
             .name
               h3.title = @user.full_name.titleize
-              h6 = @user.email
-              hr/
-              h6 Pekerjaan dan Sekolah
-              .description.text-center
-                = @user.job.present? ? @user.job : "-"
-                br/
-                = @user.faculty.present? ? @user.faculty : "-"
-                | At 
-                = @user.university.present? ? @user.university : "-"
+              h6 
+              dl
+                dt Tahun masuk dan keluar
+                dd 
+                  = @user.year_of_entry
+                  | - 
+                  = @user.year_graduated
 
+                dt Jurusan dan Universitas
+                dd 
+                  = @user.faculty 
+                  | &nbsp; At 
+                  = @user.university
+                dt Pekerjaan dan Kantor
+                dd = @user.job.present? ? @user.job : "Belum Bekerja"
+                dt Alamat Sekarang
+                dd = @user.address
+                dt Alamat Email
+                dd = @user.email
+                dt No Handphone
+                dd = @user.handphone
               - unless @user.twitter.blank? 
                 = link_to "https://twitter.com/#{@user.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
                   i.fa.fa-twitter
@@ -51,6 +62,16 @@
               - unless @user.ig.blank?
                 = link_to "https://instagram.com/#{@user.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
                   i.fa.fa-instagram
+              hr/
+              / h6 Pekerjaan dan Sekolah
+              / .description.text-center
+              /   = @user.job.present? ? @user.job : "-"
+              /   br/
+              /   = @user.faculty.present? ? @user.faculty : "-"
+              /   | At 
+              /   = @user.university.present? ? @user.university : "-"
+
+              
         .col-xs-2.follow
           -if current_user.eql?(@user)
             = link_to edit_user_path(current_user.slug), rel: "tooltip", data: {turbolinks: false, original_title: 'Edit Profile'}, class: "btn btn-fab btn-primary" do
