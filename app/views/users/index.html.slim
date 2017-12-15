@@ -58,6 +58,8 @@
 										- else
 											= alumni.job
 									h6.text-muted.capitalize = "#{alumni.faculty} at #{alumni.university }" 
+								- elsif alumni.job.blank?
+								  h6.text-muted.capitalize Belum bekerja
 								-elsif alumni.faculty.present?
 									h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
 								p.card-description
