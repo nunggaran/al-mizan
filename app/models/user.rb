@@ -63,7 +63,7 @@ class User < ApplicationRecord
   has_one :testimony, dependent: :destroy
 
   scope :alumni, -> { where(role: "alumni")}
-  scope :alumni_order, ->(page) { order('year_graduated').paginate(page: page, :per_page => 20) }
+  scope :alumni_order, ->(page) { order('year_graduated, first_name').paginate(page: page, :per_page => 20) }
   is_impressionable
   extend FriendlyId
   friendly_id :username, use: :slugged
