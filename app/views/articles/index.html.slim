@@ -65,53 +65,8 @@
         .col-md-6.col-md-offset-3
           = will_paginate @articles, :previous_label => 'Previous', :next_label => 'Next'
     = render 'shared/newslatter'
-  /.subscribe-line
-    .container
-      .row
-        .col-md-6
-          h3.title Get Tips &amp; Tricks every Week!
-          p.description
-            | Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
-        .col-md-6
-          .card.card-plain.card-form-horizontal
-            .card-content
-              form action="" method="" 
-                .row
-                  .col-md-8
-                    .input-group
-                      span.input-group-addon
-                        i.material-icons mail
-                      .form-group.is-empty
-                        input.form-control placeholder=("Your Email...") type="email" value="" /
-                        span.material-input
-                  .col-md-4
-                    button.btn.btn-primary.btn-round.btn-block type="button"  Subscribe
 
+-content_for :body_script_bottom
+  javascript:
+    jQuery( '#newsletter-form' ).formchimp( { 'buttonText': 'Thanks' } );
 
-/ table
-/   thead
-/     tr
-/       th Title
-/       th Content
-/       th Slug
-/       th User
-/       th Image
-/       th
-/       th
-/       th
-
-/   tbody
-/     - @articles.each do |article|
-/       tr
-/         td = article.title
-/         td = article.content
-/         td = article.slug
-/         td = article.user_id
-/         td = article.image
-/         td = link_to 'Show', article
-/         td = link_to 'Edit', edit_article_path(article)
-/         td = link_to 'Destroy', article, data: { confirm: 'Are you sure?' }, method: :delete
-
-/ br
-
-/ = link_to 'New Article', new_article_path

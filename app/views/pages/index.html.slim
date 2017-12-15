@@ -112,7 +112,7 @@
             p.card-description
               = t('static_page.index.new_barter_desc').html_safe
 #features.cd-section
-  .features-4.section-white
+  .features-4.section-grey
     .container
       .row
         .col-md-8.col-md-offset-2.text-center
@@ -159,6 +159,44 @@
         .col-md-6.col-md-offset-3.text-center
           = link_to 'All Blog', articles_path, class: "btn btn-primary btn-lg"
 
+#features.cd-section
+  .features-4.section-white
+    .container
+      .row
+        .col-md-8.col-md-offset-2.text-center
+          h2.title = t('static_page.index.milad.title').html_safe
+          h5.description
+            = t('static_page.index.milad.description').html_safe
+      .row
+        .col-md-3.col-md-offset-1
+          .info.info-horizontal
+            .icon.icon-info
+              i.material-icons account_balance
+            .description
+              h4.info-title Bazar Alumni
+              p Semua alumni yang memiliki usaha akan membuka bazar pada saat milad nanti
+          .info.info-horizontal
+            .icon.icon-primary
+              i.material-icons surround_sound
+            .description
+              h4.info-title Konser Al-Mizan
+              p Konser 25 Tahun Al-Mizan Soneta - H Rhoma Irama
+        .col-md-4
+          .phone-container
+            = image_tag "https://res.cloudinary.com/al-mizan/image/upload/c_scale,w_400/v1513318880/al-mizan-banner-mlad_h5ol9e.png", alt: "Milad Al-Mizan", class: "img img-responsive"
+        .col-md-3
+          .info.info-horizontal
+            .icon.icon-danger
+              i.material-icons healing
+            .description
+              h4.info-title Pengobatan Gratis
+              p Al-Mizan akan mengadakan Pengobatan Gratis serta Khitanan Massal
+          .info.info-horizontal
+            .icon.icon-success
+              i.fa.fa-trophy
+            .description
+              h4.info-title Al-Mizan Olimpiade
+              p Al-Mizan akan mengadakan lomba olimpiade 
 = render 'shared/testimony'
 = render 'shared/newslatter'
 = render 'shared/contact_section'
