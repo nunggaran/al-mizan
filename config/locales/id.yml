@@ -17,6 +17,7 @@ id:
               too_short: "Oppss..! Password terlalu pendek, minimal 6 characters dan harus mengandung huruf dan angka"
             address: 
               too_short: "Oppss..! Alamat terlalu pendek"
+              blank: "Oppss..! Alamat tidak boleh kosong"
         testimony:
           attributes: 
             content: 

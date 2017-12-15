@@ -153,6 +153,19 @@
                     span.material-input
                 .col-md-6
                   .form-group.is-empty
+                    - if @user.linkedin.present?
+                      label.control-label 
+                        | Linkedin Username, 
+                        = link_to "https://linkedin.com/in/#{@user.linkedin}", "https://twitter.com/#{@user.linkedin}",  target: "_blank"  
+                      = f.text_field :linkedin, class: "form-control"
+                    - else
+                      label.control-label 
+                        | Linkedin Username, like  
+                        = link_to "https://linkedin.com/in/{{linkedin.name}}","https://linkedin.com/in/{{linkedin.name}}", target: "_blank"
+                      = f.text_field :linkedin, class: "form-control", 'ng-model': 'linkedin.name'
+                    span.material-input
+                .col-md-6
+                  .form-group.is-empty
                     label.control-label Pekerjaan / kosongkan jika belum lulus
                     = f.text_field :job, class: "form-control"
                     span.material-input
