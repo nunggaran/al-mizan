@@ -23,7 +23,7 @@ module ApplicationHelper
   end
 
   def user_action
-    %w(edit show)
+    %w(edit show index)
   end
 
   def gravatar_for(user, class_names=nil, options = { size: 500 })

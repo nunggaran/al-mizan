@@ -25,10 +25,23 @@
         .col-xs-6.col-xs-offset-3
           .profile
             .avatar
-              = gravatar_for(@user, "img-circle img-responsive img-raised")
+              - if @user.avatar.present?
+                = image_tag @user.avatar.thumbnail.url, class: "img-circle img-responsive img-raised"
+              - else
+                = gravatar_for(@user, "img-circle img-responsive img-raised")
+              
             .name
               h3.title = @user.full_name.titleize
               h6 = @user.email
+              hr/
+              h6 Pekerjaan dan Sekolah
+              .description.text-center
+                = @user.job.present? ? @user.job : "-"
+                br/
+                = @user.faculty.present? ? @user.faculty : "-"
+                | At 
+                = @user.university.present? ? @user.university : "-"
+
               - unless @user.twitter.blank? 
                 = link_to "https://twitter.com/#{@user.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
                   i.fa.fa-twitter

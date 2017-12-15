@@ -36,7 +36,10 @@
 										.col-md-5
 											.card-image
 												= link_to user_path(alumni.slug) do
-													= gravatar_for(alumni, "img")
+													- if alumni.avatar.present?
+														= image_tag alumni.avatar.thumbnail.url, class: "img"
+													- else
+														= gravatar_for(alumni, "img")
 								        
 												.ripple-container
 										.col-md-7

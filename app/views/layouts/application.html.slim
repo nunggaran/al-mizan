@@ -46,7 +46,7 @@ html lang="#{I18n.locale.downcase}"
       = render 'layouts/analytics_bottom'
   -elsif params[:controller].eql?('users') && user_action.include?(params[:action])
     body.profile-page
-      = render 'shared/navbar'
+      = render 'shared/navbar_no_parallax'
       = yield
       = render 'shared/footer'
       / = javascript_include_tag 'application', 'data-turbolinks-track' => true
