@@ -14,7 +14,7 @@
               .card-content
                 h5.card-description = testimony.content
               .footer
-                h4.card-title = testimony.user.full_name.titleize
+                h4.card-title = link_to testimony.user.full_name.titleize, user_path(testimony.user.slug)
                 / h6.category @ginaandrew
                 .card-avatar
                   = link_to user_path(testimony.user.slug) do
