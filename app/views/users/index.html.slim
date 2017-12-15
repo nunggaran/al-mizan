@@ -49,19 +49,16 @@
 							.card-content.pad-top-1
 								= link_to user_path(alumni.slug), data: {turbolinks: false} do
 									h4.card-title = alumni.full_name.titleize
-								- if alumni.job.present?
+								
+								h6.text-muted.capitalize = alumni.job.present? ? alumni.job : "Belum Bekerja"
+								- if alumni.faculty.present? && alumni.university.present?
 									h6.text-muted.capitalize 
-										-if alumni.job.length > 30
-											= alumni.job[0..36] 
-											| &nbsp;
-											= link_to '[...]', user_path(alumni.slug)
-										- else
-											= alumni.job
-									h6.text-muted.capitalize = "#{alumni.faculty} at #{alumni.university }" 
-								- elsif alumni.job.blank?
-								  h6.text-muted.capitalize Belum bekerja
-								-elsif alumni.faculty.present?
-									h6.category.text-muted = "#{alumni.faculty} at #{alumni.university }" 
+										= alumni.faculty 
+										| &nbsp; At 
+										= alumni.university
+								- else
+									| None
+								
 								p.card-description
 									= alumni.address
 								.footer

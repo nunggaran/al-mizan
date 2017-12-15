@@ -55,6 +55,7 @@ class User < ApplicationRecord
 				format: { with: VALID_EMAIL_REGEX }
   has_many  :articles, dependent: :destroy
   validates :first_name, :last_name, presence: true
+  validates :address, presence: true, length: { maximum: 100, minimum: 40 }
   validates :username, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 4, maximum: 20 },format: { without: /\s/ }
   devise :invitable, :database_authenticatable, :registerable,
        	:recoverable, :rememberable, :validatable, :confirmable, :trackable, :invite_for => 2.weeks
