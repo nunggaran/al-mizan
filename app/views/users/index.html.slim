@@ -50,10 +50,13 @@
 							.card-content.pad-top-1
 								= link_to user_path(alumni.slug), data: {turbolinks: false} do
 									h4.card-title = alumni.full_name.titleize
-								
+								h6.text-muted.capitalize 
+									i.fa.fa-calendar
+									| &nbsp;&nbsp;&nbsp;
+									= "Angkatan #{alumni.year_graduated}"
 								h6.text-muted.capitalize 
 									i.fa.fa-briefcase
-									| &nbsp; 
+									| &nbsp; &nbsp;
 									= alumni.job.present? ? alumni.job : "Belum Bekerja"
 								- if alumni.faculty.present? && alumni.university.present?
 									h6.text-muted.capitalize 
@@ -68,7 +71,7 @@
 										| &nbsp; 
 										| None
 								
-								p.card-description
+								/p.card-description
 									i.fa.fa-map-marker
 									| &nbsp; 
 									= alumni.address
