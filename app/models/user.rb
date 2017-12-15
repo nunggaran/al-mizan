@@ -53,7 +53,7 @@ class User < ApplicationRecord
        	:recoverable, :rememberable, :validatable, :confirmable, :trackable, :invite_for => 2.weeks
 
   scope :alumni, -> { where(role: "alumni")}
-
+  is_impressionable
   extend FriendlyId
   friendly_id :username, use: :slugged
   mount_uploader :avatar, AvatarUploader

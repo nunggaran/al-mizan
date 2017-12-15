@@ -33,6 +33,12 @@
             .name
               h3.title = @user.full_name.titleize
               h6 
+                | Profile view
+                | &nbsp;
+                i.fa.fa-eye
+                | &nbsp;
+                = @user.impressionist_count(:filter=>:ip_address)
+              h6 
               dl
                 dt Tahun masuk dan keluar
                 dd 
