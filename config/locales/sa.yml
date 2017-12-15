@@ -10,6 +10,7 @@ sa:
             username:
               too_short: "Oppss..!! Username terlalu pendek, minimal 4 characters" 
               invalid: "Oppss..!! Username sudah ada"
+              taken: "Oppss..! Username sudah ada yang menggunakan"
             password_confirmation:
               confirmation: "Oppss..! Password confirmation tidak sama"
             password:
