@@ -51,16 +51,26 @@
 								= link_to user_path(alumni.slug), data: {turbolinks: false} do
 									h4.card-title = alumni.full_name.titleize
 								
-								h6.text-muted.capitalize = alumni.job.present? ? alumni.job : "Belum Bekerja"
+								h6.text-muted.capitalize 
+									i.fa.fa-briefcase
+									| &nbsp; 
+									= alumni.job.present? ? alumni.job : "Belum Bekerja"
 								- if alumni.faculty.present? && alumni.university.present?
 									h6.text-muted.capitalize 
+										i.fa.fa-graduation-cap
+										| &nbsp; 
 										= alumni.faculty 
 										| &nbsp; At 
 										= alumni.university
 								- else
-									| None
+									h6.text-muted.capitalize
+										i.fa.fa-graduation-cap
+										| &nbsp; 
+										| None
 								
 								p.card-description
+									i.fa.fa-map-marker
+									| &nbsp; 
 									= alumni.address
 								.footer
 									- unless alumni.twitter.blank? 
@@ -72,6 +82,9 @@
 									- unless alumni.ig.blank?
 										= link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
 											i.fa.fa-instagram
+									- unless alumni.linkedin.blank?
+										= link_to "https://linkedin.com/in/#{alumni.linkedin}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
+											i.fa.fa-linkedin
 
 									/ = link_to "Detail", user_path(alumni.slug), class: "btn btn-primary btn-round"
 
