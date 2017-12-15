@@ -100,3 +100,6 @@
 				  /       - unless alumni.ig.blank?
 				  /         = link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
 				  /           i.fa.fa-instagram
+		.row.text-center
+			.col-md-6.col-md-offset-3
+				= will_paginate @alumni, :previous_label => 'Previous', :next_label => 'Next'

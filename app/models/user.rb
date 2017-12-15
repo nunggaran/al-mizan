@@ -61,7 +61,9 @@ class User < ApplicationRecord
        	:recoverable, :rememberable, :validatable, :confirmable, :trackable, :invite_for => 2.weeks
 
   has_one :testimony, dependent: :destroy
+
   scope :alumni, -> { where(role: "alumni")}
+  scope :alumni_order, ->(page) { order('created_at ASC').paginate(page: page, :per_page => 20) }
   is_impressionable
   extend FriendlyId
   friendly_id :username, use: :slugged
