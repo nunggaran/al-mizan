@@ -23,10 +23,10 @@
                     - else
                       = gravatar_for(testimony.user, "img")
 
-        .col-md-2.col-md-offset-5.mt-30
-          = link_to 'Semua testimony', testimonies_path, class: "btn btn-primary"
-      - else
-        h4.text-center Belum ada testimony
+    .row
+      .col-md-2.col-md-offset-5.mt-80
+        = link_to 'Semua testimony', testimonies_path, class: "btn btn-primary"
+      
 
       / .col-md-4
       /   .card.card-testimonial
