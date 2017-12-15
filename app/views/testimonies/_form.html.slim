@@ -1,4 +1,32 @@
-= simple_form_for(@testimony) do |f|
+- if @testimony.errors.any?
+  .alert.alert-danger
+    .container
+      .alert-icon
+        i.material-icons error_outline
+      button.close aria-label="Close" data-dismiss="alert" type="button" 
+        span aria-hidden="true" 
+          i.material-icons clear
+      b = pluralize(@testimony.errors.count, "Error")
+      ul 
+        -@testimony.errors.full_messages.each do |message|
+          li = message
+= form_for @testimony do |f|
+  .card-content
+    .row
+      .col-md-12
+        .form-group.is-empty
+          label.control-label Content
+          = f.text_area :content, class: "form-control", rows: "4"
+          span.material-input
+    .row.mb-50
+      .col-md-6
+        .checkbox
+          label
+            input name="optionsCheckboxes" type="checkbox" /
+            | I'm not a robot
+      .col-md-6
+        = f.submit class: 'btn btn-primary pull-right'
+/ = simple_form_for(@testimony) do |f|
   = f.error_notification
 
   .form-inputs

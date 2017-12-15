@@ -30,7 +30,7 @@ class TestimoniesController < ApplicationController
     @testimony.user = current_user
     respond_to do |format|
       if @testimony.save
-        format.html { redirect_to @testimony, notice: 'Testimony was successfully created.' }
+        format.html { redirect_to @testimony.user, notice: 'Testimony was successfully created.' }
         format.json { render :show, status: :created, location: @testimony }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class TestimoniesController < ApplicationController
   def update
     respond_to do |format|
       if @testimony.update(testimony_params)
-        format.html { redirect_to @testimony, notice: 'Testimony was successfully updated.' }
+        format.html { redirect_to @testimony.user, notice: 'Testimony was successfully updated.' }
         format.json { render :show, status: :ok, location: @testimony }
       else
         format.html { render :edit }
@@ -67,7 +67,7 @@ class TestimoniesController < ApplicationController
     def require_same_user
       if current_user != @testimony.user
         flash[:alert] = "you can only edit or delete ypur own testimony"
-        redirect_to articles_path
+        redirect_to users_path
       end
     end
     # Use callbacks to share common setup or constraints between actions.

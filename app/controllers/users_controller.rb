@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = current_user
+    # @testimony = Testimony.find(params[:id])
   end
 
   # POST /users

@@ -175,6 +175,20 @@
                       | I'm not a robot
                 .col-md-6
                   = f.submit "Update Profile", class: 'btn btn-primary pull-right'
+        .col-md-4
+          - if @user.testimony.present?
+            h3.title.text-center Testimony anda kepada Al-Mizan
+            .col-md-12
+              .card.card-testimonial
+                .icon
+                  i.material-icons format_quote
+                .card-content
+                  h5.card-description = @user.testimony.content
+                .footer
+                  = link_to 'Edit Testimony', edit_testimony_path(@user.testimony.id), class: "mb-50"
+          - else
+            h4 Yuk beri testimony yang bagus ke pondok
+            = link_to "Tambah testimony", new_testimony_path
 
 - content_for :body_script_bottom
   javascript:

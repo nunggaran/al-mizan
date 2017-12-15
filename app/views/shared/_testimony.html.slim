@@ -5,40 +5,60 @@
         h2.title = t('static_page.testimony.title').html_safe
         h5.description = t('static_page.testimony.content')
     .row
-      .col-md-4
-        .card.card-testimonial
-          .icon
-            i.material-icons format_quote
-          .card-content
-            h5.card-description
-              | "Pandangan para alumni, santri dan orang-orang luar terhadap AL-Mizan, mungkin nanti dari beberapa alumni, walisantri atau orang-orang luar dimintai pendapt tentang Al-Mizan "
-          .footer
-            h4.card-title Ahmad Fulan
-            / h6.category @alecthompson
-            .card-avatar
-              = image_tag "https://res.cloudinary.com/muhammadyana/image/upload/v1512726303/al-mizan/user-male.svg", class: "img", alt: "Ponpes Al-Mizan" 
-      .col-md-4
-        .card.card-testimonial
-          .icon
-            i.material-icons format_quote
-          .card-content
-            h5.card-description
-              | "Pandangan para alumni, santri dan orang-orang luar terhadap AL-Mizan, mungkin nanti dari beberapa alumni, walisantri atau orang-orang luar dimintai pendapt tentang Al-Mizan "
-          .footer
-            h4.card-title Ahmad Fulan
-            / h6.category @ginaandrew
-            .card-avatar
-              = image_tag "https://res.cloudinary.com/muhammadyana/image/upload/v1512726303/al-mizan/user-male.svg", class: "img", alt: "Ponpen Al-Mizan" 
-      .col-md-4
-        .card.card-testimonial
-          .icon
-            i.material-icons format_quote
-          .card-content
-            h5.card-description
-              | "Pandangan para alumni, santri dan orang-orang luar terhadap AL-Mizan, mungkin nanti dari beberapa alumni, walisantri atau orang-orang luar dimintai pendapt tentang Al-Mizan "
-          .footer
-            h4.card-title Ahmad Fulan
-            / h6.category @georgewest
-            .card-avatar
-              = image_tag "https://res.cloudinary.com/muhammadyana/image/upload/v1512726303/al-mizan/user-male.svg", class: "img", alt: "Ponpen Al-Mizan" 
+      - if @testimonies.present?
+        - @testimonies.each do |testimony|
+          .col-md-4
+            .card.card-testimonial
+              .icon
+                i.material-icons format_quote
+              .card-content
+                h5.card-description = testimony.content
+              .footer
+                h4.card-title = testimony.user.full_name.titleize
+                / h6.category @ginaandrew
+                .card-avatar
+                  = link_to user_path(testimony.user.slug) do
+                    - if testimony.user.avatar.present?
+                      = image_tag testimony.user.avatar.thumbnail.url, class: "img"
+                    - else
+                      = gravatar_for(testimony.user, "img")
+      - else
+        h4.text-center Belum ada testimony
+
+      / .col-md-4
+      /   .card.card-testimonial
+      /     .icon
+      /       i.material-icons format_quote
+      /     .card-content
+      /       h5.card-description
+      /         | "Pandangan para alumni, santri dan orang-orang luar terhadap AL-Mizan, mungkin nanti dari beberapa alumni, walisantri atau orang-orang luar dimintai pendapt tentang Al-Mizan "
+      /     .footer
+      /       h4.card-title Ahmad Fulan
+      /       / h6.category @alecthompson
+      /       .card-avatar
+      /         = image_tag "https://res.cloudinary.com/muhammadyana/image/upload/v1512726303/al-mizan/user-male.svg", class: "img", alt: "Ponpes Al-Mizan" 
+      / .col-md-4
+      /   .card.card-testimonial
+      /     .icon
+      /       i.material-icons format_quote
+      /     .card-content
+      /       h5.card-description
+      /         | "Pandangan para alumni, santri dan orang-orang luar terhadap AL-Mizan, mungkin nanti dari beberapa alumni, walisantri atau orang-orang luar dimintai pendapt tentang Al-Mizan "
+      /     .footer
+      /       h4.card-title Ahmad Fulan
+      /       / h6.category @ginaandrew
+      /       .card-avatar
+      /         = image_tag "https://res.cloudinary.com/muhammadyana/image/upload/v1512726303/al-mizan/user-male.svg", class: "img", alt: "Ponpen Al-Mizan" 
+      / .col-md-4
+      /   .card.card-testimonial
+      /     .icon
+      /       i.material-icons format_quote
+      /     .card-content
+      /       h5.card-description
+      /         | "Pandangan para alumni, santri dan orang-orang luar terhadap AL-Mizan, mungkin nanti dari beberapa alumni, walisantri atau orang-orang luar dimintai pendapt tentang Al-Mizan "
+      /     .footer
+      /       h4.card-title Ahmad Fulan
+      /       / h6.category @georgewest
+      /       .card-avatar
+      /         = image_tag "https://res.cloudinary.com/muhammadyana/image/upload/v1512726303/al-mizan/user-male.svg", class: "img", alt: "Ponpen Al-Mizan" 
               

@@ -1,23 +1,49 @@
-h1 Listing testimonies
 
-table
-  thead
-    tr
-      th Content
-      th User
-      th
-      th
-      th
+-content_for :meta_tags
+  = display_meta_tags site: "Testimony Alumni Untuk Pondok Pesantren Modern Al-Mizan"
+  = display_meta_tags description: "Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya."
+  = display_meta_tags keyword: "Blog dan Berita Pondok Pesantren Modern Al-Mizan, blog al-mizan, al-mizan post, mizan blog, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih, pondok di banten "
+  = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
 
-  tbody
-    - @testimonies.each do |testimony|
-      tr
-        td = testimony.content
-        td = testimony.user_id
-        td = link_to 'Show', testimony
-        td = link_to 'Edit', edit_testimony_path(testimony)
-        td = link_to 'Destroy', testimony, data: { confirm: 'Are you sure?' }, method: :delete
+  meta property="og:image" content="https://res.cloudinary.com/al-mizan/image/upload/v1512879375/assets/image/20121206_1495176167207114_2865656083753650746_o.jpg"/
+  meta content="https://al-mizan.herokuapp.com#{request.fullpath}" property="og:url" /
+  meta content="Testimony Alumni Untuk Pondok Pesantren Modern Al-Mizan" property="og:title" /
+  meta content="Pondok Pesantren Modern Al-Mizan sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari. " property="og:description" /
+  meta content="https://res.cloudinary.com/al-mizan/image/upload/v1512879375/assets/image/20121206_1495176167207114_2865656083753650746_o.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="Testimony Alumni Untuk Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
+  meta content="Testimony Alumni Untuk Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya. " name="twitter:description" /
+  meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
+.page-header.header-filter.header-small data-parallax="true" filter-color="green" style="background-image: url('#{random_image_mudir}');"
+  .container
+    .row
+      .col-md-12
+        h1.title Apa kata para alumni tentang Al-Mizan
+        h4 Pondok Pesantren Modern Al-Mizan
 
-br
+.main.main-raised.mb-50
+  .section
+    .testimonials-1
+      .container
+        .row
+          - @testimonies.each do |testimony|
+            .col-md-4
+              .card.card-testimonial
+                .icon
+                  i.material-icons format_quote
+                .card-content
+                  h5.card-description = testimony.content
+                .footer
+                  h4.card-title = testimony.user.full_name.titleize
+                  / h6.category @ginaandrew
+                  .card-avatar
+                    = link_to user_path(testimony.user.slug) do
+                      - if testimony.user.avatar.present?
+                        = image_tag testimony.user.avatar.thumbnail.url, class: "img"
+                      - else
+                        = gravatar_for(testimony.user, "img")
 
-= link_to 'New Testimony', new_testimony_path
+              

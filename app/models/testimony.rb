@@ -11,5 +11,6 @@
 
 class Testimony < ApplicationRecord
 	belongs_to :user
-	validates :content, presence: true
+	validates :content, presence: true, length: { maximum: 280, minimum: 150 }
+
 end
