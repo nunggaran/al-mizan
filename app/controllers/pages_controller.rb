@@ -6,7 +6,8 @@ class PagesController < ApplicationController
     # Rails.logger.info(amount_btc)
     # Price.create(amount_params)
     # Rails.logger.info("=== Data Saved === ")
-    @testimonies = Testimony.all
+    @testimonies = Testimony.order("RANDOM()").limit(10)
+
     @articles = Article.all.order('created_at DESC').limit(6)
     @contact = Contact.new(contact_params)
     if @contact.save
