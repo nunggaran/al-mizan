@@ -41,18 +41,21 @@
                   = @user.year_graduated
 
                 dt Jurusan dan Universitas
-                dd 
-                  = @user.faculty 
-                  | &nbsp; At 
-                  = @user.university
+                dd
+                  - if @user.faculty.present? && @user.university.present?
+                    = @user.faculty 
+                    | &nbsp; At 
+                    = @user.university
+                  - else
+                    | None
                 dt Pekerjaan dan Kantor
                 dd = @user.job.present? ? @user.job : "Belum Bekerja"
                 dt Alamat Sekarang
-                dd = @user.address
+                dd = @user.address.present? ? @user.address : "None"
                 dt Alamat Email
                 dd = @user.email
                 dt No Handphone
-                dd = @user.handphone
+                dd = @user.handphone.present? ? @user.handphone : "None"
               - unless @user.twitter.blank? 
                 = link_to "https://twitter.com/#{@user.twitter}", class: "btn btn-just-icon btn-simple btn-twitter", target: "_blank" do
                   i.fa.fa-twitter
@@ -78,7 +81,7 @@
               i.material-icons mode_edit
       .description.text-center
         /p An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure.
-      .row
+      /.row
         .col-md-6.col-md-offset-3
           .profile-tabs
             /.nav-align-center
