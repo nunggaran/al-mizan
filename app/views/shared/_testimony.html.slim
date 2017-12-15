@@ -22,6 +22,9 @@
                       = image_tag testimony.user.avatar.thumbnail.url, class: "img"
                     - else
                       = gravatar_for(testimony.user, "img")
+
+        .col-md-2.col-md-offset-5.mt-30
+          = link_to 'Semua testimony', testimonies_path, class: "btn btn-primary"
       - else
         h4.text-center Belum ada testimony
 
