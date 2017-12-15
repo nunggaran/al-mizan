@@ -82,6 +82,9 @@
             - unless @user.ig.blank?
               = link_to "https://instagram.com/#{@user.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
                 i.fa.fa-instagram
+            - unless @user.linkedin.blank?
+              = link_to "https://linkedin.com/in/#{@user.linkedin}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
+                i.fa.fa-linkedin
         .col-md-12
           - if @user.testimony.present?
             h3.title.text-center
