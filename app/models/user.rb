@@ -100,7 +100,11 @@ class User < ApplicationRecord
       user.password_confirmation = password
       Rails.logger.info("============ Profile password = #{user.password}")
       user.first_name            = auth.info.first_name   # assuming the user model has a name
-      user.last_name             = auth.info.last_name
+      if auth.info.last_name.blank?
+        user.last_name = rand(1..1000)
+      else
+        user.last_name = auth.info.last_name
+      end
       avatar_tmp                 = auth.info.image
       user.remote_avatar_url     = avatar_tmp + "?type=large" # assuming the user model has an image
       user.username              = auth.info.name.to_s.split(" ")[0].downcase + "_" + auth.info.name.to_s.split(" ")[1].downcase + rand(1..100).to_s

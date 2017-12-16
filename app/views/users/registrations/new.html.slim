@@ -34,6 +34,19 @@
               .ripple-container
             h4 or be classical
           .row
+            .col-md-12
+              - if @user.errors.any?
+                .alert.alert-danger
+                  .container
+                    .alert-icon
+                      i.material-icons error_outline
+                    button.close aria-label="Close" data-dismiss="alert" type="button" 
+                      span aria-hidden="true" 
+                        i.material-icons clear
+                    b = pluralize(@user.errors.count, "Error")
+                    ul 
+                      -@user.errors.full_messages.each do |message|
+                        li = message
             = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
               .col-md-12
                 .card-content
