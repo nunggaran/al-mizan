@@ -69,11 +69,11 @@ nav.navbar.navbar-primary.navbar-transparent.navbar-fixed-top.navbar-color-on-sc
               = link_to t('navbar.ekonomi_pondok.tour'), '#'
             li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
               = link_to t('navbar.ekonomi_pondok.koperasi'), '#'
+        li = link_to 'Blog', articles_path, data: {turbolinks: false}
         li = link_to 'Alumni', users_path
 
         / li = link_to t('navbar.about'), '#'
         
-        li = link_to 'Blog', articles_path, data: {turbolinks: false}
         - if user_signed_in?
           li.dropdown
             a.profile-photo.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#pablo" 
