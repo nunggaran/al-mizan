@@ -47,7 +47,7 @@
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun masuk" }
+                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun masuk" }
                   .input-group
                     span.input-group-addon
                       i.material-icons accessibility
@@ -59,12 +59,6 @@
                       i.material-icons email
                     .form-group.is-empty
                       = f.email_field :email, required: true, class: "form-control", placeholder: "Email"
-                      span.material-input
-                  /.input-group
-                    span.input-group-addon
-                      i.material-icons smartphone
-                    .form-group.is-empty
-                      = f.text_field :handphone, required: true, class: "form-control", placeholder: "Handphone Number"
                       span.material-input
               .col-md-6
                 /.social.text-center
@@ -94,7 +88,7 @@
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_graduated, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar" }
+                      = f.select :year_graduated, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar" }
                       
                       / span.material-input
                   .input-group
