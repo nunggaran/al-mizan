@@ -23,15 +23,16 @@
 				.card.card-signup
 					= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 						.header.header-primary.text-center
-							h4.card-title Log in
-							/.social-line
-								a.btn.btn-just-icon.btn-simple href="#pablo" 
+							h4.card-title Log in via Facebook
+							.social-line
+								
+								= link_to user_facebook_omniauth_authorize_path, class: "btn btn-just-icon btn-simple" do
 									i.fa.fa-facebook-square
-								a.btn.btn-just-icon.btn-simple href="#pablo" 
+								/= link_to user_twitter_omniauth_authorize_path, class: "btn btn-just-icon btn-simple" do
 									i.fa.fa-twitter
-								a.btn.btn-just-icon.btn-simple href="#pablo" 
+								/a.btn.btn-just-icon.btn-simple href="#pablo" 
 									i.fa.fa-google-plus
-						p.description.text-center Login Untuk melihat semua data Alumni
+						p.description.text-center Login dengan akun yang sudah terdaftar
 						.card-content
 							.input-group
 								span.input-group-addon

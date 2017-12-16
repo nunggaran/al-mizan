@@ -32,7 +32,7 @@ id:
         subject: "Instruksi untuk Membuka Kunci"
     omniauth_callbacks:
       failure: "Tidak dapat mengautentikasi anda dari %{kind} dikarenakan \"%{reason}\"."
-      success: "Autentikasi berhasil dari akun %{kind}."
+      success: "Autentikasi berhasil dari akun %{kind}, silahkan masuk ke menu edit profile kemudian lengkapi data diri anda jika belum lengkap"
     passwords:
       no_token: "Anda tidak dapat mengakses halaman ini tanpa melalui email yang menginstruksikan cara untuk mereset sandi. Jika anda benar membuka tautan dari email reset password, maka pastikan anda memasukkan URL secara utuh."
       send_instructions: "Anda akan menerima email dengan instruksi cara untuk mereset sandi anda."

@@ -11,14 +11,14 @@ Rails.application.routes.draw do
   # 		# put '/profilesV2/update/:id', to: 'profiles_v2#update'
   # 	end
   # end
-
+  devise_for :users, :path => "alumni", controllers: {
+    :sessions           => 'users/sessions',
+    :registrations      => 'users/registrations',
+    :omniauth_callbacks => "users/omniauth_callbacks" ,
+    :invitations        => 'users/invitations'
+  }
   scope '(:locale)', locale: /en|id|sa/  do 
-    devise_for :users, :path => "alumni", controllers: {
-      :sessions           => 'users/sessions',
-      :registrations      => 'users/registrations',
-      # :omniauth_callbacks => "users/omniauth_callbacks" ,
-      :invitations        => 'users/invitations'
-    }
+    
     resources :articles, :path => "blog"
     resources :testimonies
     devise_scope :user do
