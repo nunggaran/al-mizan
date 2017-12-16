@@ -101,6 +101,7 @@ group :development do
   gem 'capistrano3-puma',   require: false
   gem 'capistrano-rails-console', require: false
   gem 'capistrano-rails-db'
+  gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

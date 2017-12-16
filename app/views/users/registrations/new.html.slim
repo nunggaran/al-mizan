@@ -23,7 +23,16 @@
     .row
       .col-md-10.col-md-offset-1
         .card.card-signup
-          h3.card-title.text-center Bagi Alumni Al-Mizan, harap mendaftarkan dirinya pada form berikut
+          h4.card-title.text-center Bagi Alumni Al-Mizan, harap mendaftarkan dirinya pada form berikut atau melalui social media
+          .social.text-center
+            /button.btn.btn-just-icon.btn-round.btn-twitter
+              i.fa.fa-twitter
+            = link_to user_facebook_omniauth_authorize_path, class: "btn btn-just-icon btn-round btn-facebook" do
+              i.fa.fa-facebook
+            /button.btn.btn-just-icon.btn-round.btn-facebook
+              i.fa.fa-facebook
+              .ripple-container
+            h4 or be classical
           .row
             = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
               .col-md-12
