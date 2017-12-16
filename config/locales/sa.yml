@@ -22,6 +22,8 @@ sa:
               blank: "Oppss..! Tahun masuk tidak boleh kosong"
             year_graduated: 
               blank: "Oppss..! Tahun keluar / angkatan tidak boleh kosong"
+            avatar:
+              blank: "Harap upload photo profile anda :) agar memudahkan orang lain mengenal anda :)"
         testimony:
           attributes: 
             content: 
