@@ -8,6 +8,7 @@ sa:
               taken: "Oppss..!! Email sudah terdaftar"
               invalid: "Oppss..!! email yang anda Masukkan tidak benar"
               blank: "Oppss..! Email tidak boleh kosong"
+              too_short: "Oppss..! Email terlalu pendek"
             username:
               too_short: "Oppss..!! Username terlalu pendek, minimal 4 characters" 
               invalid: "Oppss..!! Format username tidak boleh menggunakan spasi"
