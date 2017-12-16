@@ -109,6 +109,7 @@ class User < ApplicationRecord
       user.uid                   = auth.uid
       Rails.logger.info("============ Profile avatar from fb = #{auth.info.image}")
       Rails.logger.info("============ Profile avatar = #{user.remote_avatar_url}")
+      Rails.logger.info("========= Error from login facebook = #{user.errors.full_messages if user.errors.present?} ")
       if user.errors.any?
         Rails.logger.info("========= Error from login facebook = #{user.errors.full_messages} ")
       end

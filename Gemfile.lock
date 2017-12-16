@@ -130,6 +130,9 @@ GEM
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
     erubis (2.7.0)
+    exception_notification (4.2.1)
+      actionmailer (>= 4.0, < 6)
+      activesupport (>= 4.0, < 6)
     execjs (2.7.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
@@ -376,6 +379,7 @@ DEPENDENCIES
   devise_invitable
   dotenv
   dotenv-rails
+  exception_notification
   font-awesome-rails
   friendly_id (~> 5.0.0)
   httparty

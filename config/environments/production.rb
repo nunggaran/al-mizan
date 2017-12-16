@@ -102,6 +102,14 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  Rails.application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :deliver_with => :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
+    :email_prefix => "[ERROR in Al-Mizan Web] ",
+    :sender_address => %{"Notifier Al-Mizan" <error@al-mizan.sch.id>},
+    :exception_recipients => %w{muhammadyanaa@gmail.com}
+  }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = {:host => "https://al-mizan.herokuapp.com/"}

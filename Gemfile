@@ -36,6 +36,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-github', github: 'intridea/omniauth-github'
 gem 'omniauth-openid', github: 'intridea/omniauth-openid'
 
+gem 'exception_notification'
 #image cloud uploading
 gem 'cloudinary'
 # Image processing
