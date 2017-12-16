@@ -1,0 +1,115 @@
+.container
+  .navbar-header
+    button.navbar-toggle data-toggle="collapse" type="button" 
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    = link_to t('navbar.al-mizan'), root_path, class: "navbar-brand", data: {turbolinks: false}
+  .collapse.navbar-collapse
+    ul.nav.navbar-nav.navbar-right
+      li.dropdown
+        = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+          span.header-firstname = t('navbar.profile.profile')
+          b.caret
+        ul.dropdown-menu
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.profile.history'), sejarah_path
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.profile.visi_misi'), visi_misi_path
+          /li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.profile.susunan_pengurus') , '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.profile.fasilitas') , facility_path, data: {turbolinks: false}
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.profile.ekstrakulikuler') , ekskul_path
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.about'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.profile.kalender_akademik') , '#'
+
+      li.dropdown
+        = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+          span.header-firstname = t('navbar.pengajaran.pengajaran')
+          b.caret
+        ul.dropdown-menu
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}" 
+            = link_to t('navbar.pengajaran.kurikulum'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.pengajaran.program_pendidikan'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.pengajaran.pengajar'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            a href="#" 
+              | KBM
+      
+      li.dropdown
+        = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+          span.header-firstname = t('navbar.pengasuhan.pengasuhan')
+          b.caret
+        ul.dropdown-menu
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}" 
+            = link_to t('navbar.pengasuhan.majlis'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.pengasuhan.kegiatan'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.pengasuhan.putra'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.pengasuhan.putri'), '#'
+      
+      li.dropdown
+        = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+          span.header-firstname = t('navbar.ekonomi_pondok.pondok')
+          b.caret
+        ul.dropdown-menu
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}" 
+            = link_to t('navbar.ekonomi_pondok.rent_car'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.ekonomi_pondok.tour'), '#'
+          li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+            = link_to t('navbar.ekonomi_pondok.koperasi'), '#'
+      li = link_to 'Blog', articles_path, data: {turbolinks: false}
+      li = link_to t('navbar.registrasi'), '#'
+      / li = link_to t('navbar.about'), '#'
+      li.dropdown
+        = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+          span.header-firstname Alumni
+          b.caret
+        ul.dropdown-menu
+          li = link_to 'Data Alumni', users_path
+          - unless user_signed_in?
+            li = link_to 'Login Alumni', new_user_session_path
+            li = link_to "Daftar sebagai alumni", new_user_registration_path, data: {turbolinks: false}
+      
+      - if user_signed_in?
+        li.dropdown
+          a.profile-photo.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#pablo" 
+            .profile-photo-small
+              - if current_user.avatar.present?
+                = image_tag current_user.avatar.thumbnail.url, class: "img-circle img-responsive", alt: current_user.full_name
+              - else
+                = gravatar_for(current_user, "img-circle img-responsive")
+          .ripple-container
+          ul.dropdown-menu
+            li = link_to current_user.username, user_path(current_user.slug), data: {turbolinks: false}
+            li = link_to 'Edit Profile', edit_user_path(current_user.slug), data: {turbolinks: false}
+            li.divider
+            li = link_to 'Logout', logout_path, method: :delete
+
+      /li.dropdown
+        = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}
+          = current_language_flag
+          |   
+          span.header-firstname = locale_nation(I18n.locale)
+          b.caret
+        ul.dropdown-menu
+          - language_flag.zip(I18n.available_locales).each do |language, locale|
+            li= link_to params.merge({locale: locale.to_s}), data: {turbolinks: false}
+                = image_tag language
+                |   
+                = locale_nation(locale)
+
+      
+      
+      
+       
