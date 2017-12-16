@@ -53,7 +53,7 @@ class UsersController < ApplicationController
     @user = current_user
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: 'Account was successfully updated.' }
         bypass_sign_in(@user)
         format.json { render :show, status: :ok, location: @user }
       else
@@ -76,7 +76,7 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.friendly.find(params[:id])
+      @user = User.confirmed.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

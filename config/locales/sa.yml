@@ -50,8 +50,8 @@ sa:
         one: "lebih dari setahun"
         other: "lebih dari %{count} tahun"
       x_days:
-        one: 1 jam
-        other: "%{count} jam"
+        one: 1 Days
+        other: "%{count} Days"
       x_minutes:
         one: 1 menit
         other: "%{count} menit"
