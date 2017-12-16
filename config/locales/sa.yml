@@ -18,6 +18,10 @@ sa:
             address: 
               too_short: "Oppss..! Alamat terlalu pendek"
               blank: "Oppss..! Alamat tidak boleh kosong"
+            year_of_entry:
+              blank: "Oppss..! Tahun masuk tidak boleh kosong"
+            year_graduated: 
+              blank: "Oppss..! Tahun keluar / angkatan tidak boleh kosong"
         testimony:
           attributes: 
             content: 
