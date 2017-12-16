@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_i18n_locale_from_params
-  before_action :configure_permitted_parameters, if: :devise_controller?
+  # before_action :configure_permitted_parameters, if: :devise_controller?
   layout :layout_by_resource
   
   def default_url_options
@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     end
     
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :username, :handphone, :date_of_birth, :alumni, :address, :year_of_entry, :year_graduated])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :username, :handphone, :date_of_birth, :address, :year_of_entry, :year_graduated])
       #devise_parameter_sanitizer.permit(:account_update, keys: [:username, :name])
     end
 
