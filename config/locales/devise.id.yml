@@ -3,7 +3,7 @@
 id:
   devise:
     confirmations:
-      confirmed: "Email anda telah berhasil dikonfirmasi."
+      confirmed: "Email anda telah berhasil dikonfirmasi, silahkan login kemudian lengkapi data diri anda"
       send_instructions: "Anda akan menerima sebuah email dengan instruksi bagaimana cara untuk mengkonfirmasikan email anda."
       send_paranoid_instructions: "Jika email anda telah terdaftar, anda akan menerima email dengan instruksi bagaimana cara untuk mengkonfirmasikan email anda."
     failure:
