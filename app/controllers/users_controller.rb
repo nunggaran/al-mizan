@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @alumni = User.alumni.alumni_order(params[:page])
+    @alumni = User.confirmed.alumni.alumni_order(params[:page])
     # @user_articles_count = @user_articles
   end
 

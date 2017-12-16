@@ -64,6 +64,7 @@ class User < ApplicationRecord
 
   scope :alumni, -> { where(role: "alumni")}
   scope :alumni_order, ->(page) { order('year_graduated, first_name').paginate(page: page, :per_page => 20) }
+  scope :confirmed, -> {where("confirmed_at IS NOT NULL")}
   is_impressionable
   extend FriendlyId
   friendly_id :username, use: :slugged
