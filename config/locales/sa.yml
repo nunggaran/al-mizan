@@ -1,11 +1,6 @@
 sa:
   activerecord:
     errors:
-      messages:
-        record_invalid: "Validation failed: %{errors}"
-        restrict_dependent_destroy:
-          has_one: "Cannot delete record because a dependent %{record} exists"
-          has_many: "Cannot delete record because dependent %{record} exist"
       models:
         user:
           attributes:
@@ -34,6 +29,11 @@ sa:
             content: 
               too_short: "Oppss..! Minimum content adalah 70 characters dan maksimum 280 characters"
               too_long: "Oppss..! Maximum content adalah 280 characters"
+      messages:
+        record_invalid: "Validation failed: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "Cannot delete record because a dependent %{record} exists"
+          has_many: "Cannot delete record because dependent %{record} exist"
   datetime: 
     distance_in_words:
       about_x_hours:
