@@ -67,6 +67,8 @@
               dd = @user.address.present? ? @user.address : "None"
               dt Alamat Email
               dd = @user.email
+              dt Tanggal Lahir
+              dd =@user.date_of_birth.to_time.strftime('%e %B %Y ')
               dt No Handphone
               dd = @user.handphone.present? ? @user.handphone : "None"
             hr/
