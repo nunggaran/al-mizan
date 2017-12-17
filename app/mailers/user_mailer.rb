@@ -23,4 +23,12 @@ class UserMailer < ApplicationMailer
 		mail(to: ['muhammadyanaa@gmail.com'], subject: subject)
 	end
 
+	def announcement(first_name, last_name, email, message)
+		subject = "Update from Al-Mizan Website"
+		@recipient = email
+		@full_name = "#{first_name} #{last_name}"
+		@message = message
+		mail(to: @recipient, subject: subject)
+	end
+
 end
