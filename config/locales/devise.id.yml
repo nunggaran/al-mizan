@@ -25,9 +25,9 @@ id:
         accept_until: "This invitation just valid until"
         ignore: "Abaikan"
       confirmation_instructions:
-        subject: "Instruksi untuk Konfirmasi"
+        subject: "Instruksi untuk Konfirmasi akun IKBA Al-Mizan"
       reset_password_instructions:
-        subject: "Instruksi untuk Mereset Sandi"
+        subject: "Instruksi untuk Mereset Sandi akun Al-Mizan"
       unlock_instructions:
         subject: "Instruksi untuk Membuka Kunci"
     omniauth_callbacks:

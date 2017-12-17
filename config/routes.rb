@@ -15,7 +15,8 @@ Rails.application.routes.draw do
     :sessions           => 'users/sessions',
     :registrations      => 'users/registrations',
     :omniauth_callbacks => "users/omniauth_callbacks" ,
-    :invitations        => 'users/invitations'
+    :invitations        => 'users/invitations',
+    :confirmations      => 'users/confirmations'
   }
   scope '(:locale)', locale: /en|id|sa/  do 
     
