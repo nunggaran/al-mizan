@@ -44,7 +44,7 @@ id:
       signed_up: "Selamat Datang! Anda telah berhasil masuk."
       signed_up_but_inactive: "Anda telah berhasil terdaftar. Tetapi, kami tidak dapat memasukkan anda dikarenakan akun anda belum diaktifkan."
       signed_up_but_locked: "Anda telah berhasil terdaftar. Tetapi, kami tidak dapat memasukkan anda dikarenakan akun anda terkunci."
-      signed_up_but_unconfirmed: "Sebuah pesan dengan tautan untuk konfirmasi telah di kirim ke alamat email anda. Mohon untuk mengikuti tautan yang ada untuk mengaktifkan akun anda."
+      signed_up_but_unconfirmed: "Sebuah pesan dengan tautan untuk konfirmasi telah di kirim ke alamat email anda. Mohon untuk klik confirm my account pada email untuk mengaktifkan akun anda."
       update_needs_confirmation: "Akun anda telah berhasil diubah, mohon verifikasi email anda. Cek email anda dan ikuti cara yang dicantumkan untuk mengkonfirmasi email anda."
       updated: "Akun anda telah berhasil diubah."
     sessions:
