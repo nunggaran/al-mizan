@@ -52,7 +52,7 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true, uniqueness: true, length: { minimum: 4, maximum: 45 }, format: { with: VALID_EMAIL_REGEX }
   has_many  :articles, dependent: :destroy
-  validates :first_name, :last_name, presence: true
+  validates :first_name, presence: true
   
   validates :username, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 4, maximum: 30 },format: { without: /\s/ }
 
@@ -101,7 +101,7 @@ class User < ApplicationRecord
       Rails.logger.info("============ Profile password = #{user.password}")
       user.first_name            = auth.info.name.to_s.split(" ")[0]   # assuming the user model has a name
       if auth.info.last_name.blank?
-        user.last_name = rand(1..1000)
+        user.last_name = auth.info.name.to_s.split(" ").last
       else
         user.last_name = auth.info.name.to_s.split(" ")[1]
       end
