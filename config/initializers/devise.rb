@@ -300,11 +300,24 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   # login with facebook use muhammad yana mulyana account
+  
+  
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], 
-    scope: 'public_profile, email',
-    info_fields: 'email, first_name, last_name',
-    callback_url: "https://al-mizan.herokuapp.com/alumni/auth/facebook/callback"
-  config.omniauth :twitter, ENV['TWITTER_APP_ID'], ENV['TWITTER_APP_SECRET']
+    callback_url: "http://localhost:3000/alumni/auth/facebook/callback",
+    scope: 'email', info_fields: 'email, first_name, last_name',
+    provider_ignores_state: true,
+    token_params: { parse: :json }
+  config.omniauth :twitter, ENV['TWITTER_APP_ID'], ENV['TWITTER_APP_SECRET'],
+    {
+      :secure_image_url => 'true',
+      :image_size => 'original',
+      :authorize_params => {
+        :force_login => 'true',
+        :lang => 'en'
+      }
+    }
+  
+  
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

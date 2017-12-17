@@ -52,7 +52,7 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true, uniqueness: true, length: { minimum: 4, maximum: 45 }, format: { with: VALID_EMAIL_REGEX }
   has_many  :articles, dependent: :destroy
-  validates :first_name, presence: true
+  validates :first_name, :last_name, presence: true
   
   validates :username, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 4, maximum: 30 },format: { without: /\s/ }
 
@@ -89,8 +89,7 @@ class User < ApplicationRecord
   end
 
   def self.from_omniauth(auth)
-    data = auth.info
-    user = where(provider: auth.provider, uid: auth.uid, email: auth.info.email).first
+    user = where(provider: auth.provider, uid: auth.uid).first
 
     unless user.present?
       # asasas
@@ -113,16 +112,20 @@ class User < ApplicationRecord
       user.provider              = auth.provider
       user.uid                   = auth.uid
       Rails.logger.info("============ Profile avatar from fb = #{auth.info.image}")
+      Rails.logger.info("============ Profile first name = #{auth.info.first_name}")
+      Rails.logger.info("============ Profile last name = #{auth.info.last_name}")
+      Rails.logger.info("============ Profile full_name = #{auth.info.name.to_s}")
       Rails.logger.info("============ Profile avatar = #{user.remote_avatar_url}")
       Rails.logger.info("============ Profile Email variable = #{user.email}")
       Rails.logger.info("============ Profile Email = #{auth.info.email}")
+      
+      user.skip_confirmation!
+
+      # user.save!
       Rails.logger.info("========= Error from login facebook = #{user.errors.full_messages if user.errors.present?} ")
       if user.errors.any?
         Rails.logger.info("========= Error from login facebook = #{user.errors.full_messages} ")
       end
-      user.skip_confirmation!
-
-      user.save!
     end
 
     user
