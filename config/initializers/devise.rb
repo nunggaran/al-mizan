@@ -301,8 +301,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   # login with facebook use muhammad yana mulyana account
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], 
-    scope: 'public_profile,email',
-    info_fields: 'email,first_name,last_name,gender,birthday,location,picture',
+    scope: 'public_profile, email',
+    info_fields: 'email, first_name, last_name, gender, birthday, location, picture',
     callback_url: "https://al-mizan.herokuapp.com/alumni/auth/facebook/callback"
   config.omniauth :twitter, ENV['TWITTER_APP_ID'], ENV['TWITTER_APP_SECRET']
   # ==> Warden configuration
