@@ -56,18 +56,31 @@
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun masuk" }
+                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "tahun masuk" }
                   .input-group
                     span.input-group-addon
                       i.material-icons accessibility
                     .form-group.is-empty
-                      = f.text_field :username, required: true, class: "form-control", placeholder: "username, gunakan huruf kecil semua"
+                      = f.text_field :username, required: true, class: "form-control", placeholder: "username, tanpa spasi dan huruf kecil"
                       span.material-input
                   .input-group
                     span.input-group-addon
                       i.material-icons email
                     .form-group.is-empty
                       = f.email_field :email, required: true, class: "form-control", placeholder: "Email"
+                      span.material-input
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons lock_outline
+                    .form-group.is-empty
+                      = f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password"
+                      
+                      span.material-input
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons lock_outline
+                    .form-group.is-empty
+                      = f.password_field :password_confirmation, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password Confirmation"
                       span.material-input
               .col-md-6
                 /.social.text-center
@@ -82,11 +95,21 @@
                 .card-content
                   .input-group
                     span.input-group-addon
+                      i.material-icons smartphone
+                    .form-group.is-empty
+                      = f.text_field :handphone, required: false, class: "form-control", placeholder: "No Handphone"
+                      span.material-input
+                  .input-group
+                    span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
                       = f.text_field :date_of_birth, require: true, class: "form-control datepicker", placeholder: "Tanggal Lahir"
                     span.material-input
-
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons date_range
+                    .form-group.is-empty
+                      = f.select :year_graduated, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Angkatan" }
                   .input-group
                     span.input-group-addon
                       i.material-icons place
@@ -95,24 +118,25 @@
                       span.material-input
                   .input-group
                     span.input-group-addon
-                      i.material-icons date_range
+                      i.material-icons business_center
                     .form-group.is-empty
-                      = f.select :year_graduated, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar" }
+                      = f.text_field :job, required: false, class: "form-control", placeholder: "Pekerjaan - Kosongkan jika masih kuliah"
+                      span.material-input
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons school
+                    .form-group.is-empty
+                      = f.text_field :faculty, required: false, class: "form-control", placeholder: "Jurusan Kuliah"
+                      span.material-input
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons location_city
+                    .form-group.is-empty
+                      = f.text_field :university, required: false, class: "form-control", placeholder: "Kampus (Kampus saat ini atau lulusan)"
+                      span.material-input
                       
                       / span.material-input
-                  .input-group
-                    span.input-group-addon
-                      i.material-icons lock_outline
-                    .form-group.is-empty
-                      = f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password"
-                      
-                      span.material-input
-                  .input-group
-                    span.input-group-addon
-                      i.material-icons lock_outline
-                    .form-group.is-empty
-                      = f.password_field :password_confirmation, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password Confirmation"
-                      span.material-input
+                  
                   /! If you want to add a checkbox to this form, uncomment this code
               .row
                 .col-md-6.pull-left
@@ -125,7 +149,7 @@
                           span.check
                           | I agree to the
                           a href="#something"  terms and conditions
-                .col-md-6.pull-right
+                .col-md-6
                   .footer.text-center
                     = f.submit "Daftar", class: "btn btn-primary btn-round mb-50"
   footer.footer

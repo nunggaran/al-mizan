@@ -11,7 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    UserMailer.new_alumni_registration(@user.first_name, @user.last_name, @user.email, @user.year_graduated, @user.address, @user.username).deliver
+    UserMailer.new_alumni_registration(@user.first_name, @user.last_name, @user.email, @user.year_graduated, @user.address, @user.username, @user.job, @user.handphone, @user.university, @user.faculty).deliver
   end
 
   # GET /resource/edit
@@ -45,7 +45,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :username, :handphone, :date_of_birth, :avatar, :address, :year_of_entry, :year_graduated])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :username, :handphone, :job, :faculty, :university, :date_of_birth, :avatar, :address, :year_of_entry, :year_graduated])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
