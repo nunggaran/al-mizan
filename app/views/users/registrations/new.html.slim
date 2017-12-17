@@ -38,96 +38,98 @@
               .col-md-12
                 .card-content
                   = devise_error_messages!
-              .col-md-6
-                .card-content
+              .card-content
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons face
                     .form-group.is-empty
                       = f.text_field :first_name, required: true, class: "form-control", placeholder: "First Name"
                       span.material-input
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons account_circle
                     .form-group.is-empty
                       = f.text_field :last_name, required: true, class: "form-control", placeholder: "Last Name"
                       span.material-input
-                  .input-group
-                    span.input-group-addon
-                      i.material-icons date_range
-                    .form-group.is-empty
-                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "tahun masuk" }
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons accessibility
                     .form-group.is-empty
                       = f.text_field :username, required: true, class: "form-control", placeholder: "username, tanpa spasi dan huruf kecil"
                       span.material-input
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons email
                     .form-group.is-empty
                       = f.email_field :email, required: true, class: "form-control", placeholder: "Email"
                       span.material-input
-                  .input-group
-                    span.input-group-addon
-                      i.material-icons lock_outline
-                    .form-group.is-empty
-                      = f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password"
-                      
-                      span.material-input
-                  .input-group
-                    span.input-group-addon
-                      i.material-icons lock_outline
-                    .form-group.is-empty
-                      = f.password_field :password_confirmation, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password Confirmation"
-                      span.material-input
-              .col-md-6
-                /.social.text-center
-                  button.btn.btn-just-icon.btn-round.btn-twitter
-                    i.fa.fa-twitter
-                  button.btn.btn-just-icon.btn-round.btn-dribbble
-                    i.fa.fa-dribbble
-                  button.btn.btn-just-icon.btn-round.btn-facebook
-                    i.fa.fa-facebook
-                  h4 or be classical
-                
-                .card-content
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons smartphone
                     .form-group.is-empty
                       = f.text_field :handphone, required: false, class: "form-control", placeholder: "No Handphone"
                       span.material-input
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
                       = f.text_field :date_of_birth, require: true, class: "form-control datepicker", placeholder: "Tanggal Lahir"
                     span.material-input
+                .col-md-6
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons lock_outline
+                    .form-group.is-empty
+                      = f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password"
+                      span.material-input
+                .col-md-6
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons lock_outline
+                    .form-group.is-empty
+                      = f.password_field :password_confirmation, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "form-control", placeholder: "Password Confirmation"
+                      span.material-input
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_graduated, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Angkatan" }
+                      = f.select :year_of_entry,  options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "tahun masuk" }
+                .col-md-6
                   .input-group
                     span.input-group-addon
-                      i.material-icons place
+                      i.material-icons date_range
                     .form-group.is-empty
-                      = f.text_field :address, required: true, class: "form-control", placeholder: "Alamat Sekarang"
-                      span.material-input
+                      = f.select :year_graduated,  options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar / Lulus" }
+                
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons business_center
                     .form-group.is-empty
                       = f.text_field :job, required: false, class: "form-control", placeholder: "Pekerjaan - Kosongkan jika masih kuliah"
                       span.material-input
+                .col-md-6
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons school
+                    .form-group.is-empty
+                      = f.select :generation, options_for_select( (Time.zone.now.year - 19)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Angkatan" }
+                      span.material-input
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons school
                     .form-group.is-empty
                       = f.text_field :faculty, required: false, class: "form-control", placeholder: "Jurusan Kuliah"
                       span.material-input
+                .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons location_city
@@ -138,6 +140,15 @@
                       / span.material-input
                   
                   /! If you want to add a checkbox to this form, uncomment this code
+              
+                .col-md-12
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons place
+                    .form-group.is-empty
+                      = f.text_area :address, required: true, class: "form-control", id: "message", rows: "4", placeholder: "Alamat Sekarang"
+                      /= f.text_field :address, required: true, class: "form-control", placeholder: "Alamat Sekarang"
+                      span.material-input
               .row
                 .col-md-6.pull-left
                   .container-fluid

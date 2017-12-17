@@ -54,7 +54,11 @@
 									h6.text-muted.capitalize 
 										i.fa.fa-calendar
 										| &nbsp;&nbsp;&nbsp;
-										= "Angkatan #{alumni.year_graduated}"
+										= "Angkatan #{alumni.generation}"
+									h6.text-muted.capitalize 
+										i.fa.fa-calendar-o
+										| &nbsp;&nbsp;&nbsp;
+										= "Jenjang #{alumni.year_graduated.to_i - alumni.year_of_entry.to_i} Tahun, #{alumni.year_of_entry} - #{alumni.year_graduated}"
 									h6.text-muted.capitalize 
 										i.fa.fa-briefcase
 										| &nbsp; &nbsp;

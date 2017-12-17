@@ -52,7 +52,8 @@
                 = @user.year_of_entry
                 | - 
                 = @user.year_graduated
-
+              dt Angkatan
+              dd = @user.generation
               dt Jurusan dan Universitas
               dd
                 - if @user.faculty.present? && @user.university.present?

@@ -98,7 +98,7 @@
                     span.material-input
                 .col-md-6
                   .form-group.is-empty
-                    label.control-label Angkatan / Tahun Lulus
+                    label.control-label Tahun Keluar / Tahun Lulus
                     = f.select :year_graduated, options_for_select( (Time.zone.now.year - 18)..(Time.zone.now.year), selected:  @user.year_graduated ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
                     / = f.text_field :year_graduated, class: "form-control"
                     span.material-input
@@ -107,6 +107,13 @@
                     label.control-label No HP
                     = f.text_field :handphone, class: "form-control"
                     span.material-input
+                .col-md-6
+                  .form-group.is-empty
+                    label.control-label Angkatan
+                    = f.select :generation, options_for_select( (Time.zone.now.year - 18)..(Time.zone.now.year), selected:  @user.generation ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+                    / = f.text_field :year_graduated, class: "form-control"
+                    span.material-input
+                
                 .col-md-6
                   .form-group.is-empty
                     label.control-label Tgl Lahir

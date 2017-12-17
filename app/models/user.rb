@@ -67,7 +67,7 @@ class User < ApplicationRecord
   has_one :testimony, dependent: :destroy
 
   scope :alumni, -> { where(role: "alumni")}
-  scope :alumni_order, ->(page) { order('year_graduated, first_name').paginate(page: page, :per_page => 30) }
+  scope :alumni_order, ->(page) { order('generation, first_name').paginate(page: page, :per_page => 30) }
   scope :confirmed, -> {where("confirmed_at IS NOT NULL")}
   scope :unconfirmed, -> {where("confirmed_at IS NULL")}
   is_impressionable
