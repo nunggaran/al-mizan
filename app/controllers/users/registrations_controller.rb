@@ -11,7 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    #UserMailer.new_alumni_registration(@user.first_name, @user.last_name, @user.email, @user.year_graduated, @user.address, @user.username, @user.job, @user.handphone, @user.university, @user.faculty).deliver
+    UserMailer.new_alumni_registration(@user.first_name, @user.last_name, @user.email, @user.year_graduated, @user.address, @user.username, @user.job, @user.handphone, @user.university, @user.faculty).deliver
   end
 
   # GET /resource/edit
