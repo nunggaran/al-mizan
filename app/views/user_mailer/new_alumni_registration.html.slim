@@ -1,0 +1,45 @@
+
+table bgcolor="#f6f6f6" border="0" cellpadding="0" cellspacing="0" height="100%" style=("margin-bottom: 20px;") width="100%"
+  tbody
+    tr
+      td
+        table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" style=(" max-width:600px; border-radius:3px;") width="100%"
+          tr
+            td align="center"
+              img src="https://res.cloudinary.com/muhammadyana/image/upload/c_scale,w_615/v1512631795/al-mizan/logo/Graphic1-2.png" style=("padding-top: 25px;margin-bottom: 25px;") /
+          tr bgcolor="white"
+            td style=("padding:0 25px 25px 25px;font-size:20px;color:#616161;font-weight:700;color:#1fb8ff;")
+          tr bgcolor="white"
+            td style=("padding:0 25px 15px 25px;font-size:20px;color:#616161;") Hi Admin Ponpes Al-Mizan,
+          tr bgcolor="white"
+            td style=("padding:0 25px 15px 25px;font-size:14px;color:#616161;font-weight:300;line-height:22px;")
+              | New Alumni registration, please check data alumni :)
+              ul.list style="padding:0px;list-style:none;"
+                li style="margin:0px;"
+                  b Full name: &nbsp;
+                  = @full_name
+                li style="margin:0px;"
+                  b Email: &nbsp;
+                  = @email
+                li style="margin:0px;"
+                  b Alamat: &nbsp;
+                  = @address
+                li style="margin:0px;"
+                  b Angkatan: &nbsp;
+                  = @angkatan
+                li style="margin:0px;"
+                  b Username: &nbsp;
+                  = @username
+              .tell style="margin: 0 auto;text-align: left;"
+                h4 style="margin-bottom:0px;" Alamat:
+                .box-fill-tell style="width: 100%;padding:0px;"
+                  p style='margin:0px' = @address
+          tr bgcolor="white"
+            td style=("background:url(https://res.cloudinary.com/indoexchanger/image/upload/v1511945733/assets/logo/signature-full.png) no-repeat bottom;padding:147px 25px 25px 65%;font-size:14px;color:#616161;font-weight:300;line-height:22px;")
+    tr
+      td &nbsp;
+    tr
+      td &nbsp;
+    tr
+      td &nbsp;
+    = render partial: "footer"
