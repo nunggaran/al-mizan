@@ -28,6 +28,8 @@ id:
               blank: "Harap upload photo profile anda :) agar memudahkan orang lain mengenal anda :)"
             last_name: 
               blank: "Last name tidak boleh kosong"
+            generation: 
+              blank: "Angkatan tidak boleh kosong"
         testimony:
           attributes: 
             content: 
