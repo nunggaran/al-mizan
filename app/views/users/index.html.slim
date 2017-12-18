@@ -44,11 +44,13 @@
 						= f.button nil, class: "btn btn-primary btn-fab" do
 							i.material-icons search
 				.col-md-6.col-md-offset-3
-					= sort_link(@q, :generation, "Sort Berdasarkan angkatan" )
+					= sort_link(@q, :generation, "Sort Berdasarkan angkatan", default_order: :desc )
 					| &nbsp; - &nbsp;
-					= sort_link(@q, :created_at, "Sort Berdasarkan registrasi" )
+					= sort_link(@q, :created_at, "Sort Berdasarkan registrasi", default_order: :desc )
 					| &nbsp; - &nbsp;
-					= sort_link(@q, :first_name_or_last_name_cont, "Sort Berdasarkan nama" )
+					= sort_link(@q, :first_name_or_last_name_cont, "Sort Berdasarkan nama", default_order: :desc )
+					| &nbsp; - &nbsp;
+					= link_to "Reset", users_path
 					
 
 			/= search_form_for @q do |f|
