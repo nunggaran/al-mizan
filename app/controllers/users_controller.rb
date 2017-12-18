@@ -8,6 +8,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @alumni = User.confirmed.alumni.alumni_order(params[:page])
+    @q = User.confirmed.alumni.ransack(params[:q])
+    @users = @q.result
+
     # @user_articles_count = @user_articles
   end
 

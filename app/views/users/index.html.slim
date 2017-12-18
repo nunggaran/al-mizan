@@ -34,9 +34,39 @@
 	.row.team-3
 		.container-fluid
 			h2.text-center = "#{@alumni.count} Alumni yang terdaftar"
+		.container
+			= search_form_for @q do |f|
+				.col-md-6.pull-right
+					.form.form-newsletter action="" method="" 
+						.form-group.is-empty
+							/ label.control-label First name
+							= f.search_field :first_name_or_last_name_or_email_or_username_cont, plaehokder: "Cari berdasarkan nama, email dan username", class: "form-control"
+							span.material-input
+						= f.button nil, class: "btn btn-primary btn-fab" do
+							i.material-icons search
+
+			/= search_form_for @q do |f|
+				= f.search_field :first_name_or_last_name_or_email_or_username_cont, placeholder: "Cari ", class: "form-control"
+				= f.submit "search", class: "btn btn-primary"
+			/table
+				thead
+					tr
+						th = sort_link(@q, :first_name, "Sort Berdasarkan nama" )
+						th = sort_link(@q, :last_name, "Sort Berdasarkan nama" )
+						th = sort_link(@q, :generation, "Sort Berdasarkan angkatan" )
+				tbody
+					- @users.each do |user|
+						tr
+							td = user.first_name
+							td = user.last_name
+							td = user.generation
+
+			/- @users.each do |user|
+				h2 user.first_name
 		.container-fluid
 			.col-md-12
-				- @alumni.each do |alumni|
+				/ = sort_link(@q, :generation, "Sort Berdasarkan angkatan" )
+				- @users.each do |alumni|
 					.col-md-6
 						.card.card-profile.card-plain
 							.col-md-5
