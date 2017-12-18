@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
 		@full_name = "#{first_name} #{last_name}"
 		@from = email
 		@message = message
-		mail(to: ['muhammadyanaa@gmail.com'], subject: "Question from #{@full_name}")
+		mail(to: ['muhammadyanaa@gmail.com', 'tomrockgf@gmail.com'], subject: "Question from #{@full_name}")
 	end
 
 	def new_alumni_registration(first_name, last_name, email, angkatan, address, username, job, handphone, university, faculty)
@@ -20,7 +20,7 @@ class UserMailer < ApplicationMailer
 		@handphone = handphone
 		@university = university
 		@faculty = faculty
-		mail(to: ['muhammadyanaa@gmail.com'], subject: subject)
+		mail(to: ['muhammadyanaa@gmail.com', 'tomrockgf@gmail.com'], subject: subject)
 	end
 
 	def announcement(first_name, last_name, email, message)
