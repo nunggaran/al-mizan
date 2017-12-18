@@ -41,14 +41,14 @@ id:
       updated_not_active: "Sandi anda berhasil diubah."
     registrations:
       destroyed: "Sampai jumpa! Akun anda telah dibatalkan. Kami berharap bertemu lagi dengan anda."
-      signed_up: "Selamat Datang! Anda telah berhasil masuk."
+      signed_up: "Selamat Datang! Anda telah berhasil login."
       signed_up_but_inactive: "Anda telah berhasil terdaftar. Tetapi, kami tidak dapat memasukkan anda dikarenakan akun anda belum diaktifkan."
       signed_up_but_locked: "Anda telah berhasil terdaftar. Tetapi, kami tidak dapat memasukkan anda dikarenakan akun anda terkunci."
       signed_up_but_unconfirmed: "Sebuah pesan dengan tautan untuk konfirmasi telah di kirim ke alamat email anda. Mohon untuk klik confirm my account pada email untuk mengaktifkan akun anda."
       update_needs_confirmation: "Akun anda telah berhasil diubah, mohon verifikasi email anda. Cek email anda dan ikuti cara yang dicantumkan untuk mengkonfirmasi email anda."
       updated: "Akun anda telah berhasil diubah."
     sessions:
-      signed_in: "Anda telah berhasil masuk."
+      signed_in: "Anda telah berhasil login."
       signed_out: "Anda telah berhasil keluar."
       already_signed_out: "Anda telah berhasil keluar."
     unlocks:
@@ -57,7 +57,7 @@ id:
       unlocked: "Akun anda telah berhasil dibuka. Silahkan masuk untuk melanjutkan."
   errors:
     messages:
-      already_confirmed: "telah dikonfirmasi, Silahkan coba untuk masuk"
+      already_confirmed: "telah dikonfirmasi, Silahkan login dengan email dan password pada saat registrasi akun IKBA"
       confirmation_period_expired: "butuh dikonfirmasi dalam waktu %{period}, tolong anda minta kembali"
       expired: "telah habis masa berlakunya, tolong anda minta kembali"
       not_found: "tidak dapat kami temukan"
