@@ -16,7 +16,7 @@
   meta content="Listing Semua Alumni Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
   meta content="Listing Semua Alumni Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya. " name="twitter:description" /
   meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
-.page-header.header-filter.header-small filter-color="green" style="background-image: url('#{random_image_mudir}');"
+.page-header.header-filter.header-small filter-color="green" style="background-image: url('#{random_all_image}');"
   .container
     .row
       .col-md-12
@@ -51,26 +51,7 @@
 					= sort_link(@q, :first_name_or_last_name_cont, "Sort Berdasarkan nama", default_order: :desc )
 					| &nbsp; - &nbsp;
 					= link_to "Reset", users_path
-					
-
-			/= search_form_for @q do |f|
-				= f.search_field :first_name_or_last_name_or_email_or_username_cont, placeholder: "Cari ", class: "form-control"
-				= f.submit "search", class: "btn btn-primary"
-			/table
-				thead
-					tr
-						th = sort_link(@q, :first_name, "Sort Berdasarkan nama" )
-						th = sort_link(@q, :last_name, "Sort Berdasarkan nama" )
-						th = sort_link(@q, :generation, "Sort Berdasarkan angkatan" )
-				tbody
-					- @users.each do |user|
-						tr
-							td = user.first_name
-							td = user.last_name
-							td = user.generation
-
-			/- @users.each do |user|
-				h2 user.first_name
+				
 		.container-fluid
 			.col-md-12
 				/ = sort_link(@q, :generation, "Sort Berdasarkan angkatan" )
