@@ -34,7 +34,7 @@ module ApplicationHelper
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
-    image_tag(gravatar_url, alt: user.username, class: class_names)
+    image_tag(gravatar_url, alt: user.full_name, class: class_names)
   end
 
   def action_array

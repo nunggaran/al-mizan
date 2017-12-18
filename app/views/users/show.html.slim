@@ -31,7 +31,7 @@
           .profile
             .avatar
               - if @user.avatar.present?
-                = image_tag @user.avatar.thumbnail.url, class: "img-circle img-responsive img-raised"
+                = image_tag @user.avatar.thumbnail.url, class: "img-circle img-responsive img-raised", alt: @user.full_name.titleize
               - else
                 = gravatar_for(@user, "img-circle img-responsive img-raised")
               
