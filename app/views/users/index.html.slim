@@ -43,6 +43,13 @@
 							span.material-input
 						= f.button nil, class: "btn btn-primary btn-fab" do
 							i.material-icons search
+				.col-md-6.col-md-offset-3
+					= sort_link(@q, :generation, "Sort Berdasarkan angkatan" )
+					| &nbsp; - &nbsp;
+					= sort_link(@q, :created_at, "Sort Berdasarkan registrasi" )
+					| &nbsp; - &nbsp;
+					= sort_link(@q, :first_name_or_last_name_cont, "Sort Berdasarkan nama" )
+					
 
 			/= search_form_for @q do |f|
 				= f.search_field :first_name_or_last_name_or_email_or_username_cont, placeholder: "Cari ", class: "form-control"
