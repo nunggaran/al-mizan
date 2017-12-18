@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def index
     @alumni = User.confirmed.alumni.alumni_order(params[:page])
     @q = User.confirmed.alumni.ransack(params[:q])
-    @users = @q.result
+    @users = @q.result.alumni_order(params[:page])
 
     # @user_articles_count = @user_articles
   end
