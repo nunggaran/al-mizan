@@ -18,10 +18,11 @@
   meta content="www.al-mizan.sch.id" name="twitter:url" /
 / .page-header.header-filter data-parallax="true" style=("background-image: url('#{random_all_image}');") 
 .page-header.header-filter.header-small filter-color="green" style="background-image: url('#{ @user.cover.present? ? @user.cover.thumb.url : random_all_image}');"
-  /.container
+  .container
     .row
       .col-md-12
-        h2.title.text-center = @user.full_name.titleize
+        h4 style="padding-bottom: 250px;" 
+        
 .main.main-raised.mb-50
   .profile-content
     .container
