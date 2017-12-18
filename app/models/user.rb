@@ -74,6 +74,7 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :username, use: :slugged
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :cover, CoverUploader
 
 
   ROLES = ["alumni", "admin", "writer"]

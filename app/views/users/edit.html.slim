@@ -17,14 +17,13 @@
   meta content="Edit Data Alumni Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya. " name="twitter:description" /
   meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
 
-.page-header.header-filter.header-small data-parallax="true" filter-color="green" style="background-image: url('#{random_image_mudir}');"
+.page-header.header-filter.header-small data-parallax="true" filter-color="green" style="background-image: url('#{ @user.cover.present? ? @user.cover.thumb.url : random_all_image}');"
 	.container
 		.row
 			.col-md-12
-				h1.title
+				h2.title
 					| Hallo 
-					= @user.full_name
-				h4 = @user.email
+					= @user.full_name.titleize
 .main.main-raised.mb-50
   .contact-content
     .container

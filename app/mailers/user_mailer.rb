@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-	default :from => 'Ponpes Modern Al-Mizan <mail.almizan@gmail.com>'
+	default :from => 'Ponpes Modern Al-Mizan <email.almizan@gmail.com>'
 	layout 'mailer'
 	def contact_mailer(first_name, last_name, email, message)
 		subject = "Contact Admin Al-Mizan "

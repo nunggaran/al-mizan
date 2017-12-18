@@ -16,8 +16,12 @@
   meta content="#{@user.full_name.titleize} Profile - Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
   meta content="#{@user.full_name} - Angkatan #{@user.year_of_entry} s/d #{@user.year_graduated} - #{@user.faculty} at #{@user.university} - #{@user.job}" name="twitter:description" /
   meta content="www.al-mizan.sch.id" name="twitter:url" /
-.page-header.header-filter data-parallax="true" style=("background-image: url('#{random_all_image}');") 
-
+/ .page-header.header-filter data-parallax="true" style=("background-image: url('#{random_all_image}');") 
+.page-header.header-filter.header-small filter-color="green" style="background-image: url('#{ @user.cover.present? ? @user.cover.thumb.url : random_all_image}');"
+  /.container
+    .row
+      .col-md-12
+        h2.title.text-center = @user.full_name.titleize
 .main.main-raised.mb-50
   .profile-content
     .container
