@@ -22,6 +22,10 @@ module ApplicationHelper
     %w(index show)
   end
 
+  def devise_action_edit
+    %w(update edit)
+  end
+
   def user_action
     %w(edit show index)
   end

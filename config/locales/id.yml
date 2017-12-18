@@ -15,8 +15,13 @@ id:
               taken: "Oppss..! Username sudah ada yang menggunakan"
             password_confirmation:
               confirmation: "Oppss..! Password confirmation tidak sama"
+              blank: "Oppss..! Password confirmation tidak boleh kosong"
             password:
               too_short: "Oppss..! Password terlalu pendek, minimal 6 characters dan harus mengandung huruf dan angka"
+              blank: "Tidak boleh kosong"
+            current_password:
+              blank: "Tidak boleh kosong"
+              invalid: "Tidak sesuai"
             address: 
               too_short: "Oppss..! Alamat terlalu pendek"
               blank: "Oppss..! Alamat tidak boleh kosong"

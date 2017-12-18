@@ -1,3 +1,10 @@
+
+
+
+
+/p Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete
+
+/= link_to "Back", :back 
 -content_for :meta_tags
   = display_meta_tags site: "Edit Data Alumni Pondok Pesantren Modern Al-Mizan"
   = display_meta_tags description: "Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya."
@@ -18,52 +25,69 @@
   meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
 
 .page-header.header-filter.header-small data-parallax="true" filter-color="green" style="background-image: url('#{random_image_mudir}');"
-	.container
-		.row
-			.col-md-12
-				h1.title
-					| Hallo 
-					= @user.full_name
-				h4 = @user.email
+  .container
+    .row
+      .col-md-12
+        h1.title
+          | Hallo 
+          = @user.full_name
+        h4 = @user.email
 .main.main-raised.mb-50
   .contact-content
     .container
-      h2.title Edit Biodata
-      h5 Semua data-data anda dapat dilihat oleh semua alumni
+      h2.title 
+        | Edit 
+        = resource_name.to_s.humanize
       hr/
-      .row(ng-app='')
+      .row
         .col-md-8
+          / = devise_error_messages!
           - if @user.errors.any?
-            .alert.alert-danger
+            .alert.alert-warning
               .container
                 .alert-icon
                   i.material-icons error_outline
                 button.close aria-label="Close" data-dismiss="alert" type="button" 
                   span aria-hidden="true" 
                     i.material-icons clear
-                b = pluralize(@user.errors.count, "Error")
+                b = pluralize(@user.errors.count, "Warning")
                 ul 
                   -@user.errors.full_messages.each do |message|
                     li = message
 
-          = render 'users/shared/form_edit'
-        .col-md-4
-          - if @user.testimony.present?
-            h3.title.text-center Testimony anda kepada Al-Mizan
-            .col-md-12
-              .card.card-testimonial
-                .icon
-                  i.material-icons format_quote
-                .card-content
-                  h5.card-description = @user.testimony.content
-                .footer
-                  = link_to 'Edit Testimony', edit_testimony_path(@user.testimony.id), class: "mb-50"
-          - else
-            h4 Yuk beri testimony yang bagus ke pondok
-            = link_to "Tambah testimony", new_testimony_path
-
-- content_for :body_script_bottom
-  javascript:
-    $(document).ready(function(){
-      materialKit.initFormExtendedDatetimepickers();
-    });
+          = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+            .card-content
+              .row
+                - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+                  p Currently waiting confirmation for: <%= resource.unconfirmed_email
+                /.col-md-12
+                  .form-group.is-empty
+                    label.control-label Alamat Email
+                    = f.email_field :email, class: "form-control"
+                    span.material-input
+                .col-md-6
+                  .form-group.is-empty
+                    label.control-label Password
+                    = f.password_field :password, require: true, class: "form-control"
+                    span.material-input
+                .col-md-6
+                  .form-group.is-empty
+                    label.control-label Password confirmation
+                    = f.password_field :password_confirmation, require: true, class: "form-control", id: "message", rows: "2"
+                    span.material-input
+                .col-md-6
+                  .form-group.is-empty
+                    label.control-label Current password
+                    = f.password_field :current_password, require: true, class: "form-control", id: "message", rows: "2"
+                    span.material-input
+                
+                
+              .row.mb-50
+                .col-md-6
+                  .checkbox
+                    label
+                      input name="optionsCheckboxes" type="checkbox" /
+                      | I'm not a robot
+                .col-md-6
+                  = f.submit "Update Profile", class: 'btn btn-primary pull-right'
+        

@@ -49,7 +49,6 @@ html lang="#{I18n.locale.downcase}"
       = render 'shared/navbar_no_parallax'
       = yield
       = render 'shared/footer'
-      / = javascript_include_tag 'application', 'data-turbolinks-track' => true
       = yield :body_script_bottom
       = render 'layouts/analytics_bottom'
   - elsif params[:action].eql? 'contact_us'

@@ -1,0 +1,149 @@
+= form_for @user do |f|
+  .card-content
+    .row
+      .col-md-6.col-md-offset-3
+        .fileinput.fileinput-new.text-center data-provides="fileinput" 
+          .fileinput-new.thumbnail.img-raised
+            - if @user.avatar.present?
+              = image_tag @user.avatar.url, alt: @user.full_name
+            - else
+              = image_tag 'https://res.cloudinary.com/al-mizan/image/upload/v1513133933/image_placeholder_ksgu3i.jpg', alt: "Al-Mizan"
+          .fileinput-preview.fileinput-exists.thumbnail.img-raised
+          div
+            span.btn.btn-raised.btn-round.btn-default.btn-file
+              span.fileinput-new Select image
+              span.fileinput-exists Change
+              = f.file_field :avatar
+            a.btn.btn-danger.btn-round.fileinput-exists data-dismiss="fileinput" href="#pablo" 
+              i.fa.fa-times
+              | Remove
+      .col-md-6
+        .form-group.is-empty
+          label.control-label First name
+          = f.text_field :first_name, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Last name
+          = f.text_field :last_name, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Alamat Email
+          = f.text_field :email, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Username
+          = f.text_field :username, class: "form-control"
+          span.material-input
+      .col-md-12
+        .form-group.is-empty
+          label.control-label Address
+          = f.text_area :address, class: "form-control", id: "message", rows: "2"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Tahun Masuk
+          = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year), selected:  @user.year_of_entry ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+          / = f.text_field :year_of_entry, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Tahun Keluar / Tahun Lulus
+          = f.select :year_graduated, options_for_select( (Time.zone.now.year - 18)..(Time.zone.now.year), selected:  @user.year_graduated ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+          / = f.text_field :year_graduated, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label No HP
+          = f.text_field :handphone, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Angkatan
+          = f.select :generation, options_for_select( (Time.zone.now.year - 18)..(Time.zone.now.year), selected:  @user.generation ), {}, {class: "form-control selectpicker", "data-style" => "form-control", "data-size" => "7" }
+          / = f.text_field :year_graduated, class: "form-control"
+          span.material-input
+      
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Tgl Lahir
+          = f.text_field :date_of_birth, require: true, class: "form-control datepicker", placeholder: "Tanggal Lahir"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          - if @user.ig.present?
+            label.control-label 
+              | Instagram Username, 
+              = link_to "https://instagram.com/#{@user.ig}", "https://instagram.com/#{@user.ig}",  target: "_blank"  
+            = f.text_field :ig, class: "form-control"
+          - else
+            label.control-label 
+              | Instagram Username, like  
+              = link_to "https://instagram.com/{{instagram.name}}","https://instagram.com/{{instagram.name}}", target: "_blank"
+            = f.text_field :ig, class: "form-control", 'ng-model': 'instagram.name'
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          - if @user.fb.present?
+            label.control-label 
+              | Instagram Username, 
+              = link_to "https://facebook.com/#{@user.fb}", "https://facebook.com/#{@user.fb}",  target: "_blank"  
+            = f.text_field :fb, class: "form-control"
+          - else
+            label.control-label 
+              | Instagram Username, like  
+              = link_to "https://facebook.com/{{facebook.name}}","https://facebook.com/{{facebook.name}}", target: "_blank"
+            = f.text_field :fb, class: "form-control", 'ng-model': 'facebook.name'
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          - if @user.twitter.present?
+            label.control-label 
+              | Instagram Username, 
+              = link_to "https://twitter.com/#{@user.fb}", "https://twitter.com/#{@user.fb}",  target: "_blank"  
+            = f.text_field :twitter, class: "form-control"
+          - else
+            label.control-label 
+              | Instagram Username, like  
+              = link_to "https://twitter.com/{{twitter.name}}","https://twitter.com/{{twitter.name}}", target: "_blank"
+            = f.text_field :twitter, class: "form-control", 'ng-model': 'twitter.name'
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          - if @user.linkedin.present?
+            label.control-label 
+              | Linkedin Username, 
+              = link_to "https://linkedin.com/in/#{@user.linkedin}", "https://twitter.com/#{@user.linkedin}",  target: "_blank"  
+            = f.text_field :linkedin, class: "form-control"
+          - else
+            label.control-label 
+              | Linkedin Username, like  
+              = link_to "https://linkedin.com/in/{{linkedin.name}}","https://linkedin.com/in/{{linkedin.name}}", target: "_blank"
+            = f.text_field :linkedin, class: "form-control", 'ng-model': 'linkedin.name'
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Pekerjaan / kosongkan jika belum lulus
+          = f.text_field :job, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Jurusan (Jurusan saat ini atau yang sudah ditempuh)
+          = f.text_field :faculty, class: "form-control"
+          span.material-input
+      .col-md-6
+        .form-group.is-empty
+          label.control-label Kampus (Kampus saat ini atau lulusan)
+          = f.text_field :university, class: "form-control"
+          span.material-input
+      
+    .row.mb-50
+      .col-md-6
+        .checkbox
+          label
+            input name="optionsCheckboxes" type="checkbox" /
+            | I'm not a robot
+      .col-md-6
+        = f.submit "Update Profile", class: 'btn btn-primary pull-right'
