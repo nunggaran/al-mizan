@@ -31,6 +31,12 @@ table bgcolor="#f6f6f6" border="0" cellpadding="0" cellspacing="0" height="100%"
                   b Angkatan: &nbsp;
                   = @angkatan
                 li style="margin:0px;"
+                  b Tahun masuk dan tahun keluar: &nbsp;
+                  = "#{@year_of_entry} - #{@year_graduated}"
+                li style="margin:0px;"
+                  b Jenjang : &nbsp;
+                  = "#{@year_graduated.to_i - @year_of_entry.to_i} Tahun"
+                li style="margin:0px;"
                   b Username: &nbsp;
                   = @username
                 li style="margin:0px;"

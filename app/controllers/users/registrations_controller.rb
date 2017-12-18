@@ -12,7 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super
     if @user.persisted?
-      UserMailer.new_alumni_registration(@user.first_name, @user.last_name, @user.email, @user.year_graduated, @user.address, @user.username, @user.job, @user.handphone, @user.university, @user.faculty).deliver
+      UserMailer.new_alumni_registration(@user.first_name, @user.last_name, @user.email, @user.year_graduated, @user.address, @user.username, @user.job, @user.handphone, @user.university, @user.faculty, @user.year_of_entry, @user.year_graduated).deliver
     end
   end
 

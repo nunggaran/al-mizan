@@ -9,7 +9,7 @@ class UserMailer < ApplicationMailer
 		mail(to: ['muhammadyanaa@gmail.com', 'tomrockgf@gmail.com'], subject: "Question from #{@full_name}")
 	end
 
-	def new_alumni_registration(first_name, last_name, email, angkatan, address, username, job, handphone, university, faculty)
+	def new_alumni_registration(first_name, last_name, email, angkatan, address, username, job, handphone, university, faculty, year_of_entry, year_graduated)
 		@full_name = "#{first_name} #{last_name}"
 		subject = "New Alumni Mizan Registration #{@full_name}"
 		@email = email
@@ -20,6 +20,8 @@ class UserMailer < ApplicationMailer
 		@handphone = handphone
 		@university = university
 		@faculty = faculty
+		@year_of_entry = year_of_entry
+		@year_graduated = year_graduated
 		mail(to: ['muhammadyanaa@gmail.com', 'tomrockgf@gmail.com'], subject: subject)
 	end
 
