@@ -33,8 +33,8 @@ gem 'devise_invitable'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
-gem 'omniauth-github', github: 'intridea/omniauth-github'
-gem 'omniauth-openid', github: 'intridea/omniauth-openid'
+
+
 
 gem 'exception_notification'
 #image cloud uploading
@@ -46,6 +46,9 @@ gem 'mini_magick'
 # This is the right gem to use summernote editor in Rails projects.
 gem 'summernote-rails'
 gem 'codemirror-rails'
+
+#search
+gem 'ransack'
 
 # gem "lazyload-rails"
 gem 'angularjs-rails'
