@@ -13,7 +13,7 @@
 #
 
 class Article < ApplicationRecord
-	is_impressionable
+	# is_impressionable
 	#validation
 	validates :title, :content, :image, presence: true
 	validates :title, uniqueness: true
