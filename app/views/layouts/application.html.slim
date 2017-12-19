@@ -38,6 +38,7 @@ html lang="#{I18n.locale.downcase}"
       = render 'layouts/analytics_bottom'
   -elsif params[:controller].eql?('articles') && article_action.include?(params[:action])
     body.blog-posts
+      = yield :facebook_comment_plugin
       = render 'shared/navbar'
       = yield
       = render 'shared/footer'

@@ -18,6 +18,16 @@
   meta content="#{@article.title} -  Ponpes Al-Mizan" name="twitter:title" /
   meta content="#{@article.title} - #{@article.title[0..150]}" name="twitter:description" /
   meta content="www.al-mizan.sch.id#{request.fullpath}" name="twitter:url" /
+- content_for :facebook_comment_plugin
+  #fb-root
+  javascript:
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=391189471319581';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 .page-header.header-filter data-parallax="true" style=("background-image: url('#{@article.image.url}');") 
   .container
     .row
@@ -53,9 +63,11 @@
     .section.section-blog-info
       .row
         .col-md-12
+          = content_tag :div, '', :class => "fb-comments", "data-href" => request.original_url, "data-numposts" => "10", "data-colorscheme" => "light", "data-width" => "700"
           .row
             .col-md-12
               .sharethis-inline-share-buttons
+              
               
           hr/
 
