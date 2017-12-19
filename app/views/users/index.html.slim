@@ -55,6 +55,9 @@
 							= link_to "Reset", users_path
 				hr/
 		.container-fluid
+			.col-md-8.col-md-offset-2
+				.text-center
+					= page_entries_info @users
 			.col-md-12
 				- @users.each do |alumni|
 					.col-md-6
@@ -148,5 +151,7 @@
 					  /         = link_to "https://instagram.com/#{alumni.ig}", class: "btn btn-just-icon btn-simple btn-instagram", target: "_blank" do
 					  /           i.fa.fa-instagram
 		.row.text-center
+			/.col-md-6.col-md-offset-3
+				= page_entries_info @users
 			.col-md-6.col-md-offset-3
 				= will_paginate @users, :previous_label => 'Previous', :next_label => 'Next'
