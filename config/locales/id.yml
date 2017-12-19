@@ -45,6 +45,9 @@ id:
         restrict_dependent_destroy:
           has_one: "Cannot delete record because a dependent %{record} exists"
           has_many: "Cannot delete record because dependent %{record} exist"
+  errors:
+    messages:
+      max_size_error: "Oppss..! ukuran photo terlalu besar, maksimum 2 MB"
   will_paginate:
     page_entries_info:
       single_page:

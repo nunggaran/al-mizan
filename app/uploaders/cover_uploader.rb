@@ -32,6 +32,10 @@ class CoverUploader < CarrierWave::Uploader::Base
   version :thumb do
     resize_to_fill(1000, 500)
   end
+  
+  def size_range
+    0..2.megabytes
+  end
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process resize_to_fit: [50, 50]
