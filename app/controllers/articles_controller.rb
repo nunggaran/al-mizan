@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :authenticate_writer!, only: [:create, :update]
+  before_filter :allow_iframe_requests, only: [:show]
   # GET /articles
   # GET /articles.json
   def index
@@ -65,6 +66,11 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+    def allow_iframe_requests
+      response.headers.delete('X-Frame-Options')
+    end
+
     def authenticate_writer!
       unless current_user.is_writer? || current_user.is_admin?
         redirect_to root_path, alert: "You are not authorized!"
