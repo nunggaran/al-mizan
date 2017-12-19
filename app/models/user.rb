@@ -70,6 +70,8 @@ class User < ApplicationRecord
   scope :alumni_order, ->(page) { order('generation, first_name').paginate(page: page, :per_page => 30) }
   scope :confirmed, -> {where("confirmed_at IS NOT NULL")}
   scope :unconfirmed, -> {where("confirmed_at IS NULL")}
+  scope :order_by_graduated, -> { order('generation, first_name')}
+
   is_impressionable
   extend FriendlyId
   friendly_id :username, use: :slugged
