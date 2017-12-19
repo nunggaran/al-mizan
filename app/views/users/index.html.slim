@@ -56,7 +56,6 @@
 				hr/
 		.container-fluid
 			.col-md-12
-				/ = sort_link(@q, :generation, "Sort Berdasarkan angkatan" )
 				- @users.each do |alumni|
 					.col-md-6
 						.card.card-profile.card-plain
@@ -64,10 +63,9 @@
 								.card-image
 									= link_to user_path(alumni.slug) do
 										- if alumni.avatar.present?
-											= image_tag alumni.avatar.thumbnail.url, class: "img"
+											= image_tag alumni.avatar.thumbnail.url, class: "img", alt: alumni.full_name.titleize
 										- else
 											= gravatar_for(alumni, "img")
-									.ripple-container
 							.col-md-7
 								.card-content.pad-top-1
 									= link_to user_path(alumni.slug), data: {turbolinks: false} do
