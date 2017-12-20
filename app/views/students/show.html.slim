@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong First name:
+  = @student.first_name
+p
+  strong Last name:
+  = @student.last_name
+p
+  strong Date of birth:
+  = @student.date_of_birth
+p
+  strong Address:
+  = @student.address
+
+= link_to 'Edit', edit_student_path(@student)
+'|
+= link_to 'Back', students_path

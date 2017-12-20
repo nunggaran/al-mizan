@@ -15,7 +15,7 @@ module DeviseHelper
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true"><i class="material-icons">clear</i></span>
       </button>
-      <b>#{sentence} : </b> 
+      <b>#{sentence} </b> 
       <ul>
         #{messages}
       </ul>

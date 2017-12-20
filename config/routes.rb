@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   
   
+  
   # namespace :api do
   # 	namespace :v1 do
   # 		resources :price
@@ -29,6 +30,7 @@ Rails.application.routes.draw do
       # get 'login', to: 'devise/sessions#new'
     end
     resources :users, :path => 'alumni' 
+    resources :students, :path => 'pendaftaran-santri-baru'
     # resources :contacts
     post 'contacts' => 'contacts#create'
     get 'sejarah-al-mizan', to: 'pages#sejarah', as: :sejarah
@@ -36,6 +38,7 @@ Rails.application.routes.draw do
     get 'fasilitas-al-mizan', to: 'pages#facility', as: :facility
     get 'hubungi-kami', to: 'pages#contact_us', as: :contact
     get 'ekstrakurikuler', to: 'pages#ekskul', as: :ekskul
+    #get 'pendaftaran-santri-baru', to: 'pages#registration', as: :new_registration_student
     	# mount Monologue::Engine, at: '/blog', :as => :blog	
 	  root 'pages#index'
 	  

@@ -35,6 +35,8 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 
 
+gem 'rails-i18n'
+
 
 gem 'exception_notification'
 #image cloud uploading

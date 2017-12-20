@@ -31,6 +31,10 @@ class PagesController < ApplicationController
     
   end
 
+  def registration
+    
+  end
+
   def contact_us
     @contact = Contact.new(contact_params)
     if @contact.save

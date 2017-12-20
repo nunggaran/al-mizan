@@ -212,8 +212,9 @@ en:
       office_title: "Al-Mizan Address"
       office_content: "Jl Jend Sudirman KM 3 Ar-Royyan's Building 2nd floor, Narimbang - Rangkasbitung - Lebak - Banten"
       phone_title: "Work Phone"
-    rivan: 
-      title: "Link to rivan"
+    student_registration:
+      header_title: "Pendaftaran online santri baru"
+      title: "Form pendaftaran santri baru"
     testimony: 
       title: "See what alumni say about Ponpes <b> Al-Mizan </b>"
       content: "Here are some views of alumni against Al-Mizan."

@@ -107,6 +107,11 @@ id:
       user:
         username: 'User name'
         password: 'Password'
+      student:
+        first_name: "Nama Depan"
+        last_name: "Nama Belakang"
+        date_of_birth: "Tanggal Lahir"
+        address: "Alamat"
     hints:
       user:
         username: 'User name to sign in.'
@@ -315,8 +320,9 @@ id:
       office_title: "Alamat Al-Mizan"
       office_content: "Jl Jend Sudirman KM 3 Ar-Royyan's Building 2nd floor, Narimbang - Rangkasbitung - Lebak - Banten"
       phone_title: "Handphone"
-    rivan: 
-      title: "Link ke rivan"
+    student_registration:
+      header_title: "Pendaftaran online santri baru"
+      title: "Form pendaftaran santri baru"
     testimony: 
       title: "Apa kata para alumni tentang <b> Al-Mizan </b>"
       content: "Berikut beberapa pandangan alumni terhadap Al-Mizan"
