@@ -69,7 +69,7 @@
           li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
             = link_to t('navbar.ekonomi_pondok.koperasi'), '#'
       li = link_to 'Blog', articles_path, data: {turbolinks: false}
-      li = link_to t('navbar.registrasi'), students_path
+      li = link_to t('navbar.registrasi'), '#'
       / li = link_to t('navbar.about'), '#'
       li.dropdown
         = link_to "#", class: "dropdown-toggle", data: {toggle: 'dropdown'}

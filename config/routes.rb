@@ -1,23 +1,12 @@
 Rails.application.routes.draw do
   
-  
-  
-  
-  
-  
-  # namespace :api do
-  # 	namespace :v1 do
-  # 		resources :price
-  # 		# get '/price/insert', to: 'price#insert'
-  # 		# put '/profilesV2/update/:id', to: 'profiles_v2#update'
-  # 	end
-  # end
   devise_for :users, :path => "alumni", controllers: {
     :sessions           => 'users/sessions',
     :registrations      => 'users/registrations',
     :omniauth_callbacks => "users/omniauth_callbacks" ,
     :invitations        => 'users/invitations',
-    :confirmations      => 'users/confirmations'
+    :confirmations      => 'users/confirmations',
+    :passwords          => 'users/passwords'
   }
   scope '(:locale)', locale: /en|id|sa/  do 
     

@@ -1,0 +1,75 @@
+
+-content_for :meta_tags
+  = display_meta_tags site: "Reset Akun Alumni Pondok Pesantren Modern Al-Mizan"
+  = display_meta_tags description: "Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya."
+  = display_meta_tags keyword: "Login Alumni Pondok Pesantren Modern Al-Mizan, Alumni al-mizan, alumni, blog al-mizan, al-mizan post, mizan blog, pondok pesantren modern, pondok pesantren modern Al-mizan, pondok terbagus, pondok rapih, pondok di banten "
+  = display_meta_tags author: "Pondok Pesantren Modern Al-Mizan"
+
+  meta property="og:image" content="https://res.cloudinary.com/al-mizan/image/upload/v1513418691/WhatsApp_Image_2017-12-11_at_21.19.48_yfuzxo.jpg"/
+  meta content="https://al-mizan.herokuapp.com#{request.fullpath}" property="og:url" /
+  meta content="Reset Akun Alumni Pondok Pesantren Modern Al-Mizan" property="og:title" /
+  meta content="Pondok Pesantren Modern Al-Mizan sebagai pesantren prosfektif yang mampu mencetak santri berakhlaq mulia, berbadan sehat, kreatif, berpengetahuan luas dan berfikiran terbuka, berjiwa ikhlas, kebersahajaan, berukhuwah Islamiyah dan berdikari. " property="og:description" /
+  meta content="https://res.cloudinary.com/al-mizan/image/upload/v1513418691/WhatsApp_Image_2017-12-11_at_21.19.48_yfuzxo.jpg" property="og:image:secure_url" /
+  meta content="2017-03-27T12:19:49+00:00" property="article:published_time" /
+  meta content="2017-03-28T00:29:53+00:00" property="article:modified_time" /
+  / twitter card
+  meta content="summary" name="twitter:card" /
+  meta content="Reset Akun Alumni Pondok Pesantren Modern Al-Mizan" name="twitter:title" /
+  meta content="Reset Akun Alumni Pondok Pesantren Modern Al-Mizan | Pondok Pesantren Modern Al-Mizan adalah sebuah lembaga  sosial yang bergerak dalam kegiatan pendididkan, nilai-nilai islami yang bertujuan menghidupkan, memelihara serta meningkatkan semangat dikalangan umat islam khusus nya dan bangsa Indonesia pada umumnya. " name="twitter:description" /
+  meta content="https://al-mizan.herokuapp.com/" name="twitter:url" /
+.page-header.header-filter style=("background-image: url('#{random_all_image}'); background-size: cover; background-position: top center;") 
+  .container
+    .row.mt-50
+      .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+        .card.card-signup
+          = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+            .header.header-primary.text-center
+              h4.card-title Reset Password
+            / p.description.text-center Reset 
+            .card-content
+              = devise_error_messages!
+              .input-group
+                span.input-group-addon
+                  i.material-icons lock_outline
+                .form-group.is-empty
+                  = f.text_field :reset_password_token, hidden: true
+                  = f.password_field :password, required: true, class: "form-control", placeholder: "New password"
+                  span.material-input
+              .input-group
+                span.input-group-addon
+                  i.material-icons lock
+                .form-group.is-empty
+                  = f.password_field :password_confirmation, required: true, class: "form-control", placeholder: "Confirm your new password"
+                  span.material-input
+            
+            .footer.text-center
+              = f.submit "Reset Password", class: "btn btn-primary btn-round btn-lg"
+              | &nbsp; &nbsp; &nbsp;
+              = link_to "Register", new_user_registration_path, class: "btn btn-warning btn-simple btn-wd"
+              = link_to "Reset password", new_password_path(resource_name), class: "btn btn-warning btn-simple btn-wd"
+              / = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "btn btn-warning btn-simple btn-wd"
+              
+              / a.btn.btn-primary.btn-simple.btn-wd.btn-lg href="#pablo"  Get Started
+
+  footer.footer
+    .container
+      /nav.pull-left
+        ul
+          li
+            a href="http://www.creative-tim.com" 
+              | Creative Tim
+          li
+            a href="http://presentation.creative-tim.com" 
+              | About Us
+          li
+            a href="http://blog.creative-tim.com" 
+              | Blog
+          li
+            a href="http://www.creative-tim.com/license" 
+              | Licenses
+      .copyright
+        | © &nbsp; Copyright 2017, made with &nbsp;
+        i.fa.fa-heart.heart
+        | &nbsp; by
+        | &nbsp; Muhammad Yana Mulyana
+
