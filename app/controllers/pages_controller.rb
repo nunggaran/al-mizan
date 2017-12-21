@@ -36,17 +36,13 @@ class PagesController < ApplicationController
   end
 
   def contact_us
-    @contact = Contact.new(contact_params)
-    if @contact.save
-      flash[:notice] = "Thank u for cantacting us, We'll contact u back soon"
-    end
-    
+    # @contact = Contact.new(contact_params)
+    # if verify_recaptcha(model: @contact) && @contact.save
+    #   flash[:notice] = "Thank u for cantacting us, We'll contact u back soon"
+    # end
   end
 
-  def rivan
-    
-  end
-  
+
   private
     def set_contact
       @contact = Contact.find(params[:id])

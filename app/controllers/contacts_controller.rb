@@ -27,11 +27,11 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     respond_to do |format|
-      if @contact.save
+      if verify_recaptcha(model: @contact) && @contact.save
         UserMailer.contact_mailer(contact_params[:first_name], contact_params[:last_name], contact_params[:email], contact_params[:message]).deliver
         format.html { redirect_to root_path, notice: "Thank u for cantacting us, We'll contact u back soon" }
       else
-        format.html { redirect_to root_path, alert: @contact.errors.full_messages }
+        format.html { redirect_to contact_path, alert: @contact.errors.full_messages}
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end

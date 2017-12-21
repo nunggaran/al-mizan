@@ -28,7 +28,19 @@
             = t('static_page.contact_section.content')
             br/
             br/
-          = form_for @contact do |f|
+          /- if @contact.errors.any?
+            .alert.alert-danger
+              .container
+                .alert-icon
+                  i.material-icons error_outline
+                button.close aria-label="Close" data-dismiss="alert" type="button" 
+                  span aria-hidden="true" 
+                    i.material-icons clear
+                b = pluralize(@contact.errors.count, "Error")
+                ul 
+                  -@contact.errors.full_messages.each do |message|
+                    li = message
+          = form_for Contact.new do |f|
             .header.header-raised.header-primary.text-center
               h4.card-title Contact Us
             .card-content
@@ -52,12 +64,13 @@
                 = f.text_area :message, class: "form-control", id: "message", rows: "6"
                 span.material-input
               .row
-                .col-md-6
-                  .checkbox
+                .col-md-12
+                  = recaptcha_tags
+                  /.checkbox
                     label
                       input name="optionsCheckboxes" type="checkbox" /
                       | I'm not a robot
-                .col-md-6
+                .col-md-6.pull-left
                   = f.submit "Send Message", class: 'btn btn-primary pull-right'
         .col-md-4.col-md-offset-2
           .info.info-horizontal
