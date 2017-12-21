@@ -36,6 +36,19 @@
         h2 = t('static_page.student_registration.title').titleize.html_safe
         hr/
       .row
+      	.col-md-8
+          - if @student.errors.any?
+            .alert.alert-danger
+              .container
+                .alert-icon
+                  i.material-icons error_outline
+                button.close aria-label="Close" data-dismiss="alert" type="button" 
+                  span aria-hidden="true" 
+                    i.material-icons clear
+                b = pluralize(@student.errors.count, "Error")
+                ul 
+                  -@student.errors.full_messages.each do |message|
+                    li = message
         .col-md-12
           == render 'form'
 

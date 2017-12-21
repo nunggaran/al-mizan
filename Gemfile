@@ -36,7 +36,8 @@ gem 'omniauth-twitter'
 
 
 gem 'rails-i18n'
-
+#capctcha
+gem "recaptcha", require: "recaptcha/rails"
 
 gem 'exception_notification'
 #image cloud uploading

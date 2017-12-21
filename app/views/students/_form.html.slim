@@ -13,12 +13,12 @@
 	.card-content
 		.row
 			.col-md-6
-				.form-group.label-floating.is-empty
+				.form-group.is-empty
 					label.control-label Nama Depan
 					= f.text_field :first_name, class: "form-control"
 					span.material-input
 			.col-md-6
-				.form-group.label-floating.is-empty
+				.form-group.is-empty
 					label.control-label Nama Belakang
 					= f.text_field :last_name, class: "form-control"
 					span.material-input
@@ -32,3 +32,8 @@
 					label.control-label Alamat Rumah
 					= f.text_area :address, class: "form-control", id: "message", rows: "1"
 					span.material-input
+			.col-md-12
+				= recaptcha_tags
+			.col-md-6
+        = f.submit "Register", class: 'btn btn-primary pull-right'
+      
