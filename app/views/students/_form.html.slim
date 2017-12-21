@@ -1,11 +1,34 @@
-= simple_form_for(@student) do |f|
-  = f.error_notification
+/ = simple_form_for(@student) do |f|
+/   = f.error_notification
 
-  .form-inputs
-    = f.input :first_name
-    = f.input :last_name
-    = f.input :date_of_birth
-    = f.input :address
+/   .form-inputs
+/     = f.input :first_name
+/     = f.input :last_name
+/     = f.input :date_of_birth
+/     = f.input :address
 
-  .form-actions
-    = f.button :submit
+/   .form-actions
+/     = f.button :submit
+= form_for(@student) do |f|
+	.card-content
+		.row
+			.col-md-6
+				.form-group.label-floating.is-empty
+					label.control-label Nama Depan
+					= f.text_field :first_name, class: "form-control"
+					span.material-input
+			.col-md-6
+				.form-group.label-floating.is-empty
+					label.control-label Nama Belakang
+					= f.text_field :last_name, class: "form-control"
+					span.material-input
+			.col-md-6
+				.form-group.is-empty
+					label.control-label Tgl Lahir
+					= f.text_field :date_of_birth, require: true, class: "form-control datepicker"
+					span.material-input
+			.col-md-6
+				.form-group.is-empty
+					label.control-label Alamat Rumah
+					= f.text_area :address, class: "form-control", id: "message", rows: "1"
+					span.material-input
