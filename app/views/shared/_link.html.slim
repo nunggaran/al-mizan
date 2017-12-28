@@ -13,7 +13,7 @@
           span.header-firstname = t('navbar.profile.profile')
           b.caret
         ul.dropdown-menu
-          li class="#{current_class?(sejarah_path)} #{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
+          li class="#{active_class(sejarah_path)} #{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
             = link_to t('navbar.profile.history'), sejarah_path
             / = active_link_to t('navbar.profile.history'), sejarah_path, wrap_tag: :li
           li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"

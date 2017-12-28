@@ -4,6 +4,10 @@ module ApplicationHelper
     'active' if request.path.eql?(current_path)
   end
 
+  def active_class(link_path)
+    active = current_page?(link_path) ? "active" : ""
+  end
+
 	def language_flag
     flag = %w(https://res.cloudinary.com/muhammadyana/image/upload/v1512641507/al-mizan/US.png https://res.cloudinary.com/muhammadyana/image/upload/v1512641511/al-mizan/ID.png https://res.cloudinary.com/muhammadyana/image/upload/v1512641511/al-mizan/SA.png)
   end
