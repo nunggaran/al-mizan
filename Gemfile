@@ -34,7 +34,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 
-
+gem 'active_link_to'
 gem 'rails-i18n'
 #capctcha
 gem "recaptcha", require: "recaptcha/rails"
