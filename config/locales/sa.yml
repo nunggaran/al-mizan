@@ -65,9 +65,9 @@ sa:
         one: "%{count} tahun lalu"
         other: "%{count} tahun lalu"
       almost_x_years:
-        one: "hampir setahun"
-        other: "hampir %{count} tahun"
-      half_a_minute: "setengah menit"
+        one: "hampir setahun lalu"
+        other: "hampir %{count} tahun lalu"
+      half_a_minute: "setengah menit lalu"
       less_than_x_minutes:
         zero: "kurang dari satu menit"
         one: "kurang dari satu menit"
@@ -80,20 +80,20 @@ sa:
         one: "lebih dari setahun"
         other: "lebih dari %{count} tahun"
       x_days:
-        one: 1 Days
-        other: "%{count} Days"
+        one: 1 Hari lalu
+        other: "%{count} Hari lalu"
       x_minutes:
-        one: 1 menit
-        other: "%{count} menit"
+        one: 1 menit lalu
+        other: "%{count} menit lalu"
       x_months:
-        one: 1 bulan
-        other: "%{count} bulan"
+        one: 1 bulan lalu
+        other: "%{count} bulan lalu"
       x_years:
-        one: "satu tahun"
-        other: "%{count} Tahun"
+        one: "satu tahun lalu"
+        other: "%{count} Tahun lalu"
       x_seconds:
         one: 1 detik
-        other: "%{count} detik"
+        other: "%{count} detik lalu"
   layouts:
     application:
       title: "Al-Mizan | Pondok Pesantren Modern Al-Mizan - Berdiri diatas dan untuk semua golongan"
