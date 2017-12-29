@@ -14,7 +14,7 @@
           b.caret
         ul.dropdown-menu
           li class="#{active_class(sejarah_path)} #{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
-            = link_to t('navbar.profile.history'), sejarah_path
+            = link_to t('navbar.profile.history'), sejarah_path, data: {turbolinks: false}
             / = active_link_to t('navbar.profile.history'), sejarah_path, wrap_tag: :li
           li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
             = active_link_to t('navbar.profile.visi_misi'), visi_misi_path, wrap_tag: :li
