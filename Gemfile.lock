@@ -153,6 +153,8 @@ GEM
     jwt (1.5.6)
     launchy (2.4.3)
       addressable (~> 2.3)
+    lazyload-rails (0.3.1)
+      nokogiri (~> 1.5)
     letter_opener (1.4.1)
       launchy (~> 2.2)
     listen (3.0.8)
@@ -386,6 +388,7 @@ DEPENDENCIES
   jquery
   jquery-rails
   jquery-turbolinks
+  lazyload-rails
   letter_opener
   listen (~> 3.0.5)
   material_icons

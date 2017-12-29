@@ -38,10 +38,10 @@
           = @article.posted_on
           |&nbsp; by &nbsp;
           = @article.user.full_name.titleize
-        /h4
+        h4
           i.fa.fa-eye
           | &nbsp;
-          / = @article.impressionist_count
+          = @article.impressionist_count
           | &nbsp;
           | Views
         / a.btn.btn-rose.btn-round.btn-lg href="#pablo" 
@@ -62,11 +62,14 @@
         
     .section.section-blog-info
       .row
-        .col-md-12
-          = content_tag :div, '', :class => "fb-comments", "data-href" => request.original_url, "data-numposts" => "10", "data-colorscheme" => "light", "data-width" => "700"
-          .row
+        .col-md-10.col-md-offset-1
+          .sharethis-inline-share-buttons
+          br/
+          #disqus_thread
+          /= content_tag :div, '', :class => "fb-comments", "data-href" => request.original_url, "data-numposts" => "10", "data-colorscheme" => "light", "data-width" => "700"
+          /.row
             .col-md-12
-              .sharethis-inline-share-buttons
+              
               
               
           hr/
@@ -74,26 +77,22 @@
           
           /! end media-post
 
+-content_for :body_script_bottom
+  script id="dsq-count-scr" src="//al-mizan.disqus.com/count.js" async=""
+  javascript:
+    var disqus_config = function () {
+      s.src = 'https://al-mizan.disqus.com/embed.js'; 
+      this.page.url = "#{url_for(@article)}";
+      this.page.identifier = "#{@article.id}";
+      this.page.title = "#{@article.title}";
+    };
 
-/ p#notice = notice
-
-/ p
-/   strong Title:
-/   = @article.title
-/ p
-/   strong Content:
-/   = @article.content.html_safe
-/ p
-/   strong Slug:
-/   = @article.slug
-/ p
-/   strong User:
-/   = @article.user_id
-/ p
-/   strong Image:
-/   = image_tag @article.image.thumbnail.url
-  
-
-/ = link_to 'Edit', edit_article_path(@article)
-/ '|
-/ = link_to 'Back', articles_path
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://al-mizan.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    
+ 
+                            

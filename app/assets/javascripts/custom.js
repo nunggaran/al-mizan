@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	// $("img").lazyload();
 	$('[data-provider="summernote"]').each(function(){
 	  $(this).summernote({ 
 	  	height: 600,   //set editable area's height
