@@ -61,6 +61,9 @@
                     i.material-icons schedule
                     | &nbsp;
                     = time_ago_in_words(article.created_at)
+                    | &nbsp;
+                    | ago
+
       .row.text-center
         .col-md-6.col-md-offset-3
           = will_paginate @articles, :previous_label => 'Previous', :next_label => 'Next'
