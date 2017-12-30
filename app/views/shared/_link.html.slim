@@ -69,7 +69,7 @@
             = link_to t('navbar.ekonomi_pondok.tour'), '#'
           li class="#{I18n.locale.eql?(:sa) ? 'text-right' : ''}"
             = link_to t('navbar.ekonomi_pondok.koperasi'), '#'
-      li = active_link_to 'Blog', articles_path, wrap_tag: :li
+      li = active_link_to 'Blog', articles_path, wrap_tag: :li, data: {turbolinks: false}
       / li = link_to 'Blog', articles_path, data: {turbolinks: false}
       li = link_to t('navbar.registrasi'), '#'
       / li = link_to t('navbar.about'), '#'
