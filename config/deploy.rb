@@ -4,8 +4,9 @@ lock "3.9.1"
 # Change these
 # server '10.66.218.177', port: 89, roles: [:web, :app, :db], primary: true
 
-set :application, "indoexchanger"
-set :repo_url, "muhammadyana@bitbucket.org:thefutureindo/indoexchanger-v2.git"
+set :application, "al-mizan"
+# set :repo_url, "muhammadyana@bitbucket.org:thefutureindo/indoexchanger-v2.git"
+set :repo_url, "git@github.com:muhammadyana/al-mizan.git"
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
