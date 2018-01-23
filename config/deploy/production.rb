@@ -16,7 +16,7 @@ set :rack_env, "production"
 # set :stage, "production"
 set :rails_env, "production"
 
-after "root", "deploy:cleanup"
+after "deploy", "deploy:cleanup"
 # delayed job
 # set :delayed_job_args, "-n 4"
 
