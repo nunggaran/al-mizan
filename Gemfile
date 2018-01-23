@@ -108,7 +108,7 @@ group :development do
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
   gem 'capistrano-rails-console', require: false
-  gem 'capistrano-rails-db'
+  # gem 'capistrano-rails-db'
   
 end
 

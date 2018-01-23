@@ -1,4 +1,6 @@
 # Change these
+lock "3.9.1"
+
 server '139.59.116.39', port: 89, roles: [:web, :app, :db], primary: true
 
 set :repo_url, "git@github.com:muhammadyana/al-mizan.git"
