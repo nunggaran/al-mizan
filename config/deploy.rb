@@ -2,7 +2,7 @@
 lock "3.9.1"
 
 # Change these
-# server '10.66.218.177', port: 89, roles: [:web, :app, :db], primary: true
+server '139.59.116.39', port: 89, roles: [:web, :app, :db], primary: true
 
 set :application, "al-mizan"
 # set :repo_url, "muhammadyana@bitbucket.org:thefutureindo/indoexchanger-v2.git"

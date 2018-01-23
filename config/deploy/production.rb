@@ -21,7 +21,7 @@ after "deploy", "deploy:cleanup"
 # set :delayed_job_args, "-n 4"
 
 # http://stackoverflow.com/questions/21036175/how-to-deploy-a-specific-revision-with-capistrano-3
-# set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"] || 'master'
+set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"] || 'master'
 server '139.59.116.39',
   user: fetch(:user),
   port: 89,
