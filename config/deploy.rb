@@ -7,7 +7,7 @@ lock "3.9.1"
 set :application, "al-mizan"
 # set :repo_url, "muhammadyana@bitbucket.org:thefutureindo/indoexchanger-v2.git"
 set :repo_url, "git@github.com:muhammadyana/al-mizan.git"
-set :user,            'root'
+set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 set :linked_files, %w{.env}
