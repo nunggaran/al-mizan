@@ -81,11 +81,11 @@ test:
 production:
   <<: *default
   database: al_mizan_production
-  username: <%= ENV['DATABE_USERNAME'] %>
-  password: <%= ENV['DATABE_PASSWORD'] %>
+  username: ENV["DATABE_USERNAME"]
+  password: ENV["DATABE_PASSWORD"]
 
 staging:
   <<: *default
   database: al_mizan_staging
-  username: <%= ENV['DATABE_USERNAME'] %>
-  password: <%= ENV['DATABE_PASSWORD'] %>
+  username: ENV["DATABE_USERNAME"]
+  password: ENV["DATABE_PASSWORD"]

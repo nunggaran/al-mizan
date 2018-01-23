@@ -6,25 +6,6 @@
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-set :application, 'indoexchanger-staging'
-set :stage, :staging
-set :rails_env, 'staging'
-
-set :full_app_name, "#{fetch(:applicaton)}-#{fetch(:stage)}"
-# set :server_name, "staging.medic-trust.com"
-
-set :deploy_to, '/var/deploy/indoexchanger-staging'
-
-# delayed job
-# set :delayed_job_args, "-n 1"
-
-# http://stackoverflow.com/questions/21036175/how-to-deploy-a-specific-revision-with-capistrano-3
-set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"] || 'master'
-
-role :app, %w{deploy@indoexchanger.co.id}
-role :web, %w{deploy@indoexchanger.co.id}
-role :db,  %w{deploy@indoexchanger.co.id}
-server 'indoexchanger.co.id', user: 'deploy', roles: %w{web app}
 
 
 
