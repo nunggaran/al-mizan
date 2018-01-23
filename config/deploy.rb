@@ -10,6 +10,7 @@ set :repo_url, "git@github.com:muhammadyana/al-mizan.git"
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
+set :linked_files, %w{.env}
 
 # Don't change these unless you know what you're doing
 set :pty,             true

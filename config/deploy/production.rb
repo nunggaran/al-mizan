@@ -16,13 +16,13 @@ set :rack_env, "production"
 # set :stage, "production"
 set :rails_env, "production"
 
-after "deploy", "deploy:cleanup"
+after "root", "deploy:cleanup"
 # delayed job
 # set :delayed_job_args, "-n 4"
 
 # http://stackoverflow.com/questions/21036175/how-to-deploy-a-specific-revision-with-capistrano-3
 # set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"] || 'master'
-server '10.66.218.177',
+server '139.59.116.39',
   user: fetch(:user),
   port: 89,
   roles: %w{web app db},
