@@ -86,7 +86,7 @@ production:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: al_mizan_production
   username: root
-  password: "@ccesspassDB"
+  password: <% ENV['DATABE_PASSWORD'] %>
 
 staging:
   adapter: postgresql
@@ -96,4 +96,4 @@ staging:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: al_mizan_staging
   username: root
-  password: "@ccesspassDB"
+  password: <% ENV['DATABE_PASSWORD'] %>
