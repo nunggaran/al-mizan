@@ -7,6 +7,7 @@ require 'capistrano/bundler'
 require 'capistrano/rvm'
 require 'capistrano/puma'
 require 'capistrano/rails/console'
+require 'capistrano/rails/db'
 
 # Load the SCM plugin appropriate to your project:
 #
