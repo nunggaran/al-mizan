@@ -85,7 +85,7 @@ production:
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: al_mizan_production
-  username: root
+  username: deploy
   password: <% ENV['DATABE_PASSWORD'] %>
 
 staging:
@@ -95,5 +95,5 @@ staging:
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: al_mizan_staging
-  username: root
+  username: deploy
   password: <% ENV['DATABE_PASSWORD'] %>
