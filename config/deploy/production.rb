@@ -18,10 +18,10 @@ set :rails_env, 'production'
 # http://stackoverflow.com/questions/21036175/how-to-deploy-a-specific-revision-with-capistrano-3
 set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"] || 'master'
 
-role :app, %w{deploy@139.59.116.39}
-role :web, %w{deploy@139.59.116.39}
-role :db,  %w{deploy@139.59.116.39}
-server '139.59.116.39', user: 'deploy', roles: %w{web app}
+role :app, %w{deploy@188.166.215.239}
+role :web, %w{deploy@188.166.215.239}
+role :db,  %w{deploy@188.166.215.239}
+server '188.166.215.239', user: 'deploy', roles: %w{web app}
 
 
 
