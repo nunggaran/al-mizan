@@ -303,7 +303,7 @@ Devise.setup do |config|
   
   
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], 
-    callback_url: "#{Rails.env.development? ? 'http://localhost:3000/alumni/auth/facebook/callback' : 'http://al-mizan.sch.id/alumni/auth/facebook/callback'}",
+    callback_url: "#{Rails.env.development? ? 'http://localhost:3000/alumni/auth/facebook/callback' : 'http://www.al-mizan.sch.id/alumni/auth/facebook/callback'}",
     scope: 'email', info_fields: 'email, first_name, last_name',
     provider_ignores_state: true,
     token_params: { parse: :json }

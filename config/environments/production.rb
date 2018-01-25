@@ -122,7 +122,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = {:host => "http://al-mizan.sch.id/"}
+  config.action_mailer.default_url_options = {:host => "http://www.al-mizan.sch.id/"}
 end
-Rails.application.routes.default_url_options[:host] = 'http://al-mizan.sch.id/'
+Rails.application.routes.default_url_options[:host] = 'http://www.al-mizan.sch.id/'
 
