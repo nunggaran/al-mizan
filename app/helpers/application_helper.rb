@@ -77,6 +77,8 @@ module ApplicationHelper
   def random_all_image
     images = %w(
     https://res.cloudinary.com/al-mizan/image/upload/v1512975829/assets/image/activity/22730347_1591278460930217_3385631058869855206_n.jpg
+    https://res.cloudinary.com/al-mizan/image/upload/v1516887264/mizan-logo-2-down_bwqhpd.jpg 
+    https://res.cloudinary.com/al-mizan/image/upload/v1516600496/mizan-milad_skdhmg.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1512975845/assets/image/activity/22730298_1591278550930208_8752086244225043584_n.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1512975858/assets/image/activity/22780613_1591278340930229_8252693925058034813_n.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1512975876/assets/image/activity/22853200_1591278244263572_3965036959167497148_n.jpg
