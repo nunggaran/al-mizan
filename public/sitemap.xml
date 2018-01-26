@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://www.al-mizan.sch.id/</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/sejarah-al-mizan</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/visi-misi-al-mizan</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/fasilitas-al-mizan</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/ekstrakurikuler</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/blog</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/alumni</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/alumni/sign_in</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/alumni/sign_up</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/testimonies</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.al-mizan.sch.id/id/hubungi-kami</loc>
+  <lastmod>2018-01-26T08:23:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</urlset>
