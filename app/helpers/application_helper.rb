@@ -132,6 +132,15 @@ module ApplicationHelper
     return images.sample
   end
 
+  def random_image_testimony
+    images = %w(
+    https://res.cloudinary.com/al-mizan/image/upload/v1517038617/new-badge-milad-mizan-small_lzr43j.jpg
+    https://res.cloudinary.com/al-mizan/image/upload/v1517038632/al-mizan-logo-new-small_xdl6zc.jpg
+
+    )
+    return images.sample
+  end
+
   def random_image_mudir
     images = %w(https://res.cloudinary.com/al-mizan/image/upload/v1512879375/assets/image/20121206_1495176167207114_2865656083753650746_o.jpg https://res.cloudinary.com/al-mizan/image/upload/v1512880013/assets/image/mudir/21768611_1559954467395950_3594649337201265197_o.jpg https://res.cloudinary.com/al-mizan/image/upload/v1512880140/assets/image/mudir/20287018_1502939379764126_1449802719593899123_o.jpg https://res.cloudinary.com/al-mizan/image/upload/v1512880159/assets/image/mudir/20280540_1502939066430824_4309184607117713317_o.jpg https://res.cloudinary.com/al-mizan/image/upload/v1512880206/assets/image/mudir/20280408_1502938859764178_721041377275057100_o.jpg https://res.cloudinary.com/al-mizan/image/upload/v1512880250/assets/image/mudir/20106502_1494377470620317_6161044047394628790_n.jpg)
     return images.sample
