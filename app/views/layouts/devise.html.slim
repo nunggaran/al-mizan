@@ -25,6 +25,7 @@ html lang="#{I18n.locale.downcase}"
     / = stylesheet_link_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'application','data-turbolinks-track': 'reload'
     script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a2cc196d0739000123acd69&product=inline-share-buttons' async='async'
+    script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a6e85591c5d590013b4df6e&product=inline-share-buttons' async='async'
     script async='async' src="https://www.googletagmanager.com/gtag/js?id=UA-111019082-1"
   -if params[:controller].eql?('users/registrations') && params[:action].eql?('new')  
     body.signup-page
