@@ -19,12 +19,12 @@ module AlMizan
     config.i18n.available_locales = [:en, :id, :sa]
     config.action_controller.permit_all_parameters = true
     def secrets
-		  @secrets ||= begin
-		    yaml = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]
-		    ActiveSupport::OrderedOptions.new.merge!(yaml.symbolize_keys)
-		  end
-		end
-		# Code for ckeditor to precompile basepath.js.erb
+	  @secrets ||= begin
+	    yaml = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]
+	    ActiveSupport::OrderedOptions.new.merge!(yaml.symbolize_keys)
+	  end
+	end
+	# Code for ckeditor to precompile basepath.js.erb
     #config.assets.precompile += Ckeditor.assets
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.autoload_paths += %W(#{config.root}/lib)
