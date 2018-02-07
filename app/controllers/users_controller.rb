@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def index
     @alumni = User.confirmed.alumni.alumni_order(params[:page])
     @q = User.confirmed.alumni.ransack(params[:q])
-    @users = @q.result.order_by_graduated.paginate(page: params[:page], :per_page => 10)
+    @users = @q.result.order_by_graduated.paginate(page: params[:page], :per_page => 20)
 
     # @user_articles_count = @user_articles
   end
