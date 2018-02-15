@@ -71,7 +71,7 @@
 											= gravatar_for(alumni, "img")
 							.col-md-7
 								.card-content.pad-top-1
-									= link_to user_path(alumni.slug), data: {turbolinks: false} do
+									= link_to user_path(alumni.slug) do
 										h4.card-title = alumni.full_name.titleize
 									h6.text-muted.capitalize 
 										i.fa.fa-calendar
