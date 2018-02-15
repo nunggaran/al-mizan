@@ -102,13 +102,13 @@
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_of_entry,  options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "tahun masuk" }
+                      = f.select :year_of_entry,  options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "tahun masuk" }
                 .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_graduated,  options_for_select( (Time.zone.now.year - 21)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar / Lulus" }
+                      = f.select :year_graduated,  options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar / Lulus" }
                 
                 .col-md-6
                   .input-group
