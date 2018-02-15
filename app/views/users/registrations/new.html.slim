@@ -122,7 +122,7 @@
                     span.input-group-addon
                       i.material-icons school
                     .form-group.is-empty
-                      = f.select :generation, options_for_select( (Time.zone.now.year - 19)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Angkatan" }
+                      = f.select :generation, options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Angkatan" }
                       span.material-input
                 .col-md-6
                   .input-group
