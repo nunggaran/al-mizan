@@ -79,7 +79,7 @@
           b.caret
         ul.dropdown-menu
 
-          li class="#{current_class?(users_path)}" = link_to 'Data Alumni', users_path
+          li class="#{current_class?(users_path)}" = link_to 'Data Alumni', users_path, data: {turbolinks: false}
           - unless user_signed_in?
             li = active_link_to 'Login Alumni', new_user_session_path, wrap_tag: :li
             li = active_link_to 'Daftar sebagai alumni', new_user_registration_path, wrap_tag: :li, data: {turbolinks: false}
