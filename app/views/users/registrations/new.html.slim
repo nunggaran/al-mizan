@@ -27,7 +27,7 @@
           .social.text-center
             /button.btn.btn-just-icon.btn-round.btn-twitter
               i.fa.fa-twitter
-            /= link_to user_facebook_omniauth_authorize_path, class: "btn btn-just-icon btn-round btn-facebook" do
+            = link_to user_facebook_omniauth_authorize_path, class: "btn btn-just-icon btn-round btn-facebook" do
               i.fa.fa-facebook
             /= link_to user_twitter_omniauth_authorize_path, class: "btn btn-just-icon btn-round btn-twitter" do
               i.fa.fa-twitter
@@ -74,7 +74,7 @@
                     span.input-group-addon
                       i.material-icons smartphone
                     .form-group.is-empty
-                      = f.text_field :handphone, required: false, class: "form-control", placeholder: "No Handphone"
+                      = f.text_field :handphone, required: true, class: "form-control", placeholder: "No Handphone"
                       span.material-input
                 .col-md-6
                   .input-group
@@ -102,13 +102,13 @@
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_of_entry,  options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "tahun masuk" }
+                      = f.select :year_of_entry, options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "tahun masuk" }
                 .col-md-6
                   .input-group
                     span.input-group-addon
                       i.material-icons date_range
                     .form-group.is-empty
-                      = f.select :year_graduated,  options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar / Lulus" }
+                      = f.select :year_graduated, options_for_select( (Time.zone.now.year - 25)..(Time.zone.now.year) ), {}, {class: "selectpicker", "data-style" => "form-control", "data-size" => "7", "title" => "Tahun Keluar / Lulus" }
                 
                 .col-md-6
                   .input-group
