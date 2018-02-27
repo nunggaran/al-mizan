@@ -76,6 +76,18 @@ module ApplicationHelper
 
   def random_all_image
     images = %w(
+    https://res.cloudinary.com/muhammadyana/image/upload/c_scale,h_450/v1512717261/al-mizan/activity/KMD-6.jpg
+    https://res.cloudinary.com/muhammadyana/image/upload/c_scale,h_450/v1512717250/al-mizan/activity/KMD-5.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512717236/al-mizan/activity/14212078_1172167089508025_2667288149476048747_n.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512717505/al-mizan/activity/14064071_1159726490752085_4614359848663542672_n.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512717747/al-mizan/activity/fata3.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512717188/al-mizan/activity/da1.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512717647/al-mizan/activity/UTS3.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512717591/al-mizan/activity/14729238_1069258419862201_117536813428468076_n.jpg
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512700816/al-mizan/background/13781848_1133994316658636_2663626792748662069_n.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512631618/al-mizan/background/13776027_1133994073325327_6243295768723387211_n.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512631708/al-mizan/background/silaturrahmi-4.jpg 
+    https://res.cloudinary.com/muhammadyana/image/upload/v1512632320/al-mizan/background/14330073_1179143412143726_4215595160823234128_n.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1512975829/assets/image/activity/22730347_1591278460930217_3385631058869855206_n.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1516887264/mizan-logo-2-down_bwqhpd.jpg 
     https://res.cloudinary.com/al-mizan/image/upload/v1516600496/mizan-milad_skdhmg.jpg
@@ -91,19 +103,6 @@ module ApplicationHelper
     https://res.cloudinary.com/al-mizan/image/upload/v1512976130/assets/image/activity/20286956_1498345756890155_1366784682701074905_o.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1512976206/assets/image/activity/20106795_1494377300620334_4670981028455408848_n.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1512976286/assets/image/activity/18451351_1426681804056551_3519874375527151151_o.jpg
-    https://res.cloudinary.com/muhammadyana/image/upload/c_scale,h_450/v1512717261/al-mizan/activity/KMD-6.jpg
-    https://res.cloudinary.com/muhammadyana/image/upload/c_scale,h_450/v1512717250/al-mizan/activity/KMD-5.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512717236/al-mizan/activity/14212078_1172167089508025_2667288149476048747_n.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512717505/al-mizan/activity/14064071_1159726490752085_4614359848663542672_n.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512717747/al-mizan/activity/fata3.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512717188/al-mizan/activity/da1.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512717647/al-mizan/activity/UTS3.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512717591/al-mizan/activity/14729238_1069258419862201_117536813428468076_n.jpg
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512700816/al-mizan/background/13781848_1133994316658636_2663626792748662069_n.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512631618/al-mizan/background/13776027_1133994073325327_6243295768723387211_n.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512631708/al-mizan/background/silaturrahmi-4.jpg 
-    https://res.cloudinary.com/muhammadyana/image/upload/v1512632320/al-mizan/background/14330073_1179143412143726_4215595160823234128_n.jpg
-
     )
     return images.sample
   end
@@ -136,6 +135,17 @@ module ApplicationHelper
     images = %w(
     https://res.cloudinary.com/al-mizan/image/upload/v1517038617/new-badge-milad-mizan-small_lzr43j.jpg
     https://res.cloudinary.com/al-mizan/image/upload/v1517038632/al-mizan-logo-new-small_xdl6zc.jpg
+
+    )
+    return images.sample
+  end
+
+  def random_logo_image
+    images = %w(
+    https://res.cloudinary.com/al-mizan/image/upload/v1517038632/al-mizan-logo-new-small_xdl6zc.jpg
+    https://res.cloudinary.com/al-mizan/image/upload/v1517038617/new-badge-milad-mizan-small_lzr43j.jpg
+    https://res.cloudinary.com/al-mizan/image/upload/v1516887264/mizan-logo-2-down_bwqhpd.jpg
+    https://res.cloudinary.com/al-mizan/image/upload/v1516600496/mizan-milad_skdhmg.jpg
 
     )
     return images.sample
