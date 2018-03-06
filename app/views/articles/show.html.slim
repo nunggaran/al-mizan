@@ -57,6 +57,13 @@
               i.material-icons mode_edit
               .ripple-container
           h3.title = @article.title
+          p
+            b 
+              | Posted on  
+              = @article.posted_on
+              |&nbsp; by &nbsp;
+              = @article.user.full_name.titleize
+          hr/
           = @article.content.html_safe
             
         
