@@ -5,7 +5,9 @@
       span.icon-bar
       span.icon-bar
       span.icon-bar
-    = link_to t('navbar.al-mizan'), root_path, class: "navbar-brand", data: {turbolinks: false}
+    = link_to root_path, class: "navbar-brand", data: {turbolinks: false} do
+      img src="http://res.cloudinary.com/al-mizan/image/upload/v1520761708/baru_2017_hteamw.png" width="50" style="display: inline-block"
+      = t('navbar.al-mizan')
   .collapse.navbar-collapse
     ul.nav.navbar-nav.navbar-right
       li.dropdown

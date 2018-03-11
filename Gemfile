@@ -53,6 +53,7 @@ gem 'codemirror-rails'
 #search
 gem 'ransack'
 
+gem 'faker'
 # gem "lazyload-rails"
 gem 'angularjs-rails'
 gem 'jbuilder', '~> 2.5'
