@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
-  impressionist
+  # impressionist
 
   # GET /users
   # GET /users.json
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    impressionist(@user)
+    # impressionist(@user)
     # @user_articles = @user.articles.paginate(page: params[:page], :per_page => 4)
   end
 
